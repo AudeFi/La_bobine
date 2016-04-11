@@ -1,0 +1,39 @@
+body {
+	background:#eee;
+	font-family:Helvetica,Arial;
+	font-size:14px;
+}
+
+/* -------------------------------- */
+
+section {
+	height: 600px;
+	padding: 20px;
+}
+
+section h2 {
+	font-size: 18px;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+
+ table{
+	width: 400px;
+	margin: auto;
+	margin-bottom: 10px;
+}
+
+ table td{
+	height: 25px;
+	line-height: 25px;
+	vertical-align: middle;
+	text-align: center;
+	border: 1px solid grey;
+}
+
+form input[type="submit"] {
+	background-color: grey;
+	cursor: pointer;
+}
