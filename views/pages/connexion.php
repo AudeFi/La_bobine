@@ -1,6 +1,5 @@
 <?php
 
-	require 'config/form-login.php';
 
 	if(!empty($_POST['loginform'])) 
 	{
