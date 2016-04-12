@@ -2,11 +2,11 @@
 
 $name='';
 
-if(!empty($_POST['search']))
+if(!empty($_POST['name']))
 	{
 		$name = strip_tags(trim($_POST['name']));
-		$name=urlencode($name); 
-		
+		$name=urlencode($name);
+
 		$ch = curl_init();
 		
 		curl_setopt($ch, CURLOPT_URL, "http://api.themoviedb.org/3/search/movie?api_key=2fb5cd2aa5d0d9868fcd75aba6d96451&query='.$name.'");
@@ -24,24 +24,22 @@ if(!empty($_POST['search']))
 
 		$count = count($result->results);
 
- 		for ($i = 0; $i <= $count - 1; $i++) 
- 			{
- 				if($i > 6)
+		$response = '';
+		$response = array(); 
+
+		for($i = 0; $i <= $count - 1; $i++){
+			if($i > 6)
  				{
- 					 break 1;
+ 					break 1;
  				}
+		$response[] = $result->results[$i]->title;
+		}
 
- 		  		echo '<pre>';?>
+		echo json_encode($response);
 
- 		  		<form action="" method="POST">
-				<a href="index.php?id=<?=$result->results[$i]->id?>"><?php print_r($result->results[$i]->title); ?></a>
-				</form>
- 		  		<?php echo '</pre>';
-			}
 
 			// si l'utilisateur rentre un nom de film qui n'est pas dans la liste, il faudra afficher une erreur
 			// gerer l'ensemble en ajax pour plus de confort
-
 	}
 
 	if(!empty($_POST['add'])){
@@ -57,5 +55,7 @@ $link = '';
 	$prepare->bindValue('title',$title);
 	$prepare->bindValue('link',$link);
 
+
+	// json_encode($response)
 	$execute = $prepare->execute();
 }

@@ -3,17 +3,13 @@
 ?>
 
 <section>
-Insérer formulaire d'ajout de musiques
-
-
-
-
 
 	<form action="#" method="post">
-	<input type="text" name="name" id="name" value="">
+	<input class="lol" type="text" name="name" id="name" value="">
 		<div>
  			<input type="submit" name="search">
  		</div>
+ 		<div class="autos"></div>
 	</form>	
 
 
