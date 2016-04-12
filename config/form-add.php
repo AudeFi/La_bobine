@@ -25,7 +25,7 @@ if(!empty($_POST['name']))
 		$count = count($result->results);
 
 		$response = '';
-		$response = array(); 
+		$response = array();
 
 		for($i = 0; $i <= $count - 1; $i++){
 			if($i > 6)
@@ -36,10 +36,6 @@ if(!empty($_POST['name']))
 		}
 
 		echo json_encode($response);
-
-
-			// si l'utilisateur rentre un nom de film qui n'est pas dans la liste, il faudra afficher une erreur
-			// gerer l'ensemble en ajax pour plus de confort
 	}
 
 	if(!empty($_POST['add'])){
@@ -56,6 +52,5 @@ $link = '';
 	$prepare->bindValue('link',$link);
 
 
-	// json_encode($response)
 	$execute = $prepare->execute();
 }
