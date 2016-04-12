@@ -39,7 +39,7 @@
 
 	<form action="#" method="POST">
 		<div>
-			<label for="email">Votre pseudo</label></br>
+			<label for="pseudo">Votre pseudo</label></br>
 			<input type="text" name="pseudo" placeholder="Entrez votre pseudo">
 		</div>
 		<div>
@@ -55,7 +55,9 @@
 			<input type="password" name="password2" placeholder="Confirmez votre mdp">
 		</div>
 		<div>
-			<input type="submit" name="loginform">
+			<?php
+				require '/config/capchat/capchat.php';
+			?>
 		</div>
 		
 		
