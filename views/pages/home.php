@@ -37,7 +37,7 @@
 	}
 
 	echo '<pre>';
-	print_r($all->results);
+	print_r($all->results[0]);
 	echo '</pre>';
 
 ?>
