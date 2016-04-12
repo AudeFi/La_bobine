@@ -1,6 +1,10 @@
 <?php
 
-
+// Tableau pour afficher erreurs et succès
+$errors_connexion = array();
+$success_connexion = array();
+$errors_inscription = array(); 
+$success_inscription = array();
 
 // ----------- CONNEXION -------------
 
@@ -9,24 +13,24 @@
 		
 
 		// XSS PROTECTION
-	function securisation($donnees){
-		$donnees = trim($donnees); 
-		$donnees = stripcslashes($donnees);
-		$donnees = strip_tags($donnees);
-		return ($donnees);
-	}
+		function securisation($donnees){
+			$donnees = trim($donnees); 
+			$donnees = stripcslashes($donnees);
+			$donnees = strip_tags($donnees);
+			return ($donnees);
+		}
 
-	$email = securisation($_POST['email']);
-	$password = securisation(hash('sha256',SALT.$_POST['password']));
-	
+		$email_connexion = securisation($_POST['email_connexion']);
+		$password_connexion = securisation(hash('sha256',SALT.$_POST['password_connexion']));
+		
 
 		$prepare = $pdo->prepare('SELECT * FROM users WHERE email = :email');
-		$prepare->bindValue('email',$email);
+		$prepare->bindValue('email',$email_connexion);
 		$execute = $prepare->execute();
 		$user = $prepare->fetch();
 
 		if($user){
-			if($user->password == $password) {
+			if($user->password == $password_connexion) {
 				$_SESSION['user'] = array(
 					'id' => $user->id,
 					'email' => $user->email,
@@ -34,11 +38,11 @@
 				);
 			}
 			else {
-				echo "Nop";
+				$errors_connexion['connexion'] = "Login ou mot de passe incorrect";
 			}
 		}
 		else {
-			echo "Login ou mot de passe incorrect";
+			$errors_connexion['connexion'] = "Login ou mot de passe incorrect";
 		}
 	}
 
@@ -46,10 +50,9 @@
 
 // ----------- INSCRIPTION -------------
 
-	if(!empty($_POST)) {
+	if(!empty($_POST['subscribe'])) {
 
-	// SET VARIABLES AND HASH MDP
-	$pseudo = $email = $code = "";
+	// SET VARIABLES AND HASH PASSWORD
 	$vosID =' Vos ID';
 	$message = 'Voici vos ID';
 	
@@ -62,99 +65,84 @@
 		return ($donneesbis);
 	}
 
-	$pseudo = securisationbis($_POST['pseudo']);
-	$email = securisationbis($_POST['email']);
-	$password = securisationbis(hash('sha256',SALT.$_POST['password']));
-	$password2 = securisationbis(hash('sha256',SALT.$_POST['password']));
 	/*$code = securisationbis($_POST['code']);*/
 
 
-
 	// PSEUDO ERRORS
-	$pseudolength = strlen($pseudo);
-	if ($pseudolength <=3) 
-	{
-		 $errors['pseudo'] = 'Veuillez renseigner un pseudo à plus de 3 caractères';
-	}
-	elseif ($pseudolength >100)
-	{
+	if(!empty($_POST['pseudo'])){
+		$pseudo = securisationbis($_POST['pseudo']);
+		$pseudolength = strlen($pseudo);
+		if ($pseudolength <= 3) 
+		{
+			 $errors_inscription['pseudo'] = 'Veuillez renseigner un pseudo à plus de 3 caractères';
+		}
+		elseif ($pseudolength > 25)
+		{
 
-		$errors['pseudo'] = 'Veuillez renseigner un pseudo à moins de 100 caractères';
-	}	 
+			$errors_inscription['pseudo'] = 'Veuillez renseigner un pseudo à moins de 25 caractères';
+		}	 
+	}
+	else {
+		$errors_inscription['pseudo'] = 'Veuillez renseigner un pseudo';
+	}
 
 	// MAIL ERRORS
-
-	if (filter_var($email,FILTER_VALIDATE_EMAIL))
-	{
-		
-	}
-	elseif ( empty ($_POST['mail']))
-	{
-		$errors['email'] = 'Veuillez renseigner votre email';
-	}
-	else
-	{
-		$errors['email'] = 'Veuillez renseigner un email valide';
-	}	
-
-	// MDP ERRORS
-	$passwordlength = strlen($password);
-	if ( empty ($_POST['password']) AND empty ($_POST['password2']))
-	{
-		$errors['password'] = 'Veuillez renseigner votre mot de passe';
-		$errors['password2'] = 'Veuillez confirmer votre mot de passe';
-	}
-	elseif ($passwordlength <=5) 
-	{
-		 $errors['password'] = 'Veuillez renseigner un mot de passe à plus de 5 caractères';
-		 $errors['password2'] = '';
-	}
-	elseif ( empty ($_POST['password']) OR empty ($_POST['password2']))
-	{
-		$errors['password'] = 'Veuillez renseigner votre mot de passe';
-		$errors['password2'] = 'Veuillez confirmer votre mot de passe';
-	}
 	
-	// MDP COMPARE ERRORS
-	if ( isset ($_POST['password']) AND isset ($_POST['password2']))
-    {
-	       if ($password != $password2)
-	        {
-	            $errors['password'] = ' Veuillez renseigner le même mot de passe';
-	            $errors['password2'] = '';
-	        }
-       
-    }
+	if (!empty($_POST['email']))
+	{
+		$email = securisationbis($_POST['email']);
+	}
+	else {
+		$errors_inscription['email'] = 'Veuillez renseigner votre email';
+	}
 
-	// CAPCHAT ==> SPAM PROTECTION // ERRORS MANAGE
-    if ( isset ($_POST['code_entre']) AND isset ($_POST['code']))
-    {
-        $code_entre = $_POST['code_entre'];
-        $code = $_POST['code'];
-        $code = $code / '368.5';
-        if ($code_entre == NULL)
-        {
-           $errors['code_entre'] = 'Veuillez renseigner le code';
-        }
-        elseif ($code_entre != $code)
-        {
-            $errors['code_entre'] = ' Attention, mauvais code.';
-        }
-       
-    }
-	// SUCCES				
-	if(empty($errors))
+
+
+	// PASSWORDS ERRORS
+	$password = securisationbis(hash('sha256',SALT.$_POST['password']));
+	$password2 = securisationbis(hash('sha256',SALT.$_POST['password2']));
+	$passwordlength = strlen($_POST['password']);
+
+	if (empty($_POST['password']))
+	{
+		$errors_inscription['password'] = 'Veuillez renseigner votre mot de passe';
+	}
+	else if (empty($_POST['password2'])) {
+		$errors_inscription['password2'] = 'Veuillez confirmer votre mot de passe';
+	}
+	else if ($passwordlength <= 5) 
+	{
+		$errors_inscription['password'] = 'Veuillez renseigner un mot de passe à plus de 5 caractères';
+	}
+	// PASSWORDS COMPARE
+	else if ($password != $password2)
+	{
+	    $errors_inscription['password'] = ' Veuillez renseigner le même mot de passe';
+	    $errors_inscription['password2'] = '';
+	}
+
+	// SUCCESS				
+	if(empty($errors_inscription))
 	{	
-			$success[] = 'Utilisateur enregistré';
-			$prepare = $pdo -> prepare('INSERT INTO users (pseudo, email, password, /*user*/) VALUES (:pseudo, :email, :password /*,:user*/)');
+			$prepare = $pdo -> prepare('INSERT INTO users (pseudo, email, password, status) VALUES (:pseudo, :email, :password, :status)');
 			$prepare -> bindValue('pseudo', $pseudo);
 			$prepare -> bindValue('email', $email);
-			$prepare -> bindValue('mdp', $password);
-			/*$prepare -> bindValue('user', $user);*/
+			$prepare -> bindValue('password', $password);
+			$prepare -> bindValue('status', 'user');
 			$execute = $prepare -> execute();
-			
-	     // Envoi
-	     mail($email, $vosID, $message);
 
+			if(!$execute){
+				$errors_inscription[] = "Erreur lors de l'enregistrement";
+			}
+			else
+			{
+				$success_inscription[] = 'Utilisateur enregistré';
+
+				$name  = '';
+				$title = '';
+				$price = '';
+				// Envoi
+	    		mail($email, $vosID, $message);
+			}	
 	}
 }
