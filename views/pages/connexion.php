@@ -68,11 +68,6 @@
 			<input id="password2" type="password" name="password2" placeholder="Confirmez votre mdp">
 		</div>
 		<div>
-			<?php
-				/*require '/config/capchat/capchat.php';*/
-			?>
-		</div>
-		<div>
 			<input type="submit" name="subscribe">
 		</div>
 
