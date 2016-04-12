@@ -1,6 +1,14 @@
 <?php
 	require 'config/form-add.php';
 ?>
+<?php 
+	if(empty($_SESSION['user'])):
+?>
+<section>
+	Connectez-vous pour ajouter des musiques
+</section>
+
+<?php else:?>
 
 <section>
 
@@ -22,3 +30,5 @@
 	</form>
 
 </section>
+
+<?php endif; ?>
