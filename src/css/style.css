@@ -59,3 +59,7 @@ form .error label {
 form .error input {
 	border: 2px solid red;
 }
+
+.ytvideo{
+	display: none;
+}

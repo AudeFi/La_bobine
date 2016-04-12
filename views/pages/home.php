@@ -32,7 +32,7 @@
 
 
 
-	<iframe class="ytvideo" width="560" height="315" src="<?= $music->link ?>" frameborder="0" allowfullscreen>
+	<iframe class="ytvideo" width="560" height="315" src="<?= $music->link ?>&autoplay=1" frameborder="0" allowfullscreen>
 		
 	</iframe>
 
