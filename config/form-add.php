@@ -53,7 +53,7 @@ $link = '';
 	$title      = strip_tags(trim($_POST['title']));
 	$link      = strip_tags(trim($_POST['link']));
 
-	$prepare = $pdo->prepare('INSERT INTO musics (title,link) VALUES (:title,:link)');
+	$prepare = $pdo->prepare('INSERT INTO validation_musics (title,link) VALUES (:title,:link)');
 	$prepare->bindValue('title',$title);
 	$prepare->bindValue('link',$link);
 
