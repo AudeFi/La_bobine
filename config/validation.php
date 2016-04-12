@@ -9,10 +9,12 @@ $ligne = $query->fetchAll();
 
 $title = $ligne[0]->title;
 $link = $ligne[0]->link;
+$movies = $ligne[0]->movies;
 
 if(!empty($id)) {
 
-$prepare = $pdo->prepare('INSERT INTO musics (title,link) VALUES (:title,:link)');
+$prepare = $pdo->prepare('INSERT INTO musics (movies,title,link) VALUES (:movies,:title,:link)');
+		$prepare->bindValue('movies',$movies);
 		$prepare->bindValue('title',$title);
 		$prepare->bindValue('link',$link);
 		$execute = $prepare->execute();
