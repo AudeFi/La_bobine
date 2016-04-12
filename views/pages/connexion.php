@@ -20,7 +20,7 @@
 	<form action="#" method="POST">
 		<div class="email <?= array_key_exists('connexion',$errors_connexion) ? 'error' : ''?>">
 			<label for="email_connexion">Votre email</label></br>
-			<input type="email" name="email_connexion" placeholder="Email" id="email_connexion">
+			<input type="email" value="<?= $email_connexion?>" name="email_connexion" placeholder="Email" id="email_connexion">
 		</div>
 		<div class="password <?= array_key_exists('connexion',$errors_connexion) ? 'error' : ''?>">
 			<label for="password_connexion">Votre mot de passe</label></br>
@@ -53,11 +53,11 @@
 	<form action="#" method="POST">
 		<div class="pseudo <?= array_key_exists('pseudo',$errors_inscription) ? 'error' : ''?>">
 			<label for="pseudo">Votre pseudo</label></br>
-			<input id="pseudo" type="text" name="pseudo" placeholder="Entrez votre pseudo">
+			<input id="pseudo" value="<?= $pseudo ?>" type="text" name="pseudo" placeholder="Entrez votre pseudo">
 		</div>
 		<div class="email <?= array_key_exists('email',$errors_inscription) ? 'error' : ''?>">
 			<label for="email">Votre email</label></br>
-			<input id="email" type="email" name="email" placeholder="Entrez votre email">
+			<input id="email" value="<?= $email ?>" type="email" name="email" placeholder="Entrez votre email">
 		</div>
 		<div class="password <?= array_key_exists('password',$errors_inscription) ? 'error' : ''?>">
 			<label for="password">Votre mot de passe</label></br>

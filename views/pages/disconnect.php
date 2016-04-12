@@ -3,14 +3,14 @@
 	if (isset($_SESSION)){
 		session_destroy();
 	}
-	//header('Location:' . URL .'connexion');
+	header('Location:' . URL .'connexion');
 	//header('Location:'.URL.'index.php');
 	//header('Location: ../../index.php');
-	//exit();
+	exit();
 ?>
 
 <script>
-	window.location.href= '../../index.php';
+	/*window.location.href= '../../index.php';*/
 
 </script>
 

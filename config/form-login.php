@@ -52,11 +52,6 @@ $success_inscription = array();
 
 	if(!empty($_POST['subscribe'])) {
 
-	// SET VARIABLES AND HASH PASSWORD
-	$vosID =' Vos ID';
-	$message = 'Voici vos ID';
-	
-
 	// XSS PROTECTION
 	function securisationbis($donneesbis){
 		$donneesbis = trim($donneesbis); /*SPACE*/
@@ -72,7 +67,18 @@ $success_inscription = array();
 	if(!empty($_POST['pseudo'])){
 		$pseudo = securisationbis($_POST['pseudo']);
 		$pseudolength = strlen($pseudo);
-		if ($pseudolength <= 3) 
+
+		// Check if pseudo already used
+		$prepare = $pdo->prepare('SELECT * FROM users WHERE pseudo = :pseudo');
+		$prepare->bindValue('pseudo',$pseudo);
+		$execute = $prepare->execute();
+		$user_pseudo = $prepare->fetch();
+		if($user_pseudo){
+			$errors_inscription['pseudo'] = 'Pseudo déjà utilisé';
+		}
+
+		// Check pseudo length
+		else if ($pseudolength <= 3) 
 		{
 			 $errors_inscription['pseudo'] = 'Veuillez renseigner un pseudo à plus de 3 caractères';
 		}
@@ -91,6 +97,14 @@ $success_inscription = array();
 	if (!empty($_POST['email']))
 	{
 		$email = securisationbis($_POST['email']);
+		// Check if email already used
+		$prepare = $pdo->prepare('SELECT * FROM users WHERE email = :email');
+		$prepare->bindValue('email',$email);
+		$execute = $prepare->execute();
+		$user_email = $prepare->fetch();
+		if($user_email){
+			$errors_inscription['email'] = 'Email déjà utilisé';
+		}
 	}
 	else {
 		$errors_inscription['email'] = 'Veuillez renseigner votre email';
@@ -138,11 +152,15 @@ $success_inscription = array();
 			{
 				$success_inscription[] = 'Utilisateur enregistré';
 
-				$name  = '';
-				$title = '';
-				$price = '';
+				
 				// Envoi
+				// SET VARIABLES AND HASH PASSWORD
+				$vosID = 'Merci de votre inscription à la Bobine';
+				$message = 'Merci de vous être inscrit sur LaBobine. Vous pouvez désormais contribuer au site en ajoutant des musiques. Si vous faites preuve de bonne utilisation, vous pourrez peut être même être séléctionner pour modérer les propositions.<br> Votre pseudo est'.$pseudo.'. Seul vous connaisez votre mot de passe.<br> L équipe La Bobine';
 	    		mail($email, $vosID, $message);
+
+	    		$pseudo  = '';
+				$email = '';
 			}	
 	}
 }
