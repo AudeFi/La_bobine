@@ -6,8 +6,19 @@
 
 	if(!empty($_POST['loginform'])) 
 	{
-		$email = $_POST['email'];
-		$password = hash('sha256',SALT.$_POST['password']);
+		
+
+		// XSS PROTECTION
+	function securisation($donnees){
+		$donnees = trim($donnees); 
+		$donnees = stripcslashes($donnees);
+		$donnees = strip_tags($donnees);
+		return ($donnees);
+	}
+
+	$email = securisation($_POST['email']);
+	$password = securisation(hash('sha256',SALT.$_POST['password']));
+	
 
 		$prepare = $pdo->prepare('SELECT * FROM users WHERE email = :email');
 		$prepare->bindValue('email',$email);
