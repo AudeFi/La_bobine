@@ -61,6 +61,7 @@
 
 	<p>Title : <?= $music->title ?></p>
 	<p>Composer : <?= $music->composer ?></p>
+	<p>Affiche : <img src="http://image.tmdb.org/t/p/w500/<?= $all->results[0]->poster_path ?>" alt="">
 
 
 
