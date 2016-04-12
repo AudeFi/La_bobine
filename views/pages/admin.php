@@ -1,9 +1,18 @@
 <?php
 
 	$query = $pdo->query('SELECT * FROM validation_musics');
-	$validation_musics = $query->fetchAll();
+	$validation_musics = $query->fetchAll(); 
+
 ?>
 
+<?php 
+	if(empty($_SESSION['user']) || $_SESSION['user']['status']=='user'):
+?>
+<section>
+	Accès non autorisé
+</section>
+
+<?php else:?>
 
 <section>
 
@@ -43,3 +52,5 @@
 
 
 </section>
+
+<?php endif; ?>

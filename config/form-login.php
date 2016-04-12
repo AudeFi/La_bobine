@@ -29,7 +29,8 @@
 			if($user->password == $password) {
 				$_SESSION['user'] = array(
 					'id' => $user->id,
-					'email' => $user->email
+					'email' => $user->email,
+					'status' => $user->status
 				);
 			}
 			else {
