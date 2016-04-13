@@ -40,6 +40,3 @@ if(!empty($_POST['add-to-playlist'])){
 	
 	$execute = $prepare->execute();*/
 }
-else {
-	echo "vide";
-}

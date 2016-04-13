@@ -5,6 +5,10 @@ $errors_connexion = array();
 $success_connexion = array();
 $errors_inscription = array(); 
 $success_inscription = array();
+$email_connexion = '';
+$password_connexion = '';
+$email = '';
+$pseudo = '';
 
 // ----------- CONNEXION -------------
 
