@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 	<title><?= $title ?></title>
-	<link href='https://fonts.googleapis.com/css?family=Lato:400,100' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="<?= URL ?>src/css/reset.css">
 	<link rel="stylesheet" href="<?= URL ?>src/css/style.css">
 	<link rel="stylesheet" href="<?= URL ?>src/css/font-awesome/css/font-awesome.css">
@@ -24,7 +24,7 @@
 							<a href="<?= URL ?>playlists"><li>playlists</li></a>
 							<a href="<?= URL ?>add-musics"><li>ajoutez votre musique</li></a>
 							<a href="<?= URL ?>connexion"><li>connexion</li></a>
-							<a href="<?= URL ?>connexion"><li>mention légal</li></a>
+							<a href="<?= URL ?>connexion"><li>mentions légales</li></a>
 						</ul>
 					</div>
 					<div class="menu-section menu-social">
