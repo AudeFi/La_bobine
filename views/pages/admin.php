@@ -18,6 +18,10 @@
 	$query = $pdo->query('SELECT * FROM playlists_has_musics INNER JOIN playlists ON playlists_has_musics.id_playlists = playlists.id INNER JOIN musics ON playlists_has_musics.id_musics = musics.id WHERE playlists.id = 3');
 	$playlist3 = $query->fetchAll();
 
+	echo '<pre>';
+	print_r($playlist1);
+	echo '</pre>';
+	
 ?>
 
 <?php 
@@ -80,15 +84,55 @@
 		<div>
 			<h4>Selectionnez des musiques</h4>
 			<?php foreach($all_musics as $one_music): ?>
-				<label for="name_music"><?= $one_music->title ?> par <?= $one_music->composer ?></label>
+				<label for="name_music"><?= $one_music->music_title ?> par <?= $one_music->composer ?></label>
 				<input class="border" type="checkbox" value="<?= $one_music->id ?>" name="name_music" id="name_music">
 			<?php endforeach; ?>
 		</div>
 	</form>
 </div>
 
+
+
+
 <div class="list-playlists">
-	<h4>Voici le contenu des playlists</h4>
+	<h3>Voici le contenu des playlists</h3>
+	<div class="classiques">	
+		<h4>Les classiques</h4>
+		<ul>
+			<?php foreach($playlist1 as $content_playlist): ?>
+				<li><?= $content_playlist->movie_name ?></li>
+				<form class="delete_from_playlist" action="config/delete-from-playlist.php?id=<?= $content_playlist->id ?>&playlist=1" method="POST">
+ 					<button class="delete" type="submit" value="VALIDE" name="playlist1">
+ 					</button>
+ 				</form>
+			<?php endforeach; ?>
+		</ul>
+	</div>
+	<div class="classiques">	
+		<h4>Bonne humeur</h4>
+		<ul>
+			<?php foreach($playlist2 as $content_playlist): ?>
+				<li><?= $content_playlist->movie_name ?></li>
+				<form class="delete_from_playlist" action="config/delete-from-playlist.php?id=<?= $content_playlist->id ?>&playlist=2" method="POST">
+ 					<button class="delete" type="submit" value="VALIDE" name="playlist2">
+ 					</button>
+ 				</form>
+			<?php endforeach; ?>
+		</ul>
+	</div>
+	<div class="classiques">	
+		<h4>Détente</h4>
+		<ul>
+			<?php foreach($playlist3 as $content_playlist): ?>
+				<li><?= $content_playlist->movie_name ?></li>
+				<form class="delete_from_playlist" action="config/delete-from-playlist.php?id=<?= $content_playlist->id ?>&playlist=3" method="POST">
+ 					<button class="delete" type="submit" value="VALIDE" name="playlist3">
+ 					</button>
+ 				</form>
+			<?php endforeach; ?>
+		</ul>
+	</div>
+	
 </div>
 
 
