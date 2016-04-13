@@ -15,32 +15,45 @@
 	
 <div class="container-add">
 	<div class="container-title-add">
-		<h3>Ajoutez votre musique</h3>
+		<h3>Ajoutez votre musique</h3></br></br>
 	</div>
 	<div class="container-text-add">
 		<p>Votre musique sera écoutée et vérifiée par nos modérateurs.</p>
 		<p>Vous recevrez une notification si l'ajout sur notre site a été effectué.</p>
 	</div>
 
+	<div class="container-add-music">
 		<form action="#" method="post" class="search">
-			FILM : <input type="text" name="movie_title" id="movie_title" value="">
-			<div class="results">
-			</div>	
-			<div>
-				ID :<input type="text" name="movie_id" id="movie_id" value="">
-				FILM SELECTED : <input type="text" name="movie_name" id="movie_name" value="">
-				TITLE : <input type="text" name="music_title" id="music_title" value="">
-				COMPOSER : <input type="text" name="composer" id="composer" value="">
-				LINK : <input type="link" name="music_link" id="music_link" value="">
-				<div>
-	 				<input type="submit" name="add" class="add">
-	 			</div>
- 			</div>
-		</form>	
-
-	<div class="container-img-add">
-		<img src="<?= URL ?>src/images/gendarmes.png" alt="gendarmes">
+			<div class="film-search">
+				<input type="text" name="movie_title" id="movie_title" value="" placeholder="Choisissez le film">
+				<div class="results"></div>
+				<input type="text" name="movie_name" id="movie_name" value="" placeholder="Titre du film" readonly >
+			</div>
+			<div class="content-add-music">
+				<div class="music-title">
+					<input type="text" name="music_title" id="music_title" value="" placeholder="Entrez le titre de la musique">
+				</div>
+				<div class="composer">
+					<input type="text" name="composer" id="composer" value="" placeholder="Entrez un compositeur">
+				</div>
+				<div class="link">
+					<input type="link" name="music_link" id="music_link" value="" placeholder="Entrez votre lien">
+				</div>
+				<div class="add-sumbit">
+					<input type="submit" name="add" id="add" value="Soumettre">
+				</div>
+			</div>
 	</div>
+	
+			
+				
+ 			
+		</form>
+	</div>		
+
+	<!-- <div class="container-img-add">
+		<img src="<?= URL ?>src/images/gendarmes.png" alt="gendarmes">
+	</div> -->
 </div>
 
 </section>
