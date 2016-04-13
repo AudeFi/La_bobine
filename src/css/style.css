@@ -320,10 +320,9 @@ body {
 
 /* -------------------------------- */
 
-/* section {
-	height: 600px;
-	padding: 20px;
-} */
+section {
+	margin-bottom: 40px;
+}
 
 /* section h2 {
 	font-size: 18px;
@@ -544,7 +543,7 @@ p.pagenotfound {
 	width: 33%;
 }
 
-.link{
+.content-add-music .link{
 	float: left;
 	width: 33%;
 }
@@ -572,8 +571,8 @@ p.pagenotfound {
 
 .page-admin h3 {
 	font-size: 20px;
-	padding-top: 8px;
-	padding-bottom: 8px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 .section {
@@ -586,45 +585,115 @@ p.pagenotfound {
 	margin-top: 25px;
 }
 
-.approbation {
+.approbation .line {
+	padding: 15px 0;
+}
 
+.approbation .line div{
+	vertical-align: top;
+}
+
+.approbation .line .infos{
+	width:650px;
+	display: inline-block;
+}
+
+.approbation .line .buttons{
+	width:210px;
+	display: inline-block;
+}
+
+.approbation .line .infos .first-line{
+	display: block;
+}
+
+.approbation .line .infos .first-line div{
+	width:300px;
+	display: inline-block;
+}
+
+.approbation .line .infos .second-line{
+	width:200px;
+	display: block;
+}
+
+.approbation .line form{
+	width:100px;
+	display: inline-block;
+}
+
+.approbation .line form.check{
+	margin-right: 5px;
+}
+
+.approbation .line button{
+	background-color: green;
+	width: 100px;
+	height: 35px;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.approbation .line button.validate{
+	background-color: #7ad181;
+}
+
+.approbation .line button.erase{
+	background-color: #eb8686;
 }
 
 .add-playlists {
 
 }
 
-.add-playlists .flex{
+.admin .flex{
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-between;
 }
 
 
+.admin h4{
+	height: 50px;
+	background-color: #252525;
+	line-height: 50px;
+	padding-left: 10px;
+	vertical-align: center;
+}
 
-.add-playlists .colonne{
+
+.admin .colonne{
 	vertical-align: top;
-	width: 325px;
+	width: 300px;
 	display: inline-block;
 }
 
 
-.add-playlists .colonne-submit{
-	width: 100px;
+.add-playlists .colonne-submit input{
+	background-color: transparent;
+	width: 80px;
 }
 
-.add-playlists .colonne .scroll{
+.admin .scroll{
 	overflow: scroll;
 	height: 200px;
+	background-color: #292929;
+	padding: 10px;
 }
 
-.add-playlists .colonne .input-label {
+.admin .colonne .input-label {
 	display: block;
+	padding: 8px;
 }
 
+.list-playlists form{
+	display: inline;
+}
 
-.list-playlists {
-
+.list-playlists button{
+	margin-right: 20px;
+	cursor: pointer;
+	display: inline;
 }
 
 .playlist-cat {
