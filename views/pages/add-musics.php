@@ -18,8 +18,8 @@
 		<h3>Ajoutez votre musique</h3>
 	</div>
 	<div class="container-text-add">
-		<p>Votre musique sera écoutée et vérififée par nos modérateurs.</p>
-		<p>Vous recevrez une notification si l'ajout sur notre site a était effectué.</p>
+		<p>Votre musique sera écoutée et vérifiée par nos modérateurs.</p>
+		<p>Vous recevrez une notification si l'ajout sur notre site a été effectué.</p>
 	</div>
 
 		<form action="#" method="post" class="search">

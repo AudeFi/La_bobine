@@ -14,7 +14,7 @@
 
 	<div class="left-form">
 		<div class="title-connexion">
-			<h3>CONNEXION</h3>
+			<h3>Connexion</h3>
 		</div>
 <?php 
 	if(!empty($_SESSION['user'])): 
@@ -22,15 +22,19 @@
 	<a href="<?= URL ?>disconnect">Se déconnecter</a>
 	<div>Bonjour <?= $_SESSION['user']['email']; ?></div>
 <?php else:?>
+	
 	<form action="#" method="POST">
+		
 		<div class="email <?= array_key_exists('connexion',$errors_connexion) ? 'error' : ''?>">
 			<label for="email_connexion">Votre email</label></br>
 			<input class="border" type="email" value="<?= $email_connexion?>" name="email_connexion" placeholder="Email" id="email_connexion">
 		</div>
+		
 		<div class="password <?= array_key_exists('connexion',$errors_connexion) ? 'error' : ''?>">
 			<label for="password_connexion">Votre mot de passe</label></br>
 			<input class="border" type="password" name="password_connexion" placeholder="Password" id="password_connexion">
 		</div>
+		
 		<div>
 			<input class="color" type="submit" name="loginform">
 		</div>
@@ -56,7 +60,7 @@
 <!-- INSCRIPTION FORM -->
 	<div class="right-form">
 		<div class="title-inscription">
-			<h3>INSCRIPTION</h3>
+			<h3>Inscription</h3>
 		</div>
 
 		<form action="#" method="POST">

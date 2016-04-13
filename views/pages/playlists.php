@@ -17,7 +17,7 @@
 	
 <div class="container-playlist">
 	<div class="title-container-playlist">
-		<h3>Séléctionnez votre playlist</h3>
+		<h3>Sélectionnez votre playlist</h3>
 	</div>
 	<div class="playlist-content">
 			<div class="playlist-section">
@@ -29,13 +29,13 @@
 			<div class="playlist-section">
 				<a href="<?= URL ?>?id=2">
 					<img src="<?= URL ?>src/images/bonne-humeur.png" alt="bonne-humeur">
-					<h3>bonne humeur</h3>
+					<h3>Bonne humeur</h3>
 				</a>
 			</div>
 			<div class="playlist-section">
 				<a href="<?= URL ?>?id=3">
 					<img src="<?= URL ?>src/images/detente.png" alt="detente">
-					<h3>détente</h3>
+					<h3>Détente</h3>
 				</a>
 			</div>	
 		</div>
