@@ -12,22 +12,20 @@
 
 <section>
 
-	<form action="#" method="post">
-	<input type="text" name="name" id="name" value="">
+	<form action="#" method="post" class="search">
+		<input type="text" name="movie_title" id="movie_title" value="">
+		<div class="results">
+		</div>
+
 		<div>
- 			<input type="submit" name="search" class="click">
+			FILM : <input type="text" name="movies" id="movie_id" value="<?= $name?>">
+			NAME : <input type="text" name="title" id="music_title" value="">
+			LINK : <input type="link" name="link" id="music_link" value="">
+			<div>
+	 			<input type="submit" name="add">
+	 		</div>
  		</div>
 	</form>	
-
-
-	<form action="#" method="post">
-		FILM : <input type="text" name="movies" id="movies" value="<?= $name?>">
-		NAME : <input type="text" name="title" id="title" value="">
-		LINK : <input type="link" name="link" id="link" value="">
-		<div>
- 			<input type="submit" name="add">
- 		</div>
-	</form>
 
 </section>
 
