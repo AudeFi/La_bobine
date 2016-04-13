@@ -28,22 +28,13 @@ body {
 	height: 110px;
 }
 
-<<<<<<< HEAD
-.menu div {
-=======
 .menu-section{
->>>>>>> origin/master
 	display: inline-block;
 	vertical-align: center;
 }
 
-<<<<<<< HEAD
 .menu-logo {
-	float: left;
-=======
-.menu-logo{
 	position: absolute;
->>>>>>> origin/master
 }
 
 .menu-logo img {
@@ -51,15 +42,9 @@ body {
 	width: 150px;
 }
 
-<<<<<<< HEAD
 .menu-content {
-	float: left;
-	margin-left : 40px;
-=======
-.menu-content{
 	margin-left : 175px;
 	margin-top : 50px;
->>>>>>> origin/master
 }
 
 .menu-content ul li {
