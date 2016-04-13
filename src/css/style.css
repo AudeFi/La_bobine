@@ -5,6 +5,38 @@ html, body {
 	padding: 0;
 }
 
+.eq{
+	width: 20px;
+	height: 20px;
+	background-color: red;
+}
+
+.timebar{
+	width: 40vw;
+	height: 10px;
+	background-color: black;
+}
+
+.current_time{
+	background-color: white;
+	height: 10px;
+}
+
+.reload{
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+}
+
+.movie_id{
+	display: none;
+}
+
+iframe{
+	position: abolute;
+	margin-left: 10000px;
+}
+
 body {
 	font-family: "Lato";
 	font-weight: lighter; 

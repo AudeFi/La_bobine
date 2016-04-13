@@ -1,5 +1,4 @@
 <?php
-
 	if (isset($_SESSION)){
 		session_destroy();
 	}
@@ -10,8 +9,7 @@
 ?>
 
 <script>
-	/*window.location.href= '../../index.php';*/
-
+	window.location.href= '../../index.php';
 </script>
 
 	

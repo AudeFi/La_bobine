@@ -19,7 +19,7 @@
 	</div>
 	<div class="container-text-add">
 		<p>Votre musique sera écoutée et vérifiée par nos modérateurs.</p>
-		<p>Vous recevrez une notification si l'ajout sur notre site a été effectué.</p>
+		<p>Vous recevrez une notification dès que votre musique sera validée.</p>
 	</div>
 
 	<div class="container-add-music">
@@ -30,6 +30,7 @@
 				<input type="text" name="movie_name" id="movie_name" value="" placeholder="Titre du film" readonly >
 			</div>
 			<div class="content-add-music">
+			<input type="text" name="movie_id" id="movie_id" value="" class="movie_id">
 				<div class="music-title">
 					<input type="text" name="music_title" id="music_title" value="" placeholder="Entrez le titre de la musique">
 				</div>
