@@ -1,5 +1,6 @@
 <?php
 	require 'config/form-add.php';
+	require 'config/form-movie.php';
 ?>
 <?php 
 	if(empty($_SESSION['user'])):
@@ -20,41 +21,27 @@
 		<p>Votre musique sera écoutée et vérififée par nos modérateurs.</p>
 		<p>Vous recevrez une notification si l'ajout sur notre site a était effectué.</p>
 	</div>
-	<form action="#" method="post">
-	<input type="text" name="name" id="name" value="">
-		<div>
- 			<input class="color" type="submit" name="search" class="click">
- 		</div>
-	</form>	
 
+		<form action="#" method="post" class="search">
+			FILM : <input type="text" name="movie_title" id="movie_title" value="">
+			<div class="results">
+			</div>	
+			<div>
+				ID :<input type="text" name="movie_id" id="movie_id" value="">
+				FILM SELECTED : <input type="text" name="movie_name" id="movie_name" value="">
+				TITLE : <input type="text" name="music_title" id="music_title" value="">
+				COMPOSER : <input type="text" name="composer" id="composer" value="">
+				LINK : <input type="link" name="music_link" id="music_link" value="">
+				<div>
+	 				<input type="submit" name="add" class="add">
+	 			</div>
+ 			</div>
+		</form>	
 
-	<form action="#" method="post">
-		<div class="">
-			<label for="movies">Le nom du film</label></br>
-			<input class="border" type="text" name="movies" id="movies" value="<?= $name?>">		
-		</div>
-		<div class="">
-			<label for="title">Le nom de la musique</label></br>
-			<input class="border" type="text" name="title" id="title" value="">		
-		</div>
-		<div class="">
-			<label for="link">Le lien YOUTUBE</label></br>
-			<input class="border" type="link" name="link" id="link" value="">		
-		</div>
-		<!-- <div class="">
-			<label for="composer">Le compositeur</label></br>
-			<input type="text" name="composer" id="composer" value="<?= $composer?>">		
-		</div> -->
-		<div>
- 			<input class="color" type="submit" name="add">
- 		</div>
-	</form>
 	<div class="container-img-add">
 		<img src="<?= URL ?>src/images/gendarmes.png" alt="gendarmes">
 	</div>
 </div>
-
-	
 
 </section>
 

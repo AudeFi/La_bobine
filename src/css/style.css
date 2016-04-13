@@ -12,6 +12,7 @@ body {
 	background-color: #2E2E2E;
 	color: white;
 	position: relative;
+	/* overflow: hidden; */
 }
 
 /* -------------MENU--------------- */
@@ -188,6 +189,10 @@ body {
 	color: #8A95B2;
 }
 
+.add{
+	width: 100px;
+}
+
 
 
 /* -------------------------------- */
@@ -220,6 +225,7 @@ table td{
 }
 
 form input[type="submit"] {
+	height: 30px;
 	background-color: grey;
 	cursor: pointer;
 }
@@ -289,3 +295,10 @@ form .error input {
 
 
 
+/* ------- PLAYLIST -------- */
+
+.playlist-content {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}

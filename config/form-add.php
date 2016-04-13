@@ -1,61 +1,25 @@
 <?php
 
-$name='';
-
-if(!empty($_POST['name']))
-	{
-		$name = strip_tags(trim($_POST['name']));
-		$name=urlencode($name);
-
-		$ch = curl_init();
-		
-		curl_setopt($ch, CURLOPT_URL, "http://api.themoviedb.org/3/search/movie?api_key=2fb5cd2aa5d0d9868fcd75aba6d96451&query='.$name.'");
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-		curl_setopt($ch, CURLOPT_HEADER, FALSE);
-		
-		curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-		  "Accept: application/json"
-		));
-		
-		$response = curl_exec($ch);
-		curl_close($ch);
-		
-		$result = json_decode($response);
-
-		$count = count($result->results);
-
-		$response = '';
-		$response = array();
-
-		for($i = 0; $i <= $count - 1; $i++){
-			if($i > 6)
- 				{
- 					break 1;
- 				}
-		$response[] = $result->results[$i]->title;
-		}
-
-		echo json_encode($response);
-	}
-
-
 if(!empty($_POST['add'])){
 
-$title= '';
-$link = '';
-$movies = '';
+	$music_title  	  = '';
+	$music_link   = '';
+	$movie_id = '';
+	$movie_name = '';
+	$composer = '';
 
+	$music_title      	= strip_tags(trim($_POST['music_title']));
+	$movie_composer       = strip_tags(trim($_POST['composer']));
+	$music_link       	= strip_tags(trim($_POST['music_link']));
+	$movie_id       	= strip_tags($_POST['movie_id']);
+	$movie_name       = strip_tags(trim($_POST['movie_name']));
 
-	$title      = strip_tags(trim($_POST['title']));
-	$link       = strip_tags(trim($_POST['link']));
-	$movies      = strip_tags(trim($_POST['movies']));
-
-	$prepare = $pdo->prepare('INSERT INTO validation_musics (movies,title,link) VALUES (:movies,:title,:link)');
-	$prepare->bindValue('movies',$movies);
-	$prepare->bindValue('title',$title);
-	$prepare->bindValue('link',$link);
-
-
-
+	$prepare = $pdo->prepare('INSERT INTO validation_musics (movie_name,movie_id,music_title,,composer,music_link) VALUES (:movie_name,:movie_id,:music_title,:composer,:music_link)');
+	$prepare->bindValue('movie_name',$movie_name);
+	$prepare->bindValue('movie_id',$movie_id);
+	$prepare->bindValue('music_title',$music_title);
+	$prepare->bindValue('composer',$composer);
+	$prepare->bindValue('music_link',$music_link);
+	
 	$execute = $prepare->execute();
 }
