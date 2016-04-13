@@ -23,7 +23,7 @@
 	<div>Bonjour <?= $_SESSION['user']['email']; ?></div>
 <?php else:?>
 	
-	<form action="#" method="POST">
+	<form action="#" method="POST" autocomplete="off">
 		
 		<div class="email <?= array_key_exists('connexion',$errors_connexion) ? 'error' : ''?>">
 			<label for="email_connexion">Votre email</label></br>

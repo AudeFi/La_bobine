@@ -91,6 +91,63 @@
 			 	<?php endforeach; ?>
 			</table>
 
+<<<<<<< Updated upstream
+=======
+<table>
+ 		<tr>
+ 			<th>ID</th>
+ 			<th>Movie</th>
+ 			<th>Movie ID</th>
+ 			<th>Music Title</th>
+ 			<th>Composer</th>
+ 			<th>Music Link</th>
+ 			<th>Validation</th>
+ 			<th>Erase</th>
+ 		</tr>
+ 		<?php foreach($validation_musics as $_validation): ?>
+ 			<td><?= $_validation->id ?></td>
+ 			<td><?= $_validation->movie_name ?></td>
+ 			<td><?= $_validation->movie_id ?></td>
+ 			<td><?= $_validation->music_title ?></td>
+ 			<td><?= $_validation->composer ?></td>
+ 			<td><?= $_validation->music_link ?></td>
+ 			<td>
+ 				<form class="check" action="config/validation.php?id=<?= $_validation->id; ?>" method="POST">
+ 					<button class="validate" type="submit" value="VALIDE" name="validate">
+ 					</button>
+ 				</form>
+ 			</td>
+ 			<td>
+ 				<form class="trash" action="config/delete.php?id=<?= $_validation->id; ?>" method="POST">
+ 					<button class="erase" type="submit" value="REMOVE" name="erase">
+ 					</button>
+ 				</form>
+ 			</td>
+ 		</tr>
+ 		<?php endforeach; ?>
+ 	</table>
+
+
+<div class="add-playlists">
+	<h3>Ajoutez des musiques aux playlists</h3>
+	<form action="#" method="POST">
+		<div>
+			<h4>Sélectionnez une playlist</h4>
+			<?php foreach($all_playlists as $one_playlist): ?>
+				<label for="name_playlist<?=$one_playlist->id?>"><?= $one_playlist->name ?></label>
+				<input class="border" type="radio" value="<?= $one_playlist->id ?>" name="name_playlist" id="name_playlist<?=$one_playlist->id?>">
+			<?php endforeach; ?>
+		</div>
+		<div>
+			<h4>Sélectionnez des musiques</h4>
+			<?php foreach($all_musics as $one_music): ?>
+				<label for="name_music<?= $one_music->id ?>"><?= $one_music->music_title ?> par <?= $one_music->composer ?></label>
+				<input class="border" type="checkbox" value="<?= $one_music->id ?>" name="name_music[]" id="name_music<?= $one_music->id ?>">
+			<?php endforeach; ?>
+		</div>
+		<div>
+			<input type="submit" name="add-to-playlist">
+>>>>>>> Stashed changes
 		</div>
 
 

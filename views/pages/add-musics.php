@@ -19,7 +19,7 @@
 	</div>
 	<div class="container-text-add">
 		<p>Votre musique sera écoutée et vérifiée par nos modérateurs.</p>
-		<p>Vous recevrez une notification si l'ajout sur notre site a été effectué.</p>
+		<p>Vous recevrez une notification dès que votre musique sera validée.</p>
 	</div>
 
 	<div class="container-add-music">
