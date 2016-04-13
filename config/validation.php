@@ -7,16 +7,21 @@ $id = $_GET['id'];
 $query = $pdo->query("SELECT * FROM validation_musics WHERE id='".$id."'");
 $ligne = $query->fetchAll();
 
-$title = $ligne[0]->title;
-$link = $ligne[0]->link;
-$movies = $ligne[0]->movies;
+$movie_name = $ligne[0]->movie_name;
+$movie_id = $ligne[0]->movie_id;
+$music_title = $ligne[0]->music_title;
+$composer = $ligne[0]->composer;
+$music_link = $ligne[0]->music_link;
+
 
 if(!empty($id)) {
 
-$prepare = $pdo->prepare('INSERT INTO musics (movies,title,link) VALUES (:movies,:title,:link)');
-		$prepare->bindValue('movies',$movies);
-		$prepare->bindValue('title',$title);
-		$prepare->bindValue('link',$link);
+$prepare = $pdo->prepare('INSERT INTO musics (movie_name,movie_id,music_title,composer,music_link) VALUES (:movie_name,:movie_id,:music_title,:composer,:music_link)');
+		$prepare->bindValue('movie_name',$movie_name);
+		$prepare->bindValue('movie_id',$movie_id);
+		$prepare->bindValue('music_title',$music_title);
+		$prepare->bindValue('composer',$composer);
+		$prepare->bindValue('music_link',$music_link);
 		$execute = $prepare->execute();
 
 $prepare = $pdo->prepare("DELETE FROM validation_musics WHERE id='".$id."'");
