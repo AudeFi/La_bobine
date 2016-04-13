@@ -188,8 +188,8 @@ body {
 	color: #8A95B2;
 }
 
-#movie_id{
-	display: none;
+.add{
+	width: 100px;
 }
 
 
@@ -224,6 +224,7 @@ table td{
 }
 
 form input[type="submit"] {
+	height: 30px;
 	background-color: grey;
 	cursor: pointer;
 }
