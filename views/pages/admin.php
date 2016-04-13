@@ -1,4 +1,6 @@
 <?php
+	
+	require 'config/add-to-playlist.php';
 
 	$query = $pdo->query('SELECT * FROM validation_musics');
 	$validation_musics = $query->fetchAll(); 
@@ -18,9 +20,9 @@
 	$query = $pdo->query('SELECT * FROM playlists_has_musics INNER JOIN playlists ON playlists_has_musics.id_playlists = playlists.id INNER JOIN musics ON playlists_has_musics.id_musics = musics.id WHERE playlists.id = 3');
 	$playlist3 = $query->fetchAll();
 
-	echo '<pre>';
+	/*echo '<pre>';
 	print_r($playlist1);
-	echo '</pre>';
+	echo '</pre>';*/
 	
 ?>
 
@@ -73,20 +75,23 @@
 
 <div class="add-playlists">
 	<h3>Ajoutez des musiques aux playlists</h3>
-	<form action="config/add-to-playlist.php" method="POST">
+	<form action="#" method="POST">
 		<div>
 			<h4>Selectionnez une playlist</h4>
 			<?php foreach($all_playlists as $one_playlist): ?>
-				<label for="name_playlist"><?= $one_playlist->name ?></label>
-				<input class="border" type="radio" value="<?= $one_playlist->id ?>" name="name_playlist" id="name_playlist">
+				<label for="name_playlist<?=$one_playlist->id?>"><?= $one_playlist->name ?></label>
+				<input class="border" type="radio" value="<?= $one_playlist->id ?>" name="name_playlist" id="name_playlist<?=$one_playlist->id?>">
 			<?php endforeach; ?>
 		</div>
 		<div>
 			<h4>Selectionnez des musiques</h4>
 			<?php foreach($all_musics as $one_music): ?>
-				<label for="name_music"><?= $one_music->music_title ?> par <?= $one_music->composer ?></label>
-				<input class="border" type="checkbox" value="<?= $one_music->id ?>" name="name_music" id="name_music">
+				<label for="name_music<?= $one_music->id ?>"><?= $one_music->music_title ?> par <?= $one_music->composer ?></label>
+				<input class="border" type="checkbox" value="<?= $one_music->id ?>" name="name_music[]" id="name_music<?= $one_music->id ?>">
 			<?php endforeach; ?>
+		</div>
+		<div>
+			<input type="submit" name="add-to-playlist">
 		</div>
 	</form>
 </div>
