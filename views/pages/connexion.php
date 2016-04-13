@@ -36,7 +36,7 @@
 		</div>
 		
 		<div>
-			<input class="color" type="submit" name="loginform">
+			<input type="submit" class="submit" name="submit">
 		</div>
 		
 		<div class="container-php">
@@ -81,7 +81,7 @@
 				<input class="border" id="password2" type="password" name="password2" placeholder="Confirmez votre mdp">
 			</div>
 			<div>
-				<input class="color" type="submit" name="subscribe">
+				<input type="submit" class="submit" name="subscribe">
 			</div>
 
 			<div class="container-php">
