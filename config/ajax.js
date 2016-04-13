@@ -8,7 +8,7 @@ $input_movie_title.keyup(function() {
 	var value = $.trim( $input_movie_title.val() );
 
     $.ajax({
-        url     : "config/form-add.php",
+        url     : "config/form-movie.php",
         type    : "POST",
         data    : { 'name':value },
         success : function(data, status, xhr) {

@@ -1,5 +1,6 @@
 <?php
 	require 'config/form-add.php';
+	require 'config/form-movie.php';
 ?>
 <?php 
 	if(empty($_SESSION['user'])):
@@ -22,11 +23,11 @@
 	</div>
 
 		<form action="#" method="post" class="search">
-			<input type="text" name="movie_title" id="movie_title" value="">
+			FILM : <input type="text" name="movie_title" id="movie_title" value="">
 			<div class="results">
 			</div>	
 			<div>
-				FILM : <input type="text" name="movies" id="movie_id" value="<?= $name?>">
+				ID   : <input type="text" name="movies" id="movie_id" value="">
 				NAME : <input type="text" name="title" id="music_title" value="">
 				LINK : <input type="link" name="link" id="music_link" value="">
 				<div>
