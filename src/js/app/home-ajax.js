@@ -51,9 +51,16 @@
               success : function(data, status, xhr) {
                 console.log(data.music);
                 console.log(data.movie);
+                console.log(data.credits);
                 player.loadVideoById(data.music.music_link);
-                $('.title').text(data.music.music_title);
-            $('.composer').text(data.music.composer);
+                $('.music_title').text(data.music.music_title);
+                $('.movie_title').text(data.movie.title);
+                $('.release_date').text(data.movie.release_date);
+            $('.music_composer').text(data.music.composer);
+            $('.genre').text(data.movie.genre);
+            $('.overview').text(data.movie.overview);
+            $('.director').text(data.credits.crew[0].name);
+            $('.actors').text(data.credits.cast[0].name + "  /  " + data.credits.cast[1].name + "  /  " + data.credits.cast[2].name );
             $('.poster').attr('src', 'http://image.tmdb.org/t/p/w500/' + data.movie.poster_path);
              }
         });
@@ -71,9 +78,16 @@
               success : function(data, status, xhr) {
                 console.log(data.music);
                 console.log(data.movie);
+                console.log(data.credits);
                 player.loadVideoById(data.music.music_link);
-                $('.title').text(data.music.music_title);
-            $('.composer').text(data.music.composer);
+                $('.music_title').text(data.music.music_title);
+                $('.movie_title').text(data.movie.title);
+                $('.genre').text(data.movie.genre);
+                $('.release_date').text(data.movie.release_date);
+                $('.director').text(data.credits.crew[0].name);
+                $('.actors').text(data.credits.cast[0].name + "  /  " + data.credits.cast[1].name + "  /  " + data.credits.cast[2].name );
+            $('.music_composer').text(data.music.composer);
+            $('.overview').text(data.movie.overview);
             $('.poster').attr('src', 'http://image.tmdb.org/t/p/w500/' + data.movie.poster_path);
               }
     });

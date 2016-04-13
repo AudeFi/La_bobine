@@ -35,9 +35,28 @@
 		$all = json_decode($response);
 	}
 
+	if(!empty($music->movie_id))
+	{
+		$ch = curl_init();
+		
+		curl_setopt($ch, CURLOPT_URL, "http://api.themoviedb.org/3/movie/$music->movie_id/credits?api_key=2fb5cd2aa5d0d9868fcd75aba6d96451");
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+		curl_setopt($ch, CURLOPT_HEADER, FALSE);
+		
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+		  "Accept: application/json"
+		));
+		
+		$response_2 = curl_exec($ch);
+		curl_close($ch);
+		
+		$credits = json_decode($response_2);
+	}
+
 	if (isset($_POST['ajax'])) echo json_encode(array(
 		'music' => $music,
-		'movie' => $all
+		'movie' => $all,
+		'credits' => $credits
 	));
 
 	// echo '<pre>';
