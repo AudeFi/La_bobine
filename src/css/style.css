@@ -7,7 +7,7 @@ html, body {
 
 body {
 	font-family: "Lato";
-	font-weight:lighter; 
+	font-weight: lighter; 
 	background-color: #2E2E2E;
 	color: white;
 	position: relative;
@@ -53,6 +53,8 @@ body {
 	list-style: none;
 	text-transform: uppercase;
 	letter-spacing: 3px;
+	font-weight: 300;
+	font-size: 13px;
 }
 
 .menu-content a {
@@ -405,7 +407,7 @@ form .error input {
 	transform: scale(1.05);
 }
 
-<<<<<<< HEAD
+
 /* -------404-------- */
 
 .container {
@@ -434,11 +436,6 @@ p.pagenotfound {
 	text-transform: uppercase;
 }
 
-
-
-
-
-=======
 .container-add-music{
 	text-align: center;
 	width: 100%;
@@ -510,4 +507,4 @@ p.pagenotfound {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
->>>>>>> origin/master
+

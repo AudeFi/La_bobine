@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 	<title><?= $title ?></title>
-	<link href='https://fonts.googleapis.com/css?family=Lato:400,100' rel='stylesheet' type='text/css'>
+	<!-- <link href='https://fonts.googleapis.com/css?family=Lato:400,100' rel='stylesheet' type='text/css'> -->
 	<link rel="stylesheet" href="<?= URL ?>src/css/reset.css">
 	<link rel="stylesheet" href="<?= URL ?>src/css/style.css">
 	<link rel="stylesheet" href="<?= URL ?>src/css/font-awesome/css/font-awesome.css">
