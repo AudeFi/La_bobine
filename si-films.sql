@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost:8889
--- Généré le :  Mar 12 Avril 2016 à 11:58
+-- Généré le :  Mer 13 Avril 2016 à 10:26
 -- Version du serveur :  5.5.42
--- Version de PHP :  7.0.0
+-- Version de PHP :  5.6.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -28,22 +28,25 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `musics` (
   `id` int(11) NOT NULL,
-  `movie` varchar(100) NOT NULL,
+  `movies` varchar(100) NOT NULL,
   `id_movie` int(11) NOT NULL,
   `title` varchar(200) NOT NULL,
   `composer` varchar(100) NOT NULL,
   `link` varchar(200) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `musics`
 --
 
-INSERT INTO `musics` (`id`, `movie`, `id_movie`, `title`, `composer`, `link`) VALUES
-(1, 'Inception', 0, 'Titre super', 'Hans Zimmer', 'http://www.youtube.com/supermusic'),
-(2, 'Titanic', 0, 'My Heart Will Go On', 'Celine Dion', 'http://www.youtube.com/sdfsdgfs'),
-(3, 'KillBill', 0, 'KillBill', 'Bang Bang', 'http://www.youtube.com/sdfvcxvsdgfs'),
-(4, 'La guerre des étoiles', 0, 'Theme Song', 'John Williams', 'http://www.youtube.com/sd56sdgfsdgfs');
+INSERT INTO `musics` (`id`, `movies`, `id_movie`, `title`, `composer`, `link`) VALUES
+(23, 'The+Dark+Knight', 0, 'The Dark Knight - End Credit', '', 'https://www.youtube.com/watch?v=fTr89ENLZPc'),
+(24, 'Interstellar', 0, 'Interstellar', '', 'https://www.youtube.com/watch?v=IDsCtDRV2uA&nohtml5=False'),
+(25, 'Demolition', 0, 'Heartaches And Pain', '', 'https://www.youtube.com/watch?v=_pO2MyEY5WQ'),
+(26, 'Deadpool', 0, 'Shoop', '', 'https://www.youtube.com/watch?v=4vaN01VLYSQ'),
+(27, 'Home+Alone', 0, 'Home Alone', '', 'https://www.youtube.com/watch?v=GbUeK1PP7-s'),
+(28, 'The+Nightmare+Before+Christmas', 0, 'Jack Skellington', '', 'https://www.youtube.com/watch?v=yd8t1f1U2xs'),
+(29, 'Avatar', 0, 'Avavatar', '', 'https://www.youtube.com/watch?v=jaZPF2Co-38');
 
 -- --------------------------------------------------------
 
@@ -100,14 +103,15 @@ CREATE TABLE `users` (
   `email` varchar(100) NOT NULL,
   `password` varchar(150) NOT NULL,
   `status` varchar(50) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `users`
 --
 
 INSERT INTO `users` (`id`, `pseudo`, `email`, `password`, `status`) VALUES
-(1, '', 'super@super.com', '3b4ebe551d8f2a09aeb005fb3d14066e065134727d1f62112dd316ef60069bcd', '');
+(1, '', 'super@super.com', '3b4ebe551d8f2a09aeb005fb3d14066e065134727d1f62112dd316ef60069bcd', 'admin'),
+(3, 'maxaloc', 'maxaloc@gmail.com', '6c876c36c2d6685a727ac67cd555d8ce62b1e22f745f563a966fc85d84e60728', 'user');
 
 -- --------------------------------------------------------
 
@@ -122,7 +126,7 @@ CREATE TABLE `validation_musics` (
   `title` varchar(50) NOT NULL,
   `composer` varchar(50) NOT NULL,
   `link` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `validation_musics`
@@ -132,7 +136,16 @@ INSERT INTO `validation_musics` (`id`, `movies`, `id_movie`, `title`, `composer`
 (15, '', 0, 'LOL', '', 'LOL'),
 (16, '', 0, 'LOL', '', 'LOL'),
 (17, '', 0, 'LOL', '', 'LOL'),
-(18, '', 0, 'LOL', '', 'LOL');
+(18, '', 0, 'LOL', '', 'LOL'),
+(19, '', 0, 'Link', '', 'link'),
+(20, '', 0, 'max', '', 'max'),
+(21, '', 0, 'max', '', 'max'),
+(22, '', 0, 'noma', '', ''),
+(23, '', 0, 'noma', '', ''),
+(24, '', 0, 'noma', '', ''),
+(25, '', 0, 'daddy', '', 'lol.com'),
+(26, '', 0, 'oui', '', 'oui'),
+(28, 'Interstellar', 0, 'LOL', '', 'hterr');
 
 --
 -- Index pour les tables exportées
@@ -176,7 +189,7 @@ ALTER TABLE `validation_musics`
 -- AUTO_INCREMENT pour la table `musics`
 --
 ALTER TABLE `musics`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=30;
 --
 -- AUTO_INCREMENT pour la table `playlists`
 --
@@ -191,12 +204,12 @@ ALTER TABLE `playlists_has_musics`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT pour la table `validation_musics`
 --
 ALTER TABLE `validation_musics`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=30;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

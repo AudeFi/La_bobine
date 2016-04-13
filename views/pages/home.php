@@ -14,9 +14,9 @@
 
 	$music = $playlist[$id];
 
-	echo '<pre>';
-	print_r($music);
-	echo '</pre>';
+	// echo '<pre>';
+	// print_r($music);
+	// echo '</pre>';
 
 	if(!empty($music->movies))
 	{
@@ -36,9 +36,9 @@
 		$all = json_decode($response);
 	}
 
-	echo '<pre>';
-	print_r($all->results[0]);
-	echo '</pre>';
+	// echo '<pre>';
+	// print_r($all->results[0]);
+	// echo '</pre>';
 
 ?>
 
