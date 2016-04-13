@@ -38,11 +38,19 @@
 
 <section>
 	
+	<script>
+	function toggleVideo(state) {
+    // if state == 'hide', hide. Else: show video
+    var div = document.getElementById("popupVid");
+    var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+    div.style.display = state == 'hide' ? 'none' : '';
+    func = state == 'hide' ? 'pauseVideo' : 'playVideo';
+    iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+	}
+	</script>
 
 
-
-	<iframe class="ytvideo" width="560" height="315" src="<?= $music->music_link ?>&autoplay=1" frameborder="0" allowfullscreen>
-		
+	<iframe class="ytvideo" width="640" height="390" src="<?= $music->music_link ?>?enablejsapi=1" frameborder="0" allowfullscreen>
 	</iframe>
 
 	<script>
@@ -56,7 +64,6 @@
 	<p>Title : <?= $music->music_title ?></p>
 	<p>Composer : <?= $music->composer ?></p>
 	<p>Affiche : <img src="http://image.tmdb.org/t/p/w500/<?= $all->poster_path ?>" alt="">
-
 
 
 
