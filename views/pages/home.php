@@ -30,6 +30,8 @@
 		$all = json_decode($response);
 	}
 
+	echo $music->music_link;
+
 	// echo '<pre>';
 	// print_r($all);
 	// echo '</pre>';
@@ -38,28 +40,52 @@
 
 <section>
 	
-	<script>
-	function toggleVideo(state) {
-    // if state == 'hide', hide. Else: show video
-    var div = document.getElementById("popupVid");
-    var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
-    div.style.display = state == 'hide' ? 'none' : '';
-    func = state == 'hide' ? 'pauseVideo' : 'playVideo';
-    iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
-	}
-	</script>
+	<div id="player"></div>
 
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
 
-	<iframe class="ytvideo" width="640" height="390" src="<?= $music->music_link ?>?enablejsapi=1" frameborder="0" allowfullscreen>
-	</iframe>
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-	<script>
-		var video = document.querySelector('.ytvideo');
-		var url = video.src;
-		url = url.replace("watch?v=", "v/");
-		video.src = url;
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      var music_id = <?=$music->music_link?>;
+      console.log(music_id);
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: music_id,
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
 
-	</script>
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+    </script>
 
 	<p>Title : <?= $music->music_title ?></p>
 	<p>Composer : <?= $music->composer ?></p>

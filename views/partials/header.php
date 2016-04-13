@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 	<title><?= $title ?></title>
 	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="<?= URL ?>src/css/reset.css">
+<!-- 	<link rel="stylesheet" href="<?= URL ?>src/css/reset.css"> -->
 	<link rel="stylesheet" href="<?= URL ?>src/css/style.css">
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 </head>
