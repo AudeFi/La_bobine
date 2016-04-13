@@ -1,6 +1,7 @@
 <?php
 
 require 'database.php';
+require 'options.php';
 
 $id = $_GET['id'];
 
@@ -9,5 +10,5 @@ if(!empty($id)) {
 	$execute = $prepare->execute();
 }
 
-// header('Location: admin');
-// exit;
+header('Location: ' . URL . 'admin');
+exit;
