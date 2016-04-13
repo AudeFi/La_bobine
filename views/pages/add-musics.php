@@ -27,9 +27,10 @@
 			<div class="results">
 			</div>	
 			<div>
-				ID   : <input type="text" name="movies" id="movie_id" value="">
-				NAME : <input type="text" name="title" id="music_title" value="">
-				LINK : <input type="link" name="link" id="music_link" value="">
+				<input type="text" name="movie_id" id="movie_id" value="">
+				FILM SELECTED : <input type="text" name="movie_select" id="movie_select" value="">
+				NAME : <input type="text" name="music_title" id="music_title" value="">
+				LINK : <input type="link" name="music_link" id="music_link" value="">
 				<div>
 	 				<input type="submit" name="add">
 	 			</div>
