@@ -22,6 +22,7 @@ $input_movie_title.keyup(function() {
             {
                 var _data = data[i],
                     $a    = $( '<a>' );
+                $a.addClass('list');
 
                 $a.data( 'id', _data.id );
                 $a.attr( 'href', '#' );
