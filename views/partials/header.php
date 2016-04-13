@@ -14,10 +14,10 @@
 	<div class="container-global">
 			<nav>
 				<div class="menu">
-					<div class="menu-logo">
+					<div class="menu-section menu-logo">
 						<img src="<?= URL ?>src/images/logo.svg" alt="logo">
 					</div>
-					<div class="menu-content">
+					<div class="menu-section menu-content">
 						<ul>
 							<li><a href="<?= URL ?>">parcourir</a></li>
 							<li><a href="<?= URL ?>playlists">playlists</a></li>
@@ -25,7 +25,7 @@
 							<a href="<?= URL ?>connexion"><li>connexion</li></a>
 						</ul>
 					</div>
-					<div class="menu-social">
+					<div class="menu-section menu-social">
 						<ul>
 							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
