@@ -390,6 +390,10 @@ form .error input {
 	justify-content: space-between;
 }
 
+.playlist-content a{
+	text-decoration: none;
+}
+
 .playlist-section img {
 	height: 380px;
 	transition: all 0.8s ease;
@@ -405,7 +409,7 @@ form .error input {
 	transform: scale(1.05);
 }
 
-<<<<<<< HEAD
+
 /* -------404-------- */
 
 .container {
@@ -438,7 +442,7 @@ p.pagenotfound {
 
 
 
-=======
+
 .container-add-music{
 	text-align: center;
 	width: 100%;
@@ -510,4 +514,4 @@ p.pagenotfound {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
->>>>>>> origin/master
+
