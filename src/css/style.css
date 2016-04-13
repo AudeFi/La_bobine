@@ -12,7 +12,7 @@ body {
 	background-color: #2E2E2E;
 	color: white;
 	position: relative;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 /* -------------MENU--------------- */
@@ -258,5 +258,14 @@ form .error input {
 /* LEGAL */
 
 *{
-	color: red;
+	/*color: red;*/
+}
+
+
+/* ------- PLAYLIST -------- */
+
+.playlist-content {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
 }
