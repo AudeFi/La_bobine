@@ -15,9 +15,34 @@
 
 <section>
 	
-Insérer liste des playlists
+<div class="container-playlist">
+	<div class="title-container-playlist">
+		<h3>Séléctionnez votre playlist</h3>
+	</div>
+	<div class="playlist-content">
+			<div class="playlist-section">
+				<a href="<?= URL ?>?id=1">
+					<img src="<?= URL ?>src/images/les-classiques.png" alt="les-classiques">
+					<h3>Les classiques</h3>
+				</a>
+			</div>
+			<div class="playlist-section">
+				<a href="<?= URL ?>?id=2">
+					<img src="<?= URL ?>src/images/bonne-humeur.png" alt="bonne-humeur">
+					<h3>bonne humeur</h3>
+				</a>
+			</div>
+			<div class="playlist-section">
+				<a href="<?= URL ?>?id=3">
+					<img src="<?= URL ?>src/images/detente.png" alt="detente">
+					<h3>détente</h3>
+				</a>
+			</div>	
+		</div>
+	</div>
+</div>
 
-
+<!-- 
 <h2>BDD</h2>
 
 		<table>
@@ -85,7 +110,7 @@ Insérer liste des playlists
 				</tr>
 				<?php endforeach; ?>
 			</table>
-
+ -->
 
 
 
