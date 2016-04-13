@@ -9,4 +9,4 @@
 </head>
 <body class="page-<?= $class ?>">
 
-	<div class="container">
+	<div class="container-global">

@@ -1,3 +1,5 @@
+AddType text/css .css
+
 Options +FollowSymLinks
 RewriteEngine On
  
@@ -5,3 +7,5 @@ RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
  
 RewriteRule ^(.*)$ ./index.php?q=$1
+
+
