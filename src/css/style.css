@@ -259,9 +259,8 @@ form .error input {
 /* --------------LEGAL------------------ */
 
 .legal {
-	width : 100%;
-	padding-left : 150px;
-	padding-right: 150px;
+	padding-left : 10%;
+	padding-right: 10%;
 	margin-bottom : 30px;
 }
 
@@ -281,6 +280,7 @@ form .error input {
 }
 
 .legal p {
+	text-decoration: none;
 	font-size : 12px;
 	margin-top : 10px;
 	margin-bottom : 10px;
@@ -291,9 +291,6 @@ form .error input {
 	height: 47px;
 	margin-top : 10px;
 }
-
-
-
 
 /* ------- PLAYLIST -------- */
 
