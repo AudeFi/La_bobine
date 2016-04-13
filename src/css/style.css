@@ -405,7 +405,7 @@ form .error input {
 	transform: scale(1.05);
 }
 
-<<<<<<< HEAD
+
 /* -------404-------- */
 
 .container {
@@ -435,10 +435,6 @@ p.pagenotfound {
 }
 
 
-
-
-
-=======
 .container-add-music{
 	text-align: center;
 	width: 100%;
@@ -510,4 +506,3 @@ p.pagenotfound {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
->>>>>>> origin/master
