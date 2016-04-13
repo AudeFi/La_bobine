@@ -20,6 +20,22 @@ body {
 	position: relative;
 }
 
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+::-webkit-scrollbar-track {
+    /* background: rgba(255,255,255,0.8);  */
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(100,100,100,0.5);  
+}
+::-webkit-scrollbar-corner {	
+	background: transparent;
+}
+
 /* -------------MENU--------------- */
 
 .container-global nav {
@@ -511,4 +527,75 @@ p.pagenotfound {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 
+}
+
+
+/* ----------- ADMIN ----------- */ 
+
+.page-admin h2 {
+	font-size: 25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.page-admin h3 {
+	font-size: 20px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.section {
+	width: 90%;
+	margin: auto;
+	margin-top: 75px;
+}
+
+.admin-part {
+	margin-top: 25px;
+}
+
+.approbation {
+
+}
+
+.add-playlists {
+
+}
+
+.add-playlists .flex{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+
+
+.add-playlists .colonne{
+	vertical-align: top;
+	width: 325px;
+	display: inline-block;
+}
+
+
+.add-playlists .colonne-submit{
+	width: 100px;
+}
+
+.add-playlists .colonne .scroll{
+	overflow: scroll;
+	height: 200px;
+}
+
+.add-playlists .colonne .input-label {
+	display: block;
+}
+
+
+.list-playlists {
+
+}
+
+.playlist-cat {
+	display: inline-block;
+	vertical-align: top;
 }

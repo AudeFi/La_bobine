@@ -39,7 +39,7 @@
 
 <!-- DIV PROFIL -->
 
-	<div class="profil">
+	<div class="section profil">
 		<h2>Votre profil</h2>
 		<div class="date">Date d'inscription</div>
 		<div class="envoye">Nombre de musiques envoyés</div>
@@ -52,11 +52,11 @@
 	<!-- SI JE SUIS ADMIN -->
 	<?php if($_SESSION['user']['status']=='admin'):?>
 
-	<div class="admin">
+	<div class="section admin">
 		<h2>Admin - Gestion</h2>
 
 
-		<div class="approbation">
+		<div class="admin-part approbation">
 			<h3>Approuvez les demandes de musiques</h3>
 			<table>
 			 	<tr>
@@ -95,25 +95,35 @@
 
 
 
-		<div class="add-playlists">
+		<div class="admin-part add-playlists">
 			<h3>Ajoutez des musiques aux playlists</h3>
 			<form action="#" method="POST">
-				<div>
-					<h4>Selectionnez une playlist</h4>
-					<?php foreach($all_playlists as $one_playlist): ?>
-						<label for="name_playlist<?=$one_playlist->id?>"><?= $one_playlist->name ?></label>
-						<input class="border" type="radio" value="<?= $one_playlist->id ?>" name="name_playlist" id="name_playlist<?=$one_playlist->id?>">
-					<?php endforeach; ?>
-				</div>
-				<div>
-					<h4>Selectionnez des musiques</h4>
-					<?php foreach($all_musics as $one_music): ?>
-						<label for="name_music<?= $one_music->id ?>"><?= $one_music->music_title ?> par <?= $one_music->composer ?></label>
-						<input class="border" type="checkbox" value="<?= $one_music->id ?>" name="name_music[]" id="name_music<?= $one_music->id ?>">
-					<?php endforeach; ?>
-				</div>
-				<div>
-					<input type="submit" name="add-to-playlist">
+				<div class="flex">
+					<div class="colonne">
+						<h4>Selectionnez une playlist</h4>
+						<div class="scroll">
+							<?php foreach($all_playlists as $one_playlist): ?>
+							<div class="input-label">
+								<input class="border" type="radio" value="<?= $one_playlist->id ?>" name="name_playlist" id="name_playlist<?=$one_playlist->id?>">
+								<label for="name_playlist<?=$one_playlist->id?>"><?= $one_playlist->name ?></label>								
+							</div>
+							<?php endforeach; ?>
+						</div>
+					</div>
+					<div class="colonne">
+						<h4>Selectionnez des musiques</h4>
+						<div class="scroll">
+							<?php foreach($all_musics as $one_music): ?>
+							<div class="input-label">
+								<input class="border" type="checkbox" value="<?= $one_music->id ?>" name="name_music[]" id="name_music<?= $one_music->id ?>">
+								<label for="name_music<?= $one_music->id ?>"><?= $one_music->music_title ?> par <?= $one_music->composer ?></label>								
+							</div>
+							<?php endforeach; ?>
+						</div>
+					</div>
+					<div class="colonne colonne-submit">
+						<input type="submit" name="add-to-playlist">
+					</div>
 				</div>
 			</form>
 		</div>
@@ -122,9 +132,9 @@
 
 
 
-		<div class="list-playlists">
+		<div class="admin-part list-playlists">
 			<h3>Voici le contenu des playlists</h3>
-			<div class="classiques">	
+			<div class="playlist-cat classiques">	
 				<h4>Les classiques</h4>
 				<ul>
 					<?php foreach($playlist1 as $content_playlist): ?>
@@ -136,7 +146,7 @@
 					<?php endforeach; ?>
 				</ul>
 			</div>
-			<div class="classiques">	
+			<div class="playlist-cat bonne-humeur">	
 				<h4>Bonne humeur</h4>
 				<ul>
 					<?php foreach($playlist2 as $content_playlist): ?>
@@ -148,7 +158,7 @@
 					<?php endforeach; ?>
 				</ul>
 			</div>
-			<div class="classiques">	
+			<div class="playlist-cat detente">	
 				<h4>Détente</h4>
 				<ul>
 					<?php foreach($playlist3 as $content_playlist): ?>
