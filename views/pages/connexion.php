@@ -36,7 +36,7 @@
 		</div>
 		
 		<div>
-			<input type="submit" class="submit" name="submit">
+			<input type="submit" class="submit" name="loginform">
 		</div>
 		
 		<div class="container-php">
