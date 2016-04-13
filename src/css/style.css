@@ -193,6 +193,16 @@ body {
 	width: 100px;
 }
 
+.results a{
+	display: block;
+	width: 100%;
+}
+
+.results a:hover{
+	color: red;
+	width: 100%;
+}
+
 
 
 /* -------------------------------- */
