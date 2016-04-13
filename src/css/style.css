@@ -182,6 +182,8 @@ body {
 }
 
 
+
+
 /*------------ ADD MUSICS --------- */
 
 
@@ -314,6 +316,7 @@ form .error input {
 }
 
 .ytvideo {
+	display: none;
 }
 
 /* --------------LEGAL------------------ */
@@ -391,3 +394,36 @@ form .error input {
 .playlist-section:hover img{
 	transform: scale(1.05);
 }
+
+/* -------404-------- */
+
+.container {
+	position : relative;
+}
+
+.notfound { 
+	font-size: 30px;
+	text-align: center;
+	margin-top : 130px;
+}
+
+p.warning {
+	text-transform: uppercase;
+}
+
+p.page {
+	font-size: 200px;
+	font-weight: bold;
+	margin-top : 30px;
+	margin-bottom: 30px;
+}
+
+p.pagenotfound {
+	font-size: 30px;
+	text-transform: uppercase;
+}
+
+
+
+
+
