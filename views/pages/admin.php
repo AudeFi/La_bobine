@@ -3,6 +3,21 @@
 	$query = $pdo->query('SELECT * FROM validation_musics');
 	$validation_musics = $query->fetchAll(); 
 
+	$query = $pdo->query('SELECT * FROM playlists');
+	$all_playlists = $query->fetchAll(); 
+
+	$query = $pdo->query('SELECT * FROM musics');
+	$all_musics = $query->fetchAll(); 
+
+	$query = $pdo->query('SELECT * FROM playlists_has_musics INNER JOIN playlists ON playlists_has_musics.id_playlists = playlists.id INNER JOIN musics ON playlists_has_musics.id_musics = musics.id WHERE playlists.id = 1');
+	$playlist1 = $query->fetchAll();
+
+	$query = $pdo->query('SELECT * FROM playlists_has_musics INNER JOIN playlists ON playlists_has_musics.id_playlists = playlists.id INNER JOIN musics ON playlists_has_musics.id_musics = musics.id WHERE playlists.id = 2');
+	$playlist2 = $query->fetchAll();
+
+	$query = $pdo->query('SELECT * FROM playlists_has_musics INNER JOIN playlists ON playlists_has_musics.id_playlists = playlists.id INNER JOIN musics ON playlists_has_musics.id_musics = musics.id WHERE playlists.id = 3');
+	$playlist3 = $query->fetchAll();
+
 ?>
 
 <?php 
@@ -36,14 +51,14 @@
  			<td><?= $_validation->composer ?></td>
  			<td><?= $_validation->music_link ?></td>
  			<td>
- 				<form class="trash" action="config/validation.php?id=<?= $_validation->id; ?>" method="POST">
- 					<button class="erase" type="submit" value="VALIDE">
+ 				<form class="check" action="config/validation.php?id=<?= $_validation->id; ?>" method="POST">
+ 					<button class="validate" type="submit" value="VALIDE" name="validate">
  					</button>
  				</form>
  			</td>
  			<td>
  				<form class="trash" action="config/delete.php?id=<?= $_validation->id; ?>" method="POST">
- 					<button class="erase" type="submit" value="REMOVE">
+ 					<button class="erase" type="submit" value="REMOVE" name="erase">
  					</button>
  				</form>
  			</td>
@@ -51,6 +66,30 @@
  		<?php endforeach; ?>
  	</table>
 
+
+<div class="add-playlists">
+	<h3>Ajoutez des musiques aux playlists</h3>
+	<form action="config/add-to-playlist.php" method="POST">
+		<div>
+			<h4>Selectionnez une playlist</h4>
+			<?php foreach($all_playlists as $one_playlist): ?>
+				<label for="name_playlist"><?= $one_playlist->name ?></label>
+				<input class="border" type="radio" value="<?= $one_playlist->id ?>" name="name_playlist" id="name_playlist">
+			<?php endforeach; ?>
+		</div>
+		<div>
+			<h4>Selectionnez des musiques</h4>
+			<?php foreach($all_musics as $one_music): ?>
+				<label for="name_music"><?= $one_music->title ?> par <?= $one_music->composer ?></label>
+				<input class="border" type="checkbox" value="<?= $one_music->id ?>" name="name_music" id="name_music">
+			<?php endforeach; ?>
+		</div>
+	</form>
+</div>
+
+<div class="list-playlists">
+	<h4>Voici le contenu des playlists</h4>
+</div>
 
 
 </section>
