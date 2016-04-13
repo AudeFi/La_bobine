@@ -20,10 +20,11 @@
 					</div>
 					<div class="menu-section menu-content">
 						<ul>
-							<li><a href="<?= URL ?>">parcourir</a></li>
-							<li><a href="<?= URL ?>playlists">playlists</a></li>
-							<li><a href="<?= URL ?>add-musics">ajoutez votre musique</a></li>
+							<a href="<?= URL ?>"><li>parcourir</li></a>
+							<a href="<?= URL ?>playlists"><li>playlists</li></a>
+							<a href="<?= URL ?>add-musics"><li>ajoutez votre musique</li></a>
 							<a href="<?= URL ?>connexion"><li>connexion</li></a>
+							<a href="<?= URL ?>connexion"><li>mention légal</li></a>
 						</ul>
 					</div>
 					<div class="menu-section menu-social">
