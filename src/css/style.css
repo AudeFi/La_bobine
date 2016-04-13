@@ -12,7 +12,6 @@ body {
 	background-color: #2E2E2E;
 	color: white;
 	position: relative;
-	overflow: hidden;
 }
 
 /* -------------MENU--------------- */
@@ -24,7 +23,6 @@ body {
 
 .menu div{
 	display: inline-block;
-	font-weight: 100;
 }
 
 .menu-logo{
@@ -32,21 +30,23 @@ body {
 }
 
 .menu-logo img{
-	margin-top: -30px;
+	margin-top: -10px;
 	width: 150px;
 }
 
 .menu-content{
 	float: left;
+	margin-left : 40px;
 }
 
 .menu-content ul li{
 	display: inline-block;
-	margin-top: 40px;
+	font-size: 12.5px;
+	margin-top: 60px;
 	margin-right: 30px;
 	list-style: none;
 	text-transform: uppercase;
-	font-weight: 100;
+	letter-spacing: 3px;
 }
 
 .menu-content a {
@@ -246,12 +246,46 @@ form .error input {
 	border: 2px solid red;
 }
 
-.ytvideo{
+.ytvideo {
 	display: none;
 }
 
-/* LEGAL */
+/* --------------LEGAL------------------ */
 
-*{
-	color: red;
+.legal {
+	width : 100%;
+	padding-left : 150px;
+	padding-right: 150px;
+	margin-bottom : 30px;
 }
+
+.legal h1 {
+	text-align : center;
+	font-size : 20px;
+	margin-top : 70px;
+	margin-bottom : 100px;
+	font-weight: bold;
+}
+
+.legal h2 {
+	margin-top : 20px;
+	margin-bottom : 20px;
+	font-size : 15px;
+	font-weight : bold;
+}
+
+.legal p {
+	font-size : 12px;
+	margin-top : 10px;
+	margin-bottom : 10px;
+}
+
+.legal img{
+	width : 200px;
+	height: 47px;
+	margin-top : 10px;
+}
+
+
+
+
