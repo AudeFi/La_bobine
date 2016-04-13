@@ -30,3 +30,4 @@
 <script>
 	var music_id = '<?=$music->music_link?>';
 </script>
+<script src="<?= URL ?>src/js/app/home-ajax.js"></script>
