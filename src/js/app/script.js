@@ -3,6 +3,12 @@ img.onload = function () {
   var colorThief = new ColorThief();
   var color = colorThief.getColor(img);
   console.log(color);
+  if(color[0]+color[1]+color[2]>650){
+    color[0] = color[0] - 30;
+    color[1] = color[1] - 30;
+    color[2] = color[2] - 30;
+  }
+  console.log(color);
   document.querySelector('.section-2').style.backgroundColor = "rgb(" + color + ")";
 };
 img.crossOrigin = 'Anonymous';
