@@ -3,11 +3,7 @@
 define('DB_HOST','localhost');
 define('DB_NAME','si-films');
 define('DB_USER','root');
-<<<<<<< Updated upstream
-// define('DB_PASS',''); /*Jules*/
-=======
 //define('DB_PASS',''); /*Jules*/
->>>>>>> Stashed changes
 define('DB_PASS','root');
 try
 {
