@@ -53,19 +53,25 @@
 </section>
 
 	<div class="section-2">
-	<div class="info-film">
 
-		<img src="http://image.tmdb.org/t/p/w500/<?= $all->poster_path ?>" alt="" class="poster">
-		<p>Film Name : <span class="movie_title"><?= $all->title ?></span></p>
-		<p>Genre : <span class="genre"><?= $all->genres[0]->name ?></span></p>
-		<p>Overview : <span class="overview"><?= $all->overview ?></span></p>
-		<p>Release Date : <span class="release_date"><?= $all->release_date ?></span></p>
-		<p>Director : <span class="director"><?= $credits->crew[0]->name ?></span></p>
-		<p>Main Actors : <span class="actors"><?= $credits->cast[0]->name ?> / <?= $credits->cast[1]->name ?> / <?= $credits->cast[2]->name ?> </span></p>
-		<div>
-			<a class="amazon_movie" href="https://www.amazon.fr/s/ref=nb_sb_noss_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&url=search-alias%3Ddvd&field-keywords=<?= $all->title ?>" TARGET="_blank">Discover On Amazon</a>
+		<div class="info-film">
+		<div><button>Back</button></div>
+	
+			<div class="film-text">
+			<p   class="movie_title"><?= $all->title ?></p>
+			<p   class="director">Directored by <?= $credits->crew[0]->name ?></p>
+			<p   class="actors">With <?= $credits->cast[0]->name ?> | <?= $credits->cast[1]->name ?> | <?= $credits->cast[2]->	name ?></p>
+			<p   class="genre">Genre : <?= $all->genres[0]->name ?></p>
+			<p   class="release_date">Release Date : <?= $all->release_date ?></p>
+			<p   class="overview">Overview : <?= $all->overview ?></p>
+			<div>
+				<button class="amazon_link_2"><a class="amazon_movie" href="https://www.amazon.fr/s/ref=nb_sb_noss_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91	&url=search-alias%3Ddvd&field-keywords=<?= $all->title ?>" TARGET="_blank">Discover On Amazon</a></button>
+			</div>
+			</div>
+
+				<img class="poster" src="http://image.tmdb.org/t/p/w500/<?= $all->poster_path ?>" alt="">
 		</div>
-		</div>
+
 	</div>
 
 <script>

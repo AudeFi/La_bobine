@@ -4,13 +4,6 @@ $(".right").click(function(){
 
 });
 
-/*$(function() {
-  $('.right').click(function() {
-   $('.connect-you').css("margin-top","100px");
-  });
-});*/
-
-
 $(function() {
   $('.see_more').click(function() {
    console.log('hi');
