@@ -22,7 +22,6 @@
 	</div>
 	<div class="container-text-add">
 		<p>Votre musique sera écoutée et vérifiée par nos modérateurs.</p>
-		<p>Vous recevrez une notification dès que votre musique sera validée.</p>
 	</div>
 
 	<div class="container-add-music">
@@ -35,18 +34,34 @@
 			<div class="content-add-music">
 				<input type="text" name="movie_id" id="movie_id" value="" class="movie_id">
 				<div class="music-title">
-					<input type="text" name="music_title" id="music_title" value="" placeholder="Entrez le titre de la musique">
+					<input type="text" name="music_title" id="music_title" value="<?= $music_title ?>" placeholder="Entrez le titre de la musique">
 				</div>
 				<div class="composer">
-					<input type="text" name="composer" id="composer" value="" placeholder="Entrez un compositeur">
+					<input type="text" name="composer" id="composer" value="<?= $composer ?>" placeholder="Entrez un compositeur">
 				</div>
 				<div class="link">
-					<input type="link" name="music_link" id="music_link" value="" placeholder="Entrez votre lien">
+					<input type="link" name="music_link" id="music_link" value="<?= $music_link ?>" placeholder="Entrez votre lien">
 				</div>
 				<div class="add-submit">
 					<input type="submit" name="add" id="add" value="Soumettre">
 				</div>
-			</div>					
+			</div>	
+			<div class="container-php">
+				<?php if(!empty($errors)): ?>
+					<div class="errors">
+						<?php foreach ($errors as $_error): ?> 
+							<div><?= $_error ?></div>
+						<?php endforeach; ?>
+					</div>
+				<?php endif; ?>
+				<?php if(!empty($success)): ?>
+					<div class="success">
+						<?php foreach ($success as $_success): ?> 
+							<div><?= $_success ?></div>
+						<?php endforeach; ?>
+					</div>
+				<?php endif; ?>
+			</div>				
 		</form>
 	</div>		
 </div>

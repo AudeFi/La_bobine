@@ -168,19 +168,8 @@ $pseudo = '';
 				$message = 'Merci de vous être inscrit sur La Bobine. Vous pouvez désormais contribuer au site en y ajoutant des musiques. Si vous faites preuve de bonne utilisation, vous pourrez peut être même être séléctionné pour modérer les propositions d\'autres utilisateurs. Votre pseudo est '.$pseudo.'. Seul vous connaissez votre mot de passe. L\'équipe La Bobine';
 	    		mail($email, $vosID, $message);
 
-	    		
-
-				/*$_SESSION['user'] = array(
-					'id' => $user->id,
-					'pseudo' => $pseudo,
-					'status' => 'user'
-				);*/
-
 				$pseudo  = '';
 				$email = '';
-
-				/*header('Location: '.URL.'connexion');
-				exit;*/
 			}	
 	}
 }
