@@ -15,8 +15,8 @@ else if($q == 'add-musics')
 	$page = 'add-musics';
 else if($q == 'connexion')
 	$page = 'connexion';
-else if($q == 'admin')
-	$page = 'admin';
+else if($q == 'profil')
+	$page = 'profil';
 else if($q == 'disconnect')
 	$page = 'disconnect';
 else if($q == 'legal')

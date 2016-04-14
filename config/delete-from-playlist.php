@@ -11,5 +11,5 @@ if(!empty($id)) {
 	$execute = $prepare->execute();
 }
 
-header('Location: ' . URL . 'admin');
+header('Location: ' . URL . 'profil');
 exit;
