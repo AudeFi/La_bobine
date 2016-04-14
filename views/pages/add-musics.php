@@ -7,7 +7,7 @@
 ?>
 <section>
 	<div class="connect-you">
-		<p>Connectez-vous </p>
+		<p><a href="<?= URL ?>connexion">Connectez-vous</a></p>
 		 <p>pour ajouter des musiques</p>
 	</div>
 </section>
@@ -18,7 +18,7 @@
 	
 <div class="container-add">
 	<div class="container-title-add">
-		<h3>Ajoutez votre musique</h3></br></br>
+		<h3>Ajoutez votre musique</h3>
 	</div>
 	<div class="container-text-add">
 		<p>Votre musique sera écoutée et vérifiée par nos modérateurs.</p>
