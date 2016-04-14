@@ -43,7 +43,7 @@
 				<button class="amazon_link_2"><a class="amazon_music" href="https://www.amazon.fr/s/ref=nb_sb_noss_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91	&url=search-alias%3Ddvd&field-keywords=<?= $all->title ?>+Bande+Originale" TARGET="_blank">Discover On Amazon</a></button>
 			</div>
 
-				<img class="poster" src="http://image.tmdb.org/t/p/w500/<?= $all->poster_path ?>" alt="">
+				<img id="poster" class="poster" src="http://image.tmdb.org/t/p/w500/<?= $all->poster_path ?>" alt="">
 		</div>
 
 	</div>
@@ -64,6 +64,12 @@
 		<div id="player"></div>
 		<div class="eq"><i class="fa fa-volume-up" aria-hidden="true"></i></div>
 		<div class="reload"><i class="fa fa-forward" aria-hidden="true"></i></div>
+	
+
+	<div id='bars'>
+  		<div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div>
+  		<div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div>
+	</div>
 
 		<div class="timebar">
         	<div class="current_time">

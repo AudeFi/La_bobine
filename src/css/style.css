@@ -1,3 +1,116 @@
+#bars {
+    height: 50vh;
+    left: 25%;
+    margin-top: -51vh;
+    position: absolute;
+}
+
+.wave {
+    background: #FFFFFF;
+    bottom: 1px;
+    height: 50vh;
+    position: absolute;
+    width: 10px;      
+    animation: sound 0ms -800ms linear infinite alternate;
+}
+
+@keyframes sound {
+    0% {
+       opacity: .35;
+        height: 3px; 
+    }
+    50% {
+       opacity: 1;
+        height: 15vh; 
+    }
+    100% {
+        opacity: 1;       
+        height: 20vh;        
+    }
+}
+
+.wave:nth-child(1)   { left:   0px; animation-duration: 474ms; }
+.wave:nth-child(2)   { left:  11px; animation-duration: 433ms; }
+.wave:nth-child(3)   { left:  22px; animation-duration: 407ms; }
+.wave:nth-child(4)   { left:  33px; animation-duration: 458ms; }
+.wave:nth-child(5)   { left:  44px; animation-duration: 400ms; }
+.wave:nth-child(6)   { left:  55px; animation-duration: 427ms; }
+.wave:nth-child(7)   { left:  66px; animation-duration: 441ms; }
+.wave:nth-child(8)   { left:  77px; animation-duration: 419ms; }
+.wave:nth-child(9)   { left:  88px; animation-duration: 487ms; }
+.wave:nth-child(10)  { left:  99px; animation-duration: 442ms; }
+.wave:nth-child(11)  { left: 111px; animation-duration: 454ms; }
+.wave:nth-child(12)  { left: 122px; animation-duration: 487ms; }
+.wave:nth-child(13)  { left: 133px; animation-duration: 451ms; }
+.wave:nth-child(14)  { left: 144px; animation-duration: 478ms; }
+.wave:nth-child(15)  { left: 155px; animation-duration: 490ms; }
+.wave:nth-child(16)  { left: 166px; animation-duration: 401ms; }
+.wave:nth-child(17)  { left: 177px; animation-duration: 443ms; }
+.wave:nth-child(18)  { left: 188px; animation-duration: 452ms; }
+.wave:nth-child(19)  { left: 199px; animation-duration: 467ms; }
+.wave:nth-child(20)  { left: 211px; animation-duration: 493ms; }
+.wave:nth-child(21)  { left: 222px; animation-duration: 453ms; }
+.wave:nth-child(22)  { left: 233px; animation-duration: 411ms; }
+.wave:nth-child(23)  { left: 244px; animation-duration: 403ms; }
+.wave:nth-child(24)  { left: 255px; animation-duration: 456ms; }
+.wave:nth-child(25)  { left: 266px; animation-duration: 476ms; }
+.wave:nth-child(26)  { left: 277px; animation-duration: 445ms; }
+.wave:nth-child(27)  { left: 266px; animation-duration: 409ms; }
+.wave:nth-child(28)  { left: 277px; animation-duration: 471ms; }
+.wave:nth-child(29)  { left: 288px; animation-duration: 465ms; }
+.wave:nth-child(30)  { left: 299px; animation-duration: 442ms; }
+.wave:nth-child(31)  { left: 311px; animation-duration: 465ms; }
+.wave:nth-child(32)  { left: 322px; animation-duration: 410ms; }
+.wave:nth-child(33)  { left: 333px; animation-duration: 443ms; }
+.wave:nth-child(34)  { left: 344px; animation-duration: 452ms; }
+.wave:nth-child(35)  { left: 344px; animation-duration: 451ms; }
+.wave:nth-child(36)  { left: 355px; animation-duration: 501ms; }
+.wave:nth-child(37)  { left: 366px; animation-duration: 461ms; }
+.wave:nth-child(38)  { left: 377px; animation-duration: 452ms; }
+.wave:nth-child(39)  { left: 388px; animation-duration: 489ms; }
+.wave:nth-child(40)  { left: 399px; animation-duration: 491ms; }
+.wave:nth-child(41)  { left: 411px; animation-duration: 474ms; }
+.wave:nth-child(42)  { left: 422px; animation-duration: 433ms; }
+.wave:nth-child(43)  { left: 433px; animation-duration: 407ms; }
+.wave:nth-child(44)  { left: 444px; animation-duration: 458ms; }
+.wave:nth-child(45)  { left: 455px; animation-duration: 400ms; }
+.wave:nth-child(46)  { left: 466px; animation-duration: 427ms; }
+.wave:nth-child(47)  { left: 477px; animation-duration: 441ms; }
+.wave:nth-child(48)  { left: 488px; animation-duration: 419ms; }
+.wave:nth-child(49)  { left: 499px; animation-duration: 487ms; }
+.wave:nth-child(50)  { left: 511px; animation-duration: 442ms; }
+.wave:nth-child(51)  { left: 522px; animation-duration: 454ms; }
+.wave:nth-child(52)  { left: 533px; animation-duration: 487ms; }
+.wave:nth-child(53)  { left: 544px; animation-duration: 451ms; }
+.wave:nth-child(54)  { left: 555px; animation-duration: 478ms; }
+.wave:nth-child(55)  { left: 566px; animation-duration: 490ms; }
+.wave:nth-child(56)  { left: 577px; animation-duration: 401ms; }
+.wave:nth-child(57)  { left: 566px; animation-duration: 443ms; }
+.wave:nth-child(58)  { left: 577px; animation-duration: 452ms; }
+.wave:nth-child(59)  { left: 588px; animation-duration: 467ms; }
+.wave:nth-child(60)  { left: 599px; animation-duration: 493ms; }
+.wave:nth-child(61)  { left: 611px; animation-duration: 454ms; }
+.wave:nth-child(62)  { left: 622px; animation-duration: 467ms; }
+.wave:nth-child(63)  { left: 633px; animation-duration: 498ms; }
+.wave:nth-child(64)  { left: 644px; animation-duration: 401ms; }
+.wave:nth-child(65)  { left: 644px; animation-duration: 453ms; }
+.wave:nth-child(66)  { left: 655px; animation-duration: 462ms; }
+.wave:nth-child(67)  { left: 666px; animation-duration: 472ms; }
+.wave:nth-child(68)  { left: 677px; animation-duration: 451ms; }
+.wave:nth-child(69)  { left: 688px; animation-duration: 472ms; }
+.wave:nth-child(70)  { left: 699px; animation-duration: 482ms; }
+.wave:nth-child(71)  { left: 711px; animation-duration: 461ms; }
+.wave:nth-child(72)  { left: 722px; animation-duration: 454ms; }
+.wave:nth-child(73)  { left: 733px; animation-duration: 427ms; }
+.wave:nth-child(74)  { left: 744px; animation-duration: 429ms; }
+.wave:nth-child(75)  { left: 744px; animation-duration: 402ms; }
+.wave:nth-child(76)  { left: 755px; animation-duration: 573ms; }
+.wave:nth-child(77)  { left: 766px; animation-duration: 473ms; }
+.wave:nth-child(78)  { left: 777px; animation-duration: 456ms; }
+.wave:nth-child(79)  { left: 788px; animation-duration: 452ms; }
+.wave:nth-child(80)  { left: 799px; animation-duration: 461ms; }
+
+
 html, body {
 	height: 100%;
 	width: 100%;
