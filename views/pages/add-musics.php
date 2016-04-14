@@ -6,7 +6,7 @@
 	if(empty($_SESSION['user'])):
 ?>
 <section>
-	Connectez-vous pour ajouter des musiques
+	<p class="connect-you">Connectez-vous pour ajouter des musiques</p>
 </section>
 
 <?php else:?>
