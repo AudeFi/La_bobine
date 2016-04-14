@@ -299,7 +299,22 @@ body {
 
 
 /*------------ ADD MUSICS --------- */
+.connect-you{
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+.connect-you p{
+	font-size: 30px;
+	letter-spacing: 6px;
+	display: block;
 
+}
+
+.connect-you p:last-child{
+	margin-top: 8%;
+	font-size: 24px;
+}
 
 .container-add {
 	width: 100%;
