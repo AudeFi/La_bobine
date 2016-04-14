@@ -5,7 +5,6 @@ define('DB_NAME','si-films');
 define('DB_USER','root');
 
 // define('DB_PASS',''); /*Jules*/
-
 define('DB_PASS','root');
 try
 {

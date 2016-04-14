@@ -31,7 +31,6 @@ section {
 .musicplayer{
 	position: fixed;
 	bottom: 0;
-	margin-bottom: 10px;
 	z-index: 1;
 }
 
@@ -64,14 +63,14 @@ section {
 	text-transform: uppercase;
 	margin-left: 10%;
 	margin-top: 12vh;
-	font-size: 3em;
+	font-size: 4em;
 	font-family: "Lato";
 	font-weight: 600;
 	letter-spacing: 8px;
 }
 
 .music_composer{
-	font-size: 1.5em;
+	font-size: 2em;
 	font-family: "Lato";
 	margin-left: 10%;
 	margin-top: 3vh;
@@ -81,7 +80,7 @@ section {
 }
 
 .see_more{
-	width: 180px;
+	width: 220px;
 	height: 35px;
 	margin-left: 10%;
 	margin-top: 5vh;
@@ -93,30 +92,19 @@ section {
 }
 
 .amazon_link{
-	width: 180px;
+	width: 220px;
 	height: 35px;
 	margin-left: 2%;
 	margin-top: 2vh;
 	border : solid 2px white;
 }
 
-.amazon_link_2{
-	width: 180px;
-	height: 35px;
-	margin-top: 10vh;
-	border : solid 2px white;
-}
-
-.amazon_link:hover , .see_more:hover, .amazon_link_2:hover{
+.amazon_link:hover , .see_more:hover{
 	background-color: white;
 	color: #2E2E2E;
 }
 
 .amazon_music{
-	text-decoration: none;
-}
-
-.amazon_movie{
 	text-decoration: none;
 }
 
@@ -183,8 +171,7 @@ body.page-home{
 }
 
 .poster{
-	width: 45vh;
-	margin-left: 20%;
+	margin-top: 500px;
 }
 
 .close{
@@ -340,7 +327,6 @@ body {
 ::-webkit-input-placeholder {
    color: #565656;
    font-style : italic;
-   margin-right : 10px;
 }
 
 :-moz-placeholder { /* Firefox 18- */
@@ -360,6 +346,10 @@ body {
 
 .container-form label {
 	cursor: pointer;
+}
+
+.container-form input {
+	padding-left : 10px;
 }
 
 .container-form .color {
@@ -395,9 +385,27 @@ body {
 
 
 
-
 /*------------ ADD MUSICS --------- */
 
+/*------------ ADD MUSICS --------- */
+.connect-you{
+	text-align: center;
+}
+
+.connect-you p{
+	font-size: 40px;
+	letter-spacing: 3px;
+	margin-top: 20%;
+	display: block;
+	text-transform: uppercase;
+}
+
+.connect-you p:last-child{
+	margin-top: 10px;
+	font-size: 15px;
+	text-transform: lowercase;
+	font-style: italic;
+}
 
 .container-add {
 	width: 100%;
@@ -619,7 +627,188 @@ form .error input {
 .playlist-section:hover img{
 	transform: scale(1.05);
 }
+/* ----------- ADMIN ----------- */ 
 
+.section.profil {
+	margin-bottom: 50px;
+}
+
+.page-profil h2 {
+	font-size : 13px;
+	font-weight : bold;
+	text-transform : uppercase;
+	letter-spacing: 3px; 
+	text-align : left;
+	margin-bottom : 20px;
+}
+
+.page-profil h3 {
+	font-size: 20px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.page-profil h4 {
+	font-size: 12px;
+	letter-spacing: 1.5px;
+	color : #B3B3B3;
+	font-weight: bold;
+	height: 50px;
+	background-color: #252525;
+	line-height: 50px;
+	padding-left: 10px;
+	vertical-align: center;
+}
+
+.section.profil {
+	font-size : 11px;
+	text-transform: uppercase; 
+	letter-spacing: 1.25px; 
+}
+
+.section.profil .date {
+	margin-bottom : 10px;
+}
+
+.section.profil .envoye {
+	margin-bottom : 10px;
+}
+
+.section.profil .accepte {
+	margin-bottom : 10px;
+}
+
+.section.profil .disconnect {
+	font-weight : bold;
+}
+
+.section.profil .disconnect:hover {
+	color : #545454;
+}
+
+.admin-part {
+	margin-top: 25px;
+	margin-bottom: 50px;
+}
+
+.approbation .line {
+	padding: 15px 0;
+}
+
+.approbation .line div{
+	vertical-align: top;
+}
+
+.approbation .line .infos{
+	width:75%;
+	display: inline-block;
+}
+
+.approbation .line .buttons{
+	width:270px;
+	display: inline-block;
+	font-size: 12px;
+}
+
+.approbation .line .infos .first-line{
+	display: block;
+	margin-bottom: 8px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.approbation .line .infos .second-line{
+	display: block;
+	font-size: 13px;
+}
+
+.approbation .line .infos .second-line .youtube_link{
+	color: #eb8686;
+}
+
+.approbation .line form{
+	width:100px;
+	display: inline-block;
+}
+
+.approbation .line form.check{
+	margin-right: 5px;
+}
+
+.approbation .line button{
+	width: 100px;
+	height: 35px;
+	cursor: pointer;
+	border-radius: 2px;
+}
+
+.approbation .line button.validate{
+	background-color: #53DB81;
+	letter-spacing: 1.25px;
+	font-weight: bold;
+	padding
+}
+
+.approbation .line button.erase{
+	background-color: #F97980;
+	letter-spacing: 1.25px;
+	font-weight: bold;
+	background-color: red;
+}
+
+
+.admin .flex{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+.admin .colonne{
+	vertical-align: top;
+	width: 300px;
+	display: inline-block;
+}	
+
+.admin .scroll{
+	overflow: scroll;
+	height: 300px;
+	background-color: #292929;
+	padding: 10px;
+	font-size : 12px;
+}
+
+.admin .colonne .input-label {
+	display: block;
+	padding: 8px;
+	color : #6F6F6F;
+}
+
+.add-playlists .colonne-submit input{
+	background-color: transparent;
+	width: 80px;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: bold;
+
+}
+
+.list-playlists form{
+	display: inline;
+}
+
+.list-playlists button{
+	margin-right: 20px;
+	cursor: pointer;
+	display: inline;
+}
+
+.playlist-cat {
+	display: inline-block;
+	vertical-align: top;
+}
 
 /* -------404-------- */
 
@@ -857,4 +1046,11 @@ p.pagenotfound {
 .playlist-cat {
 	display: inline-block;
 	vertical-align: top;
+}
+
+.legal-mention{
+	float: right;
+	margin-top:-20px;
+	margin-right:20px;
+	color: #565656;
 }
