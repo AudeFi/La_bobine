@@ -1,5 +1,3 @@
-
-
 .menu-responsive{
 	display: none;
 	width: 100%;
@@ -54,8 +52,6 @@
 	font-weight: 100;
 }
 
-
-
 .menu-responsive-toggle a{
 	text-decoration: none;
 	text-transform: uppercase;
@@ -71,7 +67,6 @@
 	display: inline-block;
 }
 
-
 @media screen and (max-width:880px) {
 	body{
 		overflow: visible;
@@ -85,7 +80,7 @@
 	
 	.container-playlist .title-container-playlist{
 	margin-top: 100px;
-}
+	}
 
 	.playlist-content{
 		display: block;
@@ -137,22 +132,22 @@
 	display: block;
 	}
 
-	.music-title{
+	.content-add-music .music-title{
 	width: 100%;
 	margin-top: 10px;
 	}
 
-	.composer{
+	.content-add-music .composer{
 	width: 100%;
 	margin-top: 10px;
 	}
 
-	.content-add-music .link{
+	.container-add .content-add-music .link{
 	width: 100%;
 	margin-top: 10px;
 	}
 
-	.add-submit input{
+	.content-add-music .add-submit input{
 	width: 100%;
 	margin-top: 10px;
 	}
@@ -169,8 +164,8 @@
 	margin-right: 60px;
 	}
 
-	.container-add{
-		margin-top: 100px;
+	section .container-add{
+		margin-top: 150px;
 	}	 
 }
 
@@ -184,8 +179,8 @@
 		margin-top: 180px;
 	}
 
-	.container-add{
-			margin-top: 150px;
+	section .container-add{
+		margin-top: 200px;
 	}
 
 	 
