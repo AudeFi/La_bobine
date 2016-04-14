@@ -24,7 +24,11 @@
 							<a href="<?= URL ?>"><li>parcourir</li></a>
 							<a href="<?= URL ?>playlists"><li>playlists</li></a>
 							<a href="<?= URL ?>add-musics"><li>ajoutez votre musique</li></a>
-							<a href="<?= URL ?>connexion"><li>connexion</li></a>
+							<?php if(!empty($_SESSION['user'])): ?>
+								<a href="<?= URL ?>profil"><li>profil</li></a>
+							<?php else:?>
+								<a href="<?= URL ?>connexion"><li>connexion</li></a>
+							<?php endif; ?>
 						</ul>
 					</div>
 					<div class="menu-section menu-social">

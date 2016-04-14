@@ -13,12 +13,15 @@
 		<div class="title-connexion">
 			<h3>Connexion</h3>
 		</div>
-		<?php 
-			if(!empty($_SESSION['user'])): 
-		?>
-		<a href="<?= URL ?>disconnect">Se déconnecter</a>
-		<div>Bonjour <?= $_SESSION['user']['pseudo']; ?></div>
-		<?php else:?>
+
+<?php 
+	if(!empty($_SESSION['user'])): 
+?>
+	<div>Bonjour <?= $_SESSION['user']['pseudo']; ?></div>
+	<a href="<?= URL ?>disconnect">Se déconnecter</a>
+	<a href="<?= URL ?>profil">Accédez à votre profil</a>
+<?php else:?>
+
 	
 	<form action="#" method="POST" autocomplete="off">
 		

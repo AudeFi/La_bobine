@@ -3,20 +3,48 @@ html, body {
 	width: 100%;
 	margin: 0;
 	padding: 0;
-<<<<<<< Updated upstream
 	/* overflow-x:hidden; */
-=======
->>>>>>> Stashed changes
 }
 
-.eq{
-	width: 20px;
-	height: 20px;
-	background-color: red;
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+section {
+	width: 90%;
+	margin: auto;
+	margin-top: 75px;
+	margin-bottom: 100px;
+}
+
+#player{
+	width: 0px;
+	height: 0px;
+}
+
+.eq, .reload, .timebar{
+	display: inline-block;
+	margin-right: 30px;
+}
+
+.musicplayer{
+	position: fixed;
+	bottom: 0;
+}
+
+.fa:active{
+	color: black;
+	transition-duration: 0.3s;
+}
+
+.fa{
+	color: white;
+	transition-duration: 0.3s;
 }
 
 .timebar{
-	width: 40vw;
+	width: 80vw;
 	height: 10px;
 	background-color: black;
 }
@@ -26,19 +54,57 @@ html, body {
 	height: 10px;
 }
 
-.reload{
-	width: 100px;
-	height: 100px;
-	background-color: blue;
-}
-
 .movie_id{
 	display: none;
 }
 
-iframe{
-	position: abolute;
-	margin-left: 10000px;
+.music_title{
+	text-transform: uppercase;
+	margin-left: 10%;
+	margin-top: 12vh;
+	font-size: 4em;
+	font-family: "Lato";
+	font-weight: 600;
+	letter-spacing: 10px;
+}
+
+.music_composer{
+	font-size: 2em;
+	font-family: "Lato";
+	margin-left: 10%;
+	margin-top: 3vh;
+	font-family: "Lato";
+	font-weight: 600;
+	letter-spacing: 10px;
+}
+
+.see_more{
+	width: 220px;
+	height: 35px;
+	margin-left: 10%;
+	margin-top: 5vh;
+	border : solid 2px white;
+}
+
+.see_more, .amazon_link{
+	display: inline;
+}
+
+.amazon_link{
+	width: 220px;
+	height: 35px;
+	margin-left: 2%;
+	margin-top: 2vh;
+	border : solid 2px white;
+}
+
+.amazon_link:hover , .see_more:hover{
+	background-color: white;
+	color: #2E2E2E;
+}
+
+.amazon_music{
+	text-decoration: none;
 }
 
 body {
@@ -161,7 +227,6 @@ body {
 	width: 40%;
 	margin-right : 10%;
 	margin-left : 5%;
-	margin-top: 80px;
 	position : relative;
 }
 
@@ -226,7 +291,6 @@ body {
 .right-form {
 	display: inline-block;
 	width: 40%;
-	margin-top: 80px;
 	margin-right : 10%;
 	position : absolute;
 }
@@ -324,10 +388,6 @@ body {
 
 
 /* -------------------------------- */
-
-section {
-	margin-bottom: 40px;
-}
 
 /* section h2 {
 	font-size: 18px;
@@ -567,6 +627,10 @@ p.pagenotfound {
 
 /* ----------- ADMIN ----------- */ 
 
+.section.profil {
+	margin-bottom: 80px;
+}
+
 .page-profil h2 {
 	font-size: 25px;
 	padding-top: 10px;
@@ -577,12 +641,6 @@ p.pagenotfound {
 	font-size: 20px;
 	padding-top: 30px;
 	padding-bottom: 30px;
-}
-
-.section {
-	width: 90%;
-	margin: auto;
-	margin-top: 75px;
 }
 
 .admin-part {
@@ -609,16 +667,15 @@ p.pagenotfound {
 
 .approbation .line .infos .first-line{
 	display: block;
-}
-
-.approbation .line .infos .first-line div{
-	width:300px;
-	display: inline-block;
+	margin-bottom: 8px;
 }
 
 .approbation .line .infos .second-line{
-	width:200px;
 	display: block;
+}
+
+.approbation .line .infos .second-line .youtube_link{
+	color: #eb8686;
 }
 
 .approbation .line form{
@@ -631,7 +688,6 @@ p.pagenotfound {
 }
 
 .approbation .line button{
-	background-color: green;
 	width: 100px;
 	height: 35px;
 	cursor: pointer;

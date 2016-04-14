@@ -8,5 +8,8 @@ $(function() {
   });
 });
 
-
-
+$(function() {
+  $('.see_more').click(function() {
+   console.log('hi');
+  });
+});
