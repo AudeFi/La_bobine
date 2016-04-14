@@ -531,8 +531,8 @@ form input[type="submit"] {
 }
 
 .errors {
-	color: red;
-	border: 1px solid red;
+	color: #eb8686;
+	border: 1px solid #eb8686;
 	padding: 10px;
 	margin: 0 0 15px 0;
 }
@@ -545,11 +545,11 @@ form input[type="submit"] {
 }
 
 form .error label {
-	color: red;
+	color: #eb8686;
 }
 
 form .error input {
-	border: 2px solid red;
+	border: 2px solid #eb8686;
 }
 
 .ytvideo {
@@ -765,7 +765,6 @@ form .error input {
 	background-color: #F97980;
 	letter-spacing: 1.25px;
 	font-weight: bold;
-	background-color: red;
 }
 
 .admin .flex{
