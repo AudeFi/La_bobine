@@ -245,7 +245,7 @@ section {
 
 .info-film{
 	transform:skew(0deg,20deg);
-	margin-top: 450px;
+	margin-top: 55vh;
 }
 
 body.page-home{
@@ -296,6 +296,7 @@ body.page-home{
 }
 
 .poster{
+	margin-top: 5vh;
 	width: 45vh;
 	margin-left: 20%;
 }

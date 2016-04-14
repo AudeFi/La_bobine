@@ -26,7 +26,7 @@ $(function() {
 });
 
 $(".close").click(function(){
-	$(".section-2").animate({ top : 470}, 500);
+	$(".section-2").animate({ top : 400}, 500);
 	$(".music-info").fadeIn( "slow" );
 	$("#bars").fadeIn( "fast" );
 });

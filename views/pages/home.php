@@ -1,27 +1,4 @@
 <?php
-	
-	/*$num_playlist = empty($_GET['id']) ? '' : $_GET['id'];
-
-
-	if($num_playlist == '1'){
-		$query = $pdo->query('SELECT * FROM playlists_has_musics INNER JOIN playlists ON playlists_has_musics.id_playlists = playlists.id INNER JOIN musics ON playlists_has_musics.id_musics = musics.id WHERE playlists.id = 1');
-		$playlist = $query->fetchAll();
-	}		
-	else if($num_playlist == '2') {
-		$query = $pdo->query('SELECT * FROM playlists_has_musics INNER JOIN playlists ON playlists_has_musics.id_playlists = playlists.id INNER JOIN musics ON playlists_has_musics.id_musics = musics.id WHERE playlists.id = 2');
-		$playlist = $query->fetchAll();
-	}
-	else if($num_playlist == '3') {
-		$query = $pdo->query('SELECT * FROM playlists_has_musics INNER JOIN playlists ON playlists_has_musics.id_playlists = playlists.id INNER JOIN musics ON playlists_has_musics.id_musics = musics.id WHERE playlists.id = 3');
-		$playlist = $query->fetchAll();
-	}
-	else {
-		$query = $pdo->query('SELECT * FROM musics');
-		$playlist = $query->fetchAll();
-	}
-
-	$counter = 0;
-	$historique = [];*/
 
 	require 'config/home-player.php';
 	
@@ -40,7 +17,7 @@
 				<p   class="release_date">Release Date : <?= $all->release_date ?></p>
 				<p   class="overview">Overview : <?= $all->overview ?></p>
 	
-				<button class="amazon_link_2"><a class="amazon_music" href="https://www.amazon.fr/s/ref=nb_sb_noss_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91	&url=search-alias%3Ddvd&field-keywords=<?= $all->title ?>+Bande+Originale" TARGET="_blank">Discover On Amazon</a></button>
+				<button class="amazon_link_2"><a class="amazon_movie" href="https://www.amazon.fr/s/ref=nb_sb_noss_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&url=search-alias%3Ddvd&field-keywords=<?= $all->title ?>" TARGET="_blank">Discover On Amazon</a></button>
 			</div>
 
 				<img id="poster" class="poster" src="http://image.tmdb.org/t/p/w500/<?= $all->poster_path ?>" alt="">
