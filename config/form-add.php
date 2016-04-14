@@ -20,12 +20,13 @@ if(!empty($_POST['add'])){
 	$movie_name       	= strip_tags(trim($_POST['movie_name']));
 	$user				= $_SESSION['user']['pseudo'];
 
-	$prepare = $pdo->prepare('INSERT INTO validation_musics (movie_name,movie_id,music_title,composer,music_link) VALUES (:movie_name,:movie_id,:music_title,:composer,:music_link)');
+	$prepare = $pdo->prepare('INSERT INTO validation_musics (movie_name,movie_id,music_title,composer,music_link,add_by) VALUES (:movie_name,:movie_id,:music_title,:composer,:music_link,:add_by)');
 	$prepare->bindValue('movie_name',$movie_name);
 	$prepare->bindValue('movie_id',$movie_id);
 	$prepare->bindValue('music_title',$music_title);
 	$prepare->bindValue('composer',$composer);
 	$prepare->bindValue('music_link',$music_link);
+	$prepare->bindValue('add_by',$user);
 	
 	$execute = $prepare->execute();
 }

@@ -1,5 +1,7 @@
 <?php
+
 	require 'config/home-player.php';
+	
 ?>
 
 <section>

@@ -6,29 +6,31 @@
 	require_once 'database.php';
 
 
-	$id_playlist = empty($_GET['id']) ? '' : $_GET['id'];
+	$num_playlist = empty($_GET['id']) ? '' : $_GET['id'];
 
-	if($id_playlist == '1'){
+
+	if($num_playlist == '1'){
 		$query = $pdo->query('SELECT * FROM playlists_has_musics INNER JOIN playlists ON playlists_has_musics.id_playlists = playlists.id INNER JOIN musics ON playlists_has_musics.id_musics = musics.id WHERE playlists.id = 1');
 		$playlist = $query->fetchAll();
 	}		
-	else if($id_playlist == '2') {
+	else if($num_playlist == '2') {
 		$query = $pdo->query('SELECT * FROM playlists_has_musics INNER JOIN playlists ON playlists_has_musics.id_playlists = playlists.id INNER JOIN musics ON playlists_has_musics.id_musics = musics.id WHERE playlists.id = 2');
 		$playlist = $query->fetchAll();
 	}
-	else if($id_playlist == '3') {
+	else if($num_playlist == '3') {
 		$query = $pdo->query('SELECT * FROM playlists_has_musics INNER JOIN playlists ON playlists_has_musics.id_playlists = playlists.id INNER JOIN musics ON playlists_has_musics.id_musics = musics.id WHERE playlists.id = 3');
 		$playlist = $query->fetchAll();
 	}
 	else {
-		$query = $pdo->query('SELECT * FROM musics');
+		$query = $pdo->query('SELECT * FROM playlists_has_musics INNER JOIN playlists ON playlists_has_musics.id_playlists = playlists.id INNER JOIN musics ON playlists_has_musics.id_musics = musics.id');
 		$playlist = $query->fetchAll();
 	}
 
 	$result = count($playlist);
-	$id = rand(0, $result - 1);
+	$id_music = rand(0, $result - 1);
 
-	$music = $playlist[$id];
+	$music = $playlist[$id_music];
+	
 
 	if(!empty($music->movie_id))
 	{
@@ -71,5 +73,3 @@
 		'movie' => $all,
 		'credits' => $credits
 	));
-
-?>

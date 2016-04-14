@@ -65,7 +65,7 @@
         $('.reload').click(function() {
 
             $.ajax({
-                url     : "config/home-player.php",
+                url     : "./config/home-player.php",
                 type    : "POST",
                 dataType: 'JSON',
                 data: {ajax:true},
