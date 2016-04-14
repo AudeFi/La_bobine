@@ -39,7 +39,7 @@
 
             if (statement == 0) {
                 $.ajax({
-                    url     : "config/home-player.php",
+                    url     : "config/home-player.php" + location.search,
                     type    : "POST",
                     dataType: 'JSON',
                     data: {ajax:true},
@@ -65,7 +65,7 @@
         $('.reload').click(function() {
 
             $.ajax({
-                url     : "./config/home-player.php",
+                url     : "./config/home-player.php" + location.search,
                 type    : "POST",
                 dataType: 'JSON',
                 data: {ajax:true},
