@@ -233,6 +233,12 @@ a {
 	text-decoration: none;
 }
 
+.section-1 {
+	position: absolute;
+	margin: auto;
+	z-index: 1;
+}
+
 .section-2{
 	position: absolute;
 	margin-left: -2.5%;
