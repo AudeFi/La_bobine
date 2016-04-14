@@ -25,19 +25,10 @@
 		$playlist = $query->fetchAll();
 	}
 
-	echo '<pre>';
-	print_r($playlist);
-	echo '</pre>';;
-
-
 	$result = count($playlist);
 	$id = rand(0, $result - 1);
 
 	$music = $playlist[$id];
-
-	// echo '<pre>';
-	// print_r($music);
-	// echo '</pre>';
 
 	if(!empty($music->movie_id))
 	{
@@ -80,9 +71,5 @@
 		'movie' => $all,
 		'credits' => $credits
 	));
-
-	// echo '<pre>';
-	// print_r($all);
-	// echo '</pre>';
 
 ?>
