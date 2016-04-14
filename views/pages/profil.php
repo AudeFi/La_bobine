@@ -27,7 +27,8 @@
 ?>
 <section>
 
-	Accès non autorisé
+	<p>Connectez-vous pour accéder à cette page</p>
+	<a href="<?= URL ?>connexion">Connexion ou inscription</a>
 
 </section>
 
@@ -43,9 +44,10 @@
 		<h2>Votre profil</h2>
 		<div class="date">Date d'inscription</div>
 		<div class="envoye">Nombre de musiques envoyés</div>
-		<div class="accepte">Nombre de musiques acceptés</div>	
+		<div class="accepte">Nombre de musiques acceptés</div>
+		<a href="<?= URL ?>disconnect">Déconnexion</a>
 	</div>
-
+	
 
 
 
