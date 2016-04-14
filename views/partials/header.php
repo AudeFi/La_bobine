@@ -17,7 +17,7 @@
 			<nav>
 				<div class="menu">
 					<div class="menu-section menu-logo">
-						<img src="<?= URL ?>src/images/logo.svg" alt="logo">
+						<a href="<?= URL ?>"><img src="<?= URL ?>src/images/logo.svg" alt="logo"></a>
 					</div>
 					<div class="menu-section menu-content">
 						<ul>
