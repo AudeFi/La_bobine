@@ -143,11 +143,13 @@ $pseudo = '';
 	// SUCCESS				
 	if(empty($errors_inscription))
 	{	
-			$prepare = $pdo -> prepare('INSERT INTO users (pseudo, email, password, status) VALUES (:pseudo, :email, :password, :status)');
+			$prepare = $pdo -> prepare('INSERT INTO users (pseudo, email, password, status, date_inscription, contribution) VALUES (:pseudo, :email, :password, :status, :date_inscription, :contribution)');
 			$prepare -> bindValue('pseudo', $pseudo);
 			$prepare -> bindValue('email', $email);
 			$prepare -> bindValue('password', $password);
 			$prepare -> bindValue('status', 'user');
+			$prepare -> bindValue('date_inscription', date('Y-m-d'));
+			$prepare -> bindValue('contribution', '0');
 			$execute = $prepare -> execute();
 
 			if(!$execute){
