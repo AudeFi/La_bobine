@@ -3,10 +3,19 @@ html, body {
 	width: 100%;
 	margin: 0;
 	padding: 0;
-<<<<<<< Updated upstream
 	/* overflow-x:hidden; */
-=======
->>>>>>> Stashed changes
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+section {
+	width: 90%;
+	margin: auto;
+	margin-top: 75px;
+	margin-bottom: 100px;
 }
 
 .eq{
@@ -163,7 +172,6 @@ body {
 	width: 40%;
 	margin-right : 10%;
 	margin-left : 5%;
-	margin-top: 80px;
 	position : relative;
 }
 
@@ -228,7 +236,6 @@ body {
 .right-form {
 	display: inline-block;
 	width: 40%;
-	margin-top: 80px;
 	margin-right : 10%;
 	position : absolute;
 }
@@ -326,10 +333,6 @@ body {
 
 
 /* -------------------------------- */
-
-section {
-	margin-bottom: 100px;
-}
 
 /* section h2 {
 	font-size: 18px;
@@ -570,6 +573,10 @@ p.pagenotfound {
 
 /* ----------- ADMIN ----------- */ 
 
+.section.profil {
+	margin-bottom: 80px;
+}
+
 .page-profil h2 {
 	font-size: 25px;
 	padding-top: 10px;
@@ -580,12 +587,6 @@ p.pagenotfound {
 	font-size: 20px;
 	padding-top: 30px;
 	padding-bottom: 30px;
-}
-
-.section {
-	width: 90%;
-	margin: auto;
-	margin-top: 75px;
 }
 
 .admin-part {

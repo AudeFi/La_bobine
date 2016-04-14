@@ -25,10 +25,11 @@
 <?php 
 	if(empty($_SESSION['user'])):
 ?>
+<!-- Si je ne suis pas connecté -->
 <section>
 
 	<p>Connectez-vous pour accéder à cette page</p>
-	<a href="<?= URL ?>connexion">Connexion ou inscription</a>
+	<a href="<?= URL ?>connexion">-> Connexion ou inscription</a>
 
 </section>
 
