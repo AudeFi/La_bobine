@@ -18,14 +18,33 @@ section {
 	margin-bottom: 100px;
 }
 
-.eq{
-	width: 20px;
-	height: 20px;
-	background-color: red;
+#player{
+	width: 0px;
+	height: 0px;
+}
+
+.eq, .reload, .timebar{
+	display: inline-block;
+	margin-right: 30px;
+}
+
+.musicplayer{
+	position: fixed;
+	bottom: 0;
+}
+
+.fa:active{
+	color: black;
+	transition-duration: 0.3s;
+}
+
+.fa{
+	color: white;
+	transition-duration: 0.3s;
 }
 
 .timebar{
-	width: 40vw;
+	width: 80vw;
 	height: 10px;
 	background-color: black;
 }
@@ -35,19 +54,57 @@ section {
 	height: 10px;
 }
 
-.reload{
-	width: 100px;
-	height: 100px;
-	background-color: blue;
-}
-
 .movie_id{
 	display: none;
 }
 
-iframe{
-	position: abolute;
-	margin-left: 10000px;
+.music_title{
+	text-transform: uppercase;
+	margin-left: 10%;
+	margin-top: 12vh;
+	font-size: 4em;
+	font-family: "Lato";
+	font-weight: 600;
+	letter-spacing: 10px;
+}
+
+.music_composer{
+	font-size: 2em;
+	font-family: "Lato";
+	margin-left: 10%;
+	margin-top: 3vh;
+	font-family: "Lato";
+	font-weight: 600;
+	letter-spacing: 10px;
+}
+
+.see_more{
+	width: 220px;
+	height: 35px;
+	margin-left: 10%;
+	margin-top: 5vh;
+	border : solid 2px white;
+}
+
+.see_more, .amazon_link{
+	display: inline;
+}
+
+.amazon_link{
+	width: 220px;
+	height: 35px;
+	margin-left: 2%;
+	margin-top: 2vh;
+	border : solid 2px white;
+}
+
+.amazon_link:hover , .see_more:hover{
+	background-color: white;
+	color: #2E2E2E;
+}
+
+.amazon_music{
+	text-decoration: none;
 }
 
 body {
