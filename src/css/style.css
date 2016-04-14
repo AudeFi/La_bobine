@@ -303,6 +303,7 @@ body {
 .results{
 	background-color: #292929;
 	width: 300px;
+	height: 100%;
 	margin: auto;
 	
 }
@@ -310,6 +311,8 @@ body {
 	display: block;
 	width: 100%;
 	color: #a3a3a3;
+	padding-top: 7px;
+	padding-bottom: 7px;
 }
 
 .results a:hover{

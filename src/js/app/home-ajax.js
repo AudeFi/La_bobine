@@ -1,126 +1,114 @@
+    var tag = document.createElement('script');
+    var player;
+    var firstScriptTag = document.getElementsByTagName('script')[0];
 
-// 2. This code loads the IFrame Player API code asynchronously.
-      var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-      // 3. This function creates an <iframe> (and YouTube player)
-      //    after the API code downloads.
-      var player;
-      // var music_id = '<?=$music->music_link?>';
-      function onYouTubeIframeAPIReady() {
+    function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
-          height: '390',
-          width: '640',
-          videoId: music_id,
-          events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-          }
+            height: '390',
+            width: '640',
+            videoId: music_id,
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
         });
-      }
+    }
 
-      // 4. The API will call this function when the video player is ready.
-      function onPlayerReady(event) {
+    function onPlayerReady(event) {
         event.target.setPlaybackQuality('360');
         event.target.playVideo();
 
         // MUTE BUTTON
-      $(".eq").on("click", function(){
-          if( $(".eq").hasClass("mute")) {
+    $(".eq").on("click", function() {
+        if( $(".eq").hasClass("mute")) {
             $(".eq").removeClass("mute");
-              player.mute();
-          } else {
-              $(".eq").addClass("mute");
-              player.unMute();
-          }
-      }).trigger(".click");
+            player.mute();
+        } else {
+            $(".eq").addClass("mute");
+            player.unMute();
+        }
+    }).trigger(".click");
 
 
       // AJAX RELOAD MOVIE & MUSIC WHEN PLAYER END
         window.setInterval(function(){
-          var statement = player.getPlayerState();
-          if (statement == 0) {
-            $.ajax({
-              url     : "config/home-player.php",
-              type    : "POST",
-              dataType: 'JSON',
-              data: {ajax:true},
-              success : function(data, status, xhr) {
-                console.log(data.music);
-                console.log(data.movie);
-                console.log(data.credits);
-                player.loadVideoById(data.music.music_link);
-                $('.music_title').text(data.music.music_title);
-                $('.movie_title').text(data.movie.title);
-                $('.release_date').text(data.movie.release_date);
-            $('.music_composer').text(data.music.composer);
-            $('.genre').text(data.movie.genre);
-            $('.overview').text(data.movie.overview);
-            $('.director').text(data.credits.crew[0].name);
-            $('.actors').text(data.credits.cast[0].name + "  /  " + data.credits.cast[1].name + "  /  " + data.credits.cast[2].name );
-            $('.poster').attr('src', 'http://image.tmdb.org/t/p/w500/' + data.movie.poster_path);
-             }
-        });
-          }
-      }, 2000);
+            var statement = player.getPlayerState();
+
+            if (statement == 0) {
+                $.ajax({
+                    url     : "config/home-player.php",
+                    type    : "POST",
+                    dataType: 'JSON',
+                    data: {ajax:true},
+
+                    success : function(data, status, xhr) {
+                        player.loadVideoById(data.music.music_link);
+    
+                        $('.music_title').text(data.music.music_title);
+                        $('.movie_title').text(data.movie.title);
+                        $('.release_date').text(data.movie.release_date);
+                        $('.music_composer').text(data.music.composer);
+                        $('.genre').text(data.movie.genre);
+                        $('.overview').text(data.movie.overview);
+                        $('.director').text(data.credits.crew[0].name);
+                        $('.actors').text(data.credits.cast[0].name + "  /  " + data.credits.cast[1].name + "  /  " + data.credits.cast[2].name );
+                        $('.poster').attr('src', 'http://image.tmdb.org/t/p/w500/' + data.movie.poster_path);
+                    }
+                });
+            }
+        }, 2000);
 
         // AJAX RELOAD MOVIE & MUSIC WHEN SKIP
         $('.reload').click(function() {
 
-               $.ajax({
-              url     : "config/home-player.php",
-              type    : "POST",
-              dataType: 'JSON',
-              data: {ajax:true},
-              success : function(data, status, xhr) {
-                console.log(data.music);
-                console.log(data.movie);
-                console.log(data.credits);
-                player.loadVideoById(data.music.music_link);
-                $('.music_title').text(data.music.music_title);
-                $('.movie_title').text(data.movie.title);
-                $('.genre').text(data.movie.genre);
-                $('.release_date').text(data.movie.release_date);
-                $('.director').text(data.credits.crew[0].name);
-                $('.actors').text(data.credits.cast[0].name + "  /  " + data.credits.cast[1].name + "  /  " + data.credits.cast[2].name );
-            $('.music_composer').text(data.music.composer);
-            $('.overview').text(data.movie.overview);
-            $('.poster').attr('src', 'http://image.tmdb.org/t/p/w500/' + data.movie.poster_path);
-              }
-    });
+            $.ajax({
+                url     : "config/home-player.php",
+                type    : "POST",
+                dataType: 'JSON',
+                data: {ajax:true},
 
-    });
+                success : function(data, status, xhr) {
+                    player.loadVideoById(data.music.music_link);
+
+                    $('.music_title').text(data.music.music_title);
+                    $('.movie_title').text(data.movie.title);
+                    $('.genre').text(data.movie.genre);
+                    $('.release_date').text(data.movie.release_date);
+                    $('.director').text(data.credits.crew[0].name);
+                    $('.actors').text(data.credits.cast[0].name + "  /  " + data.credits.cast[1].name + "  /  " + data.credits.cast[2].name );
+                    $('.music_composer').text(data.music.composer);
+                    $('.overview').text(data.movie.overview);
+                    $('.poster').attr('src', 'http://image.tmdb.org/t/p/w500/' + data.movie.poster_path);
+                }
+            });
+
+        });
+    }
 
 
-      }
-
-      // 5. The API calls this function when the player's state changes.
-      //    The function indicates that when playing a video (state=1),
-      //    the player should play for six seconds and then stop.
       
-      function onPlayerStateChange(event) {
+    function onPlayerStateChange(event) {
         var done = false;
-
         if (event.data == YT.PlayerState.PLAYING && !done) {
 
+            window.setInterval(function(){
+                var duration = player.getDuration();
+                var currentTime = player.getCurrentTime();
 
-      window.setInterval(function(){
-        var duration = player.getDuration();
-        var currentTime = player.getCurrentTime();
-        $(".current_time").css({
-            "width": ( currentTime / duration ) * 100 + "%"
-        });
+                $(".current_time").css({
+                    "width": ( currentTime / duration ) * 100 + "%"
+                });
 
-    }, 500);
+            }, 500);
 
-
-
-          done = true;
+            done = true;
         }
-      }
-      function stopVideo() {
+    }
+
+
+    function stopVideo() {
         player.stopVideo();
-      }
+    }

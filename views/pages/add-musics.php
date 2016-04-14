@@ -23,7 +23,7 @@
 	</div>
 
 	<div class="container-add-music">
-		<form action="#" method="post" class="search">
+		<form action="#" method="post" class="search" autocomplete="off">
 			<div class="film-search">
 				<input type="text" name="movie_title" id="movie_title" value="" placeholder="Choisissez le film">
 				<div class="results"></div>
