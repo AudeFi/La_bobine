@@ -155,14 +155,31 @@
 	width: 100%;
 	margin-top: 10px;
 	}
-		
+	
+	section .profil{
+		margin-top: 100px;
+	}
 
+	section .admin .flex{
+	display: block;
+	text-align: center;
+	height: auto;
+	}
+
+	section .admin h2{
+	text-align: center;
+	}
+	
+	section .admin .scroll .line{
+		text-align: center;
+	
+	}
+	
 }
 
 @media screen and (max-width:500px) {
 
 	.menu ul{
-		background-color: red;
 		margin-right: 75px;
 	}
 	.menu-responsive-toggle ul{
@@ -188,7 +205,9 @@
 		margin-top: 200px;
 	}
 
-	 
+	 section .profil{
+		margin-top: 180px;
+	}
 }
 
 

@@ -1,20 +1,6 @@
-var img = document.getElementById("poster");
-img.onload = function () {
-  var colorThief = new ColorThief();
-  var color = colorThief.getColor(img);
-  console.log(color);
-  document.querySelector('.section-2').style.backgroundColor = "rgb(" + color + ")";
-};
-img.crossOrigin = 'Anonymous';
-img.src = img.src;
-
-
-
-
 $(".right").click(function(){
     $(".menu-responsive-toggle").slideToggle();
     $(".connect-you").slideToggle();
-
 });
 
 $(function() {
@@ -30,3 +16,13 @@ $(".close").click(function(){
 	$(".music-info").fadeIn( "slow" );
 	$("#bars").fadeIn( "fast" );
 });
+
+var img = document.getElementById("poster");
+img.onload = function () {
+  var colorThief = new ColorThief();
+  var color = colorThief.getColor(img);
+  console.log(color);
+  document.querySelector('.section-2').style.backgroundColor = "rgb(" + color + ")";
+};
+img.crossOrigin = 'Anonymous';
+img.src = img.src;
