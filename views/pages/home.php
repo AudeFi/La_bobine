@@ -48,7 +48,7 @@
 
 	</div>
 
-<section class="section-1">
+	<section class="section-1">
 	
 	<div class="music-info">
 

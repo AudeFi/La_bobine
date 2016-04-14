@@ -31,6 +31,7 @@ section {
 .musicplayer{
 	position: fixed;
 	bottom: 0;
+	margin-bottom: 10px;
 	z-index: 1;
 }
 
@@ -63,14 +64,14 @@ section {
 	text-transform: uppercase;
 	margin-left: 10%;
 	margin-top: 12vh;
-	font-size: 4em;
+	font-size: 3em;
 	font-family: "Lato";
 	font-weight: 600;
 	letter-spacing: 8px;
 }
 
 .music_composer{
-	font-size: 2em;
+	font-size: 1.5em;
 	font-family: "Lato";
 	margin-left: 10%;
 	margin-top: 3vh;
@@ -80,7 +81,7 @@ section {
 }
 
 .see_more{
-	width: 220px;
+	width: 180px;
 	height: 35px;
 	margin-left: 10%;
 	margin-top: 5vh;
@@ -92,19 +93,30 @@ section {
 }
 
 .amazon_link{
-	width: 220px;
+	width: 180px;
 	height: 35px;
 	margin-left: 2%;
 	margin-top: 2vh;
 	border : solid 2px white;
 }
 
-.amazon_link:hover , .see_more:hover{
+.amazon_link_2{
+	width: 180px;
+	height: 35px;
+	margin-top: 10vh;
+	border : solid 2px white;
+}
+
+.amazon_link:hover , .see_more:hover, .amazon_link_2:hover{
 	background-color: white;
 	color: #2E2E2E;
 }
 
 .amazon_music{
+	text-decoration: none;
+}
+
+.amazon_movie{
 	text-decoration: none;
 }
 
@@ -120,7 +132,7 @@ section {
 
 .info-film{
 	transform:skew(0deg,20deg);
-	margin-top: 400px;
+	margin-top: 450px;
 }
 
 body.page-home{
@@ -167,11 +179,12 @@ body.page-home{
 
 .film-text{
 	margin-left: 10%;
-	margin-top: -100px;
+	margin-bottom: 300px;
 }
 
 .poster{
-	margin-top: 500px;
+	width: 45vh;
+	margin-left: 20%;
 }
 
 .close{
