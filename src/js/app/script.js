@@ -14,5 +14,7 @@ $(".right").click(function(){
 $(function() {
   $('.see_more').click(function() {
    console.log('hi');
+   $(".section-2").animate({ top : -330}, 500);
+   $(".music-info").fadeOut( "fast" );
   });
 });

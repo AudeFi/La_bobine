@@ -31,6 +31,7 @@ section {
 .musicplayer{
 	position: fixed;
 	bottom: 0;
+	z-index: 1;
 }
 
 .fa:active{
@@ -45,13 +46,13 @@ section {
 
 .timebar{
 	width: 80vw;
-	height: 10px;
-	background-color: black;
+	height: 5px;
+	background-color: white;
 }
 
 .current_time{
-	background-color: white;
-	height: 10px;
+	background-color: #2E2E2E;
+	height: 5px;
 }
 
 .movie_id{
@@ -65,7 +66,7 @@ section {
 	font-size: 4em;
 	font-family: "Lato";
 	font-weight: 600;
-	letter-spacing: 10px;
+	letter-spacing: 8px;
 }
 
 .music_composer{
@@ -74,7 +75,7 @@ section {
 	margin-left: 10%;
 	margin-top: 3vh;
 	font-family: "Lato";
-	font-weight: 600;
+	font-weight: Bold;
 	letter-spacing: 10px;
 }
 
@@ -107,13 +108,40 @@ section {
 	text-decoration: none;
 }
 
+.section-2{
+	position: absolute;
+	margin-left: -2.5%;
+	background-color: blue;
+	width: 100vw;
+	top: 55vh;
+	transform:skew(0deg,-20deg);
+	z-index: -1;
+	height: 2000px;
+}
+
+.info-film{
+	transform:skew(0deg,20deg);
+}
+
+body.page-home{
+	overflow: hidden;
+}
+
+.poster{
+	margin-top: 500px;
+}
+
+
+
+
+/* ----------------------AFTER--------------------- */
+
 body {
 	font-family: "Lato";
 	font-weight: lighter; 
 	background-color: #2E2E2E;
 	color: white;
 	position: relative;
-	/* overflow: hidden; */
 }
 
 .container-global {

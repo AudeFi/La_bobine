@@ -33,7 +33,7 @@
 				<input type="text" name="movie_name" id="movie_name" value="" placeholder="Titre du film" readonly >
 			</div>
 			<div class="content-add-music">
-			<input type="text" name="movie_id" id="movie_id" value="" class="movie_id">
+			<!-- <input type="text" name="movie_id" id="movie_id" value="" class="movie_id"> -->
 				<div class="music-title">
 					<input type="text" name="music_title" id="music_title" value="" placeholder="Entrez le titre de la musique">
 				</div>
@@ -43,15 +43,10 @@
 				<div class="link">
 					<input type="link" name="music_link" id="music_link" value="" placeholder="Entrez votre lien">
 				</div>
-				<div class="add-sumbit">
+				<div class="add-submit">
 					<input type="submit" name="add" id="add" value="Soumettre">
 				</div>
-			</div>
-	</div>
-	
-			
-				
- 			
+			</div>					
 		</form>
 	</div>		
 
