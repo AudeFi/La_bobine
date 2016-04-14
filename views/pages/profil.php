@@ -26,6 +26,7 @@
 	if(empty($_SESSION['user'])):
 ?>
 <!-- Si je ne suis pas connecté -->
+
 <section>
 
 	<p>Connectez-vous pour accéder à cette page</p>
@@ -35,6 +36,7 @@
 
 
 <!-- Si je suis connecté -->
+
 <?php else:?>
 
 <section>
@@ -43,24 +45,20 @@
 
 	<div class="section profil">
 		<h2>Votre profil</h2>
-		<div class="date">Date d'inscription</div>
-		<div class="envoye">Nombre de musiques envoyés</div>
-		<div class="accepte">Nombre de musiques acceptés</div>
-		<a href="<?= URL ?>disconnect">Déconnexion</a>
+		<div class="date">Date d'inscription :</div>
+		<div class="envoye">Nombre de musiques envoyées :</div>
+		<div class="accepte">Nombre de musiques acceptées :</div>
+		<div class="disconnect"><a href="<?= URL ?>disconnect">Déconnexion</a></div>
 	</div>
 	
-
-
-
 	<!-- SI JE SUIS ADMIN -->
+
 	<?php if($_SESSION['user']['status']=='admin'):?>
 
 	<div class="section admin">
-		<h2>Admin - Gestion</h2>
-
+		<h2>Approuvez les demandes de musiques</h2>
 
 		<div class="admin-part approbation">
-			<h3>Approuvez les demandes de musiques</h3>
 			<div class="scroll">
 			 	<?php foreach($validation_musics as $_validation): ?>
 			 	<div class="line">
@@ -85,14 +83,12 @@
 			</div>
 		</div>
 
-
-
 		<div class="admin-part add-playlists">
-			<h3>Ajoutez des musiques aux playlists</h3>
+			<h2>Ajoutez des musiques aux playlists</h2>
 			<form action="#" method="POST">
 				<div class="flex">
 					<div class="colonne">
-						<h4>Selectionnez des musiques</h4>
+						<h4>Sélectionnez une musique</h4>
 						<div class="scroll">
 							<?php foreach($all_musics as $one_music): ?>
 							<div class="input-label">
@@ -103,12 +99,12 @@
 						</div>
 					</div>
 					<div class="colonne">
-						<h4>Selectionnez une playlist</h4>
+						<h4>Sélectionnez une playlist</h4>
 						<div class="scroll">
 							<?php foreach($all_playlists as $one_playlist): ?>
 							<div class="input-label">
 								<input class="border" type="radio" value="<?= $one_playlist->id ?>" name="name_playlist" id="name_playlist<?=$one_playlist->id?>">
-								<label for="name_playlist<?=$one_playlist->id?>"><?= $one_playlist->name ?></label>								
+								<label for="name_playlist<?=$one_playlist->id?>"><?= $one_playlist->name ?></label>		
 							</div>
 							<?php endforeach; ?>
 						</div>
@@ -119,14 +115,11 @@
 				</div>
 			</form>
 		</div>
-		
-
-
-
 
 		<div class="admin-part list-playlists">
-			<h3>Voici le contenu des playlists</h3>
+			<h2>Voici le contenu des playlists</h2>
 			<div class="flex">
+				
 				<div class="colonne classiques">	
 					<h4>Les classiques</h4>
 					<div class="scroll">
@@ -140,6 +133,7 @@
 						<?php endforeach; ?>
 					</div>
 				</div>
+
 				<div class="colonne bonne-humeur">	
 					<h4>Bonne humeur</h4>
 					<div class="scroll">
@@ -153,6 +147,7 @@
 						<?php endforeach; ?>
 					</div>
 				</div>
+				
 				<div class="colonne detente">	
 					<h4>Détente</h4>
 					<div class="scroll">

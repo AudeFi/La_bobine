@@ -1,12 +1,15 @@
 $(".right").click(function(){
     $(".menu-responsive-toggle").slideToggle();
+    $(".connect-you").slideToggle();
+
 });
 
-$(function() {
+/*$(function() {
   $('.right').click(function() {
-   $('.connect-you').fadeToggle("slow","linear");
+   $('.connect-you').css("margin-top","100px");
   });
-});
+});*/
+
 
 $(function() {
   $('.see_more').click(function() {

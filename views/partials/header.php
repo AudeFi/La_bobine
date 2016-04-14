@@ -6,10 +6,10 @@
 	<title><?= $title ?></title>
 	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="<?= URL ?>src/css/reset.css">
-	<link rel="stylesheet" href="<?= URL ?>src/css/style.css">
 	<link rel="stylesheet" href="<?= URL ?>src/css/media.css">
-	<link rel="stylesheet" href="<?= URL ?>src/css/font-awesome/css/font-awesome.css">
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<!-- 	<link rel="stylesheet" href="<?= URL ?>src/css/font-awesome/css/font-awesome.css"> -->
+	<!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"> -->
+	<link rel="stylesheet" href="<?= URL ?>src/css/style.css">
 </head>
 <body class="page-<?= $class ?>">
 
@@ -17,7 +17,7 @@
 			<nav>
 				<div class="menu">
 					<div class="menu-section menu-logo">
-						<img src="<?= URL ?>src/images/logo.svg" alt="logo">
+						<a href="<?= URL ?>"><img src="<?= URL ?>src/images/logo.svg" alt="logo"></a>
 					</div>
 					<div class="menu-section menu-content">
 						<ul>
