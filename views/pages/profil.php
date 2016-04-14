@@ -1,4 +1,6 @@
 <?php
+
+	error_reporting(E_ALL);
 	
 	require 'config/add-to-playlist.php';
 

@@ -49,10 +49,6 @@
 			</div>					
 		</form>
 	</div>		
-
-	<!-- <div class="container-img-add">
-		<img src="<?= URL ?>src/images/gendarmes.png" alt="gendarmes">
-	</div> -->
 </div>
 
 </section>
