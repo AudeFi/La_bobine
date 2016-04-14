@@ -46,7 +46,7 @@
 
                     success : function(data, status, xhr) {
                         player.loadVideoById(data.music.music_link);
-    
+        
                         $('.music_title').text(data.music.music_title);
                         $('.movie_title').text(data.movie.title);
                         $('.release_date').text(data.movie.release_date);
@@ -72,7 +72,7 @@
 
                 success : function(data, status, xhr) {
                     player.loadVideoById(data.music.music_link);
-
+                    console.log(data.music.id);
                     $('.music_title').text(data.music.music_title);
                     $('.movie_title').text(data.movie.title);
                     $('.genre').text(data.movie.genre);
