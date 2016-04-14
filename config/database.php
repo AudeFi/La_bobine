@@ -3,7 +3,11 @@
 define('DB_HOST','localhost');
 define('DB_NAME','si-films');
 define('DB_USER','root');
+<<<<<<< HEAD
 // define('DB_PASS',''); /*Jules*/
+=======
+//define('DB_PASS',''); /*Jules*/
+>>>>>>> origin/master
 define('DB_PASS','root');
 try
 {
