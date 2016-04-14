@@ -27,7 +27,28 @@
 	
 ?>
 
-<section class="section-1">
+	<div class="section-2">
+
+		<div class="info-film">
+		<button class="close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+	
+			<div class="film-text">
+				<p   class="movie_title"><?= $all->title ?></p>
+				<p   class="director">Directored by <?= $credits->crew[0]->name ?></p>
+				<p   class="actors">With <?= $credits->cast[0]->name ?> | <?= $credits->cast[1]->name ?> | <?= $credits->cast[2]	->	name ?></p>
+				<p   class="genre">Genre : <?= $all->genres[0]->name ?></p>
+				<p   class="release_date">Release Date : <?= $all->release_date ?></p>
+				<p   class="overview">Overview : <?= $all->overview ?></p>
+	
+				<button class="amazon_link_2"><a class="amazon_music" href="https://www.amazon.fr/s/ref=nb_sb_noss_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91	&url=search-alias%3Ddvd&field-keywords=<?= $all->title ?>+Bande+Originale" TARGET="_blank">Discover On Amazon</a></button>
+			</div>
+
+				<img class="poster" src="http://image.tmdb.org/t/p/w500/<?= $all->poster_path ?>" alt="">
+		</div>
+
+	</div>
+
+	<section class="section-1">
 	
 	<div class="music-info">
 
@@ -51,28 +72,6 @@
     </div>
 
 </section>
-
-	<div class="section-2">
-
-		<div class="info-film">
-		<div><button>Back</button></div>
-	
-			<div class="film-text">
-			<p   class="movie_title"><?= $all->title ?></p>
-			<p   class="director">Directored by <?= $credits->crew[0]->name ?></p>
-			<p   class="actors">With <?= $credits->cast[0]->name ?> | <?= $credits->cast[1]->name ?> | <?= $credits->cast[2]->	name ?></p>
-			<p   class="genre">Genre : <?= $all->genres[0]->name ?></p>
-			<p   class="release_date">Release Date : <?= $all->release_date ?></p>
-			<p   class="overview">Overview : <?= $all->overview ?></p>
-			<div>
-				<button class="amazon_link_2"><a class="amazon_movie" href="https://www.amazon.fr/s/ref=nb_sb_noss_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91	&url=search-alias%3Ddvd&field-keywords=<?= $all->title ?>" TARGET="_blank">Discover On Amazon</a></button>
-			</div>
-			</div>
-
-				<img class="poster" src="http://image.tmdb.org/t/p/w500/<?= $all->poster_path ?>" alt="">
-		</div>
-
-	</div>
 
 <script>
 	var music_id = '<?=$music->music_link?>';

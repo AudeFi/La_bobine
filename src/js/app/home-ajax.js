@@ -73,12 +73,12 @@
 
                 success : function(data, status, xhr) {
                     player.loadVideoById(data.music.music_link);
-                    console.log(data.music.id);
+                    console.log(data.movie.genre);
                     $('.music_title').text(data.music.music_title);
                     $('.movie_title').text(data.movie.title);
-                    $('.genre').text(data.movie.genre);
                     $('.release_date').text(data.movie.release_date);
                     $('.director').text(data.credits.crew[0].name);
+                    $('.genre').text(data.movie.genres[0].name);
                     $('.actors').text(data.credits.cast[0].name + "  /  " + data.credits.cast[1].name + "  /  " + data.credits.cast[2].name );
                     $('.music_composer').text(data.music.composer);
                     $('.amazon_music').attr( 'href', 'https://www.amazon.fr/s/ref=nb_sb_noss_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&url=search-alias%3Dpopular&field-keywords=' + data.movie.title + '+Bande+Originale');

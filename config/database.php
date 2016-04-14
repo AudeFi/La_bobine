@@ -5,9 +5,13 @@ define('DB_NAME','si-films');
 define('DB_USER','root');
 
 // define('DB_PASS',''); /*Jules*/
+<<<<<<< HEAD
 
 define('DB_PASS','root');
 
+=======
+define('DB_PASS','root');
+>>>>>>> origin/master
 try
 {
     // Try to connect to database

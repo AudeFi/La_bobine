@@ -31,6 +31,7 @@ section {
 .musicplayer{
 	position: fixed;
 	bottom: 0;
+	margin-bottom: 10px;
 	z-index: 1;
 }
 
@@ -63,14 +64,14 @@ section {
 	text-transform: uppercase;
 	margin-left: 10%;
 	margin-top: 12vh;
-	font-size: 4em;
+	font-size: 3em;
 	font-family: "Lato";
 	font-weight: 600;
 	letter-spacing: 8px;
 }
 
 .music_composer{
-	font-size: 2em;
+	font-size: 1.5em;
 	font-family: "Lato";
 	margin-left: 10%;
 	margin-top: 3vh;
@@ -80,7 +81,7 @@ section {
 }
 
 .see_more{
-	width: 220px;
+	width: 180px;
 	height: 35px;
 	margin-left: 10%;
 	margin-top: 5vh;
@@ -92,19 +93,30 @@ section {
 }
 
 .amazon_link{
-	width: 220px;
+	width: 180px;
 	height: 35px;
 	margin-left: 2%;
 	margin-top: 2vh;
 	border : solid 2px white;
 }
 
-.amazon_link:hover , .see_more:hover{
+.amazon_link_2{
+	width: 180px;
+	height: 35px;
+	margin-top: 10vh;
+	border : solid 2px white;
+}
+
+.amazon_link:hover , .see_more:hover, .amazon_link_2:hover{
 	background-color: white;
 	color: #2E2E2E;
 }
 
 .amazon_music{
+	text-decoration: none;
+}
+
+.amazon_movie{
 	text-decoration: none;
 }
 
@@ -115,22 +127,80 @@ section {
 	width: 100vw;
 	top: 55vh;
 	transform:skew(0deg,-20deg);
-	z-index: -1;
 	height: 2000px;
 }
 
 .info-film{
 	transform:skew(0deg,20deg);
+	margin-top: 450px;
 }
 
 body.page-home{
 	overflow: hidden;
 }
 
-.poster{
-	margin-top: 500px;
+.movie_title{
+	text-transform: uppercase;
+	width: 500px;
+	margin-top: 12vh;
+	font-size: 2.5em;
+	font-family: "Lato";
+	font-weight: 600;
+	letter-spacing: 8px;
 }
 
+.director{
+	margin-top: 2vh;
+	font-size: 0.8em;
+	font-family: "Lato";
+	letter-spacing: 3px;
+	font-weight: 900;
+}
+
+.actors{
+	margin-top: 1vh;
+	font-size: 0.8em;
+	font-family: "Lato";
+	letter-spacing: 3px;
+	font-weight: 900;
+}
+
+.film-text, .poster{
+	display: inline-block;
+}
+
+.overview, .genre, .release_date{
+	width: 500px;
+	margin-top: 3vh;
+	font-size: 0.8em;
+	font-family: "Lato";
+	letter-spacing: 1px;
+}
+
+.film-text{
+	margin-left: 10%;
+	margin-bottom: 300px;
+}
+
+.poster{
+	width: 45vh;
+	margin-left: 20%;
+}
+
+.close{
+	width: 25px;
+	height: 32px;
+	position: absolute;
+	margin-left: 10%;
+	margin-top: 5vh;
+	transition-duration: 0.3s;
+}
+
+ .close:hover{
+ 	transform-origin: 50% 50%;
+ 	transform: rotate(180deg);
+ 	transition-duration: 0.3s;
+ }
 
 
 
@@ -272,6 +342,21 @@ body {
    font-style : italic;
 }
 
+:-moz-placeholder { /* Firefox 18- */
+   color: #565656;
+   font-style : italic;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #565656; 
+   font-style : italic; 
+}
+
+:-ms-input-placeholder {  
+   color: #565656; 
+   font-style : italic; 
+}
+
 .container-form label {
 	cursor: pointer;
 }
@@ -289,6 +374,7 @@ body {
 }
 
 .container-form .submit {
+/*	font-style: italic;*/
 	background-color: transparent;
     border-style: solid;
     border-color: white;
@@ -309,6 +395,10 @@ body {
 	margin-right : 10%;
 	position : absolute;
 }
+
+
+
+/*------------ ADD MUSICS --------- */
 
 /*------------ ADD MUSICS --------- */
 .connect-you{
@@ -414,25 +504,38 @@ body {
 	width: 100%;
 }
 
-.left-form .connect {
-	font-size : 50px;
-	margin-bottom : 20px;
-	font-weight : bold;
+
+
+/* -------------------------------- */
+
+/* section h2 {
+	font-size: 18px;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+} */
+
+
+table {
+	width: 400px;
+	margin: auto;
+	margin-bottom: 10px;
 }
 
-.left-form .profil-access {
-	margin-bottom : 10px;
+table td {
+	height: 25px;
+	line-height: 25px;
+	vertical-align: middle;
+	text-align: center;
+	border: 1px solid grey;
 }
 
-.left-form .profil-access:hover {
-	color : #545454;
+form input[type="submit"] {
+	height: 30px;
+	background-color: grey;
+	cursor: pointer;
 }
 
-.left-form .disconnect:hover{
-	color : #545454;
-}
-
-/* --------------FORM------------------ */
 .errors {
 	color: red;
 	border: 1px solid red;
@@ -537,7 +640,6 @@ form .error input {
 .playlist-section:hover img{
 	transform: scale(1.05);
 }
-
 /* ----------- ADMIN ----------- */ 
 
 .section.profil {
@@ -748,7 +850,6 @@ p.pagenotfound {
 	font-size: 30px;
 	text-transform: uppercase;
 }
-/*--------- ADD MUSIC --------- */
 
 .container-add-music{
 	text-align: center;
@@ -778,6 +879,18 @@ p.pagenotfound {
    color: #565656;
 }
 
+:-moz-placeholder { /* Firefox 18- */
+   color: #565656;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #565656;  
+}
+
+:-ms-input-placeholder {  
+   color: #565656;  
+}
+
 .content-add-music{
 	width: 100%;
 	display: inline-block;
@@ -799,7 +912,7 @@ p.pagenotfound {
 	width: 33%;
 }
 
-#add {
+#add{
 	margin-top: 3%;
 	font-size: 15px;
 	font-weight: 300;
@@ -808,96 +921,144 @@ p.pagenotfound {
 	color: white;
 	text-transform: uppercase;
 	letter-spacing: 2px;
+
 }
 
-.container-add {
-	width: 100%;
-	height: 100%;
-	background-color: #2E2E2E;
-	margin-top: 5%;
+
+/* ----------- ADMIN ----------- */ 
+
+.section.profil {
+	margin-bottom: 80px;
 }
 
-.container-add h3,h6 {
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	text-align: center;
+.page-profil h2 {
+	font-size: 25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
-.container-add h6 {
-	margin-top: 6%;
+.page-profil h3 {
+	font-size: 20px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
-.container-add a {
-	text-decoration: none;
-	color: white;
-	width: 10%;
-	height: 5%;
+.admin-part {
+	margin-top: 25px;
 }
 
-.container-add a:hover {
-	text-decoration: none;
-	color: white;
-	width: 10%;
-	height: 5%;
+.approbation .line {
+	padding: 15px 0;
 }
 
-.container-add p {
-	text-align: center;
+.approbation .line div{
+	vertical-align: top;
 }
 
-.button-add {
-	width: 10%;
-	margin-left: 45%;
-	height: 5%;
-	border: 2px solid white;
+.approbation .line .infos{
+	width:650px;
+	display: inline-block;
 }
 
-.button-add:hover {
-	cursor: pointer;
-	background-color: #8A95B2;
+.approbation .line .buttons{
+	width:210px;
+	display: inline-block;
 }
 
-.container-img-add {
-	text-align: center;
-	margin-top: 2%;
-}
-
-.container-img-add img{
-	width: 30%;
-}
-
-.container-add .menu a:hover {
-	color: #8A95B2;
-}
-
-.add {
-	width: 100px;
-}
-
-.results{
-	background-color: #292929;
-	width: 300px;
-	height: 100%;
-	margin: auto;	
-}
-
-.results a{
+.approbation .line .infos .first-line{
 	display: block;
-	width: 100%;
-	color: #a3a3a3;
-	padding-top: 7px;
-	padding-bottom: 7px;
+	margin-bottom: 8px;
 }
 
-.results a:hover{
-	color: white;
-	width: 100%;
+.approbation .line .infos .second-line{
+	display: block;
 }
 
-form input[type="submit"] {
-	height: 30px;
-	background-color: grey;
+.approbation .line .infos .second-line .youtube_link{
+	color: #eb8686;
+}
+
+.approbation .line form{
+	width:100px;
+	display: inline-block;
+}
+
+.approbation .line form.check{
+	margin-right: 5px;
+}
+
+.approbation .line button{
+	width: 100px;
+	height: 35px;
 	cursor: pointer;
+	border-radius: 10px;
+}
+
+.approbation .line button.validate{
+	background-color: #7ad181;
+}
+
+.approbation .line button.erase{
+	background-color: #eb8686;
+}
+
+.add-playlists {
+
+}
+
+.admin .flex{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+
+.admin h4{
+	height: 50px;
+	background-color: #252525;
+	line-height: 50px;
+	padding-left: 10px;
+	vertical-align: center;
+}
+
+
+.admin .colonne{
+	vertical-align: top;
+	width: 300px;
+	display: inline-block;
+}
+
+
+.add-playlists .colonne-submit input{
+	background-color: transparent;
+	width: 80px;
+}
+
+.admin .scroll{
+	overflow: scroll;
+	height: 200px;
+	background-color: #292929;
+	padding: 10px;
+}
+
+.admin .colonne .input-label {
+	display: block;
+	padding: 8px;
+}
+
+.list-playlists form{
+	display: inline;
+}
+
+.list-playlists button{
+	margin-right: 20px;
+	cursor: pointer;
+	display: inline;
+}
+
+.playlist-cat {
+	display: inline-block;
+	vertical-align: top;
 }
 
 .legal-mention{
