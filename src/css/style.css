@@ -370,6 +370,20 @@ a {
 	position : relative;
 }
 
+.left-form .connect {
+	margin-top: 20px;
+	font-size: 22px;
+	margin-bottom: 35px;
+}
+
+.left-form .profil-access, .left-form .disconnect {
+	margin-top: 15px;
+}
+
+.left-form a:hover {
+	color: #8f8f8f;	
+}
+
 .container-form .border {
 	background-color: #252525;
 	outline: none;
@@ -548,20 +562,32 @@ a {
 
 form input[type="submit"] {
 	height: 30px;
-	background-color: grey;
 	cursor: pointer;
 }
 
+
+
 .errors {
 	color: #eb8686;
-	border: 1px solid #eb8686;
 	padding: 10px;
 	margin: 0 0 15px 0;
 }
 
+.page-add-musics .errors {
+	margin: auto;
+	margin-top: 20px;
+	width: 50%;
+}
+
+.page-add-musics .success {
+	margin: auto;
+	margin-top: 20px;
+	width: 50%;
+}
+
+
 .success {
-	color: green;
-	border: 1px solid green;
+	color: #53DB81;
 	padding: 10px;
 	margin: 0 0 15px 0;
 }
@@ -571,7 +597,7 @@ form .error label {
 }
 
 form .error input {
-	border: 2px solid #eb8686;
+	border: 1px solid #eb8686;
 }
 
 .ytvideo {
@@ -784,7 +810,7 @@ form .error input {
 }
 
 .approbation .line button.erase{
-	background-color: #F97980;
+	background-color: #eb8686;
 	letter-spacing: 1.25px;
 	font-weight: bold;
 }
@@ -820,10 +846,13 @@ form .error input {
 	width: 80px;
 	letter-spacing: 1.5px;
 	text-transform: uppercase;
-	font-size: 15px;
-	font-weight: bold;
-
 }
+
+.add-playlists .colonne-submit input:hover{
+	color: #8f8f8f;
+}
+
+
 
 .list-playlists form{
 	display: inline;
@@ -884,6 +913,7 @@ p.pagenotfound {
 	font-weight: 300;
 	font-size: 15px;
 	letter-spacing: 2px;
+	margin-top: 20px;
 }
 
 .film-search{
@@ -938,14 +968,14 @@ p.pagenotfound {
 
 #add{
 	margin-top: 3%;
-	font-size: 15px;
-	font-weight: 300;
-	border: none;
-	background-color: #2E2E2E;
+	background-color: transparent;
 	color: white;
 	text-transform: uppercase;
 	letter-spacing: 2px;
+}
 
+#add:hover {
+	color: #8f8f8f;	
 }
 
 /* -----------------SOUND WAVES---------------*/

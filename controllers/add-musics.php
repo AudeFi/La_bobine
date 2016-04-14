@@ -1,4 +1,4 @@
 <?php 
 
-	$title = 'Add musics';
+	$title = 'Ajouts Musique';
 	$class = 'add-musics';
