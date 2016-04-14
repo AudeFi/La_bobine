@@ -25,9 +25,11 @@
 <?php 
 	if(empty($_SESSION['user'])):
 ?>
+<!-- Si je ne suis pas connecté -->
 <section>
 
-	Accès non autorisé
+	<p>Connectez-vous pour accéder à cette page</p>
+	<a href="<?= URL ?>connexion">-> Connexion ou inscription</a>
 
 </section>
 
@@ -43,9 +45,10 @@
 		<h2>Votre profil</h2>
 		<div class="date">Date d'inscription</div>
 		<div class="envoye">Nombre de musiques envoyés</div>
-		<div class="accepte">Nombre de musiques acceptés</div>	
+		<div class="accepte">Nombre de musiques acceptés</div>
+		<a href="<?= URL ?>disconnect">Déconnexion</a>
 	</div>
-
+	
 
 
 
@@ -63,11 +66,10 @@
 			 	<div class="line">
 				 	<div class="infos">
 				 		<div class="first-line">
-				 			<div class="titles"><?= $_validation->music_title ?> - <?= $_validation->composer ?></div>
-				 			<div class="link"><?= $_validation->music_link ?></div>
+				 			<?= $_validation->music_title ?> - <?= $_validation->composer ?> - <?= $_validation->movie_name ?>
 				 		</div>
 				 		<div class="second-line">
-				 			<div class="backline"><?= $_validation->movie_name ?></div>
+				 			Proposé par <?= $_validation->add_by ?> - <a href="https://www.youtube.com/watch?v=<?= $_validation->music_link ?>" target="_blank" class="youtube_link">Lien youtube</a>
 						</div>	
 					</div>
 					<div class="buttons">

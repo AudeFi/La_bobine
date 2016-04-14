@@ -3,6 +3,19 @@ html, body {
 	width: 100%;
 	margin: 0;
 	padding: 0;
+	/* overflow-x:hidden; */
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+section {
+	width: 90%;
+	margin: auto;
+	margin-top: 75px;
+	margin-bottom: 100px;
 }
 
 #player{
@@ -216,7 +229,6 @@ body {
 	width: 40%;
 	margin-right : 10%;
 	margin-left : 5%;
-	margin-top: 80px;
 	position : relative;
 }
 
@@ -281,7 +293,6 @@ body {
 .right-form {
 	display: inline-block;
 	width: 40%;
-	margin-top: 80px;
 	margin-right : 10%;
 	position : absolute;
 }
@@ -379,10 +390,6 @@ body {
 
 
 /* -------------------------------- */
-
-section {
-	margin-bottom: 40px;
-}
 
 /* section h2 {
 	font-size: 18px;
@@ -623,6 +630,10 @@ p.pagenotfound {
 
 /* ----------- ADMIN ----------- */ 
 
+.section.profil {
+	margin-bottom: 80px;
+}
+
 .page-profil h2 {
 	font-size: 25px;
 	padding-top: 10px;
@@ -633,12 +644,6 @@ p.pagenotfound {
 	font-size: 20px;
 	padding-top: 30px;
 	padding-bottom: 30px;
-}
-
-.section {
-	width: 90%;
-	margin: auto;
-	margin-top: 75px;
 }
 
 .admin-part {
@@ -665,16 +670,15 @@ p.pagenotfound {
 
 .approbation .line .infos .first-line{
 	display: block;
-}
-
-.approbation .line .infos .first-line div{
-	width:300px;
-	display: inline-block;
+	margin-bottom: 8px;
 }
 
 .approbation .line .infos .second-line{
-	width:200px;
 	display: block;
+}
+
+.approbation .line .infos .second-line .youtube_link{
+	color: #eb8686;
 }
 
 .approbation .line form{
@@ -687,7 +691,6 @@ p.pagenotfound {
 }
 
 .approbation .line button{
-	background-color: green;
 	width: 100px;
 	height: 35px;
 	cursor: pointer;
