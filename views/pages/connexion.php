@@ -19,8 +19,9 @@
 <?php 
 	if(!empty($_SESSION['user'])): 
 ?>
-	<a href="<?= URL ?>disconnect">Se déconnecter</a>
 	<div>Bonjour <?= $_SESSION['user']['pseudo']; ?></div>
+	<a href="<?= URL ?>disconnect">Se déconnecter</a>
+	<a href="<?= URL ?>profil">Accédez à votre profil</a>
 <?php else:?>
 	
 	<form action="#" method="POST" autocomplete="off">

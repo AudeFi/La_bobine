@@ -66,11 +66,10 @@
 			 	<div class="line">
 				 	<div class="infos">
 				 		<div class="first-line">
-				 			<div class="titles"><?= $_validation->music_title ?> - <?= $_validation->composer ?></div>
-				 			<div class="link"><?= $_validation->music_link ?></div>
+				 			<?= $_validation->music_title ?> - <?= $_validation->composer ?> - <?= $_validation->movie_name ?>
 				 		</div>
 				 		<div class="second-line">
-				 			<div class="backline"><?= $_validation->movie_name ?></div>
+				 			Proposé par <?= $_validation->add_by ?> - <a href="https://www.youtube.com/watch?v=<?= $_validation->music_link ?>" target="_blank" class="youtube_link">Lien youtube</a>
 						</div>	
 					</div>
 					<div class="buttons">

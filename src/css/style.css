@@ -613,16 +613,15 @@ p.pagenotfound {
 
 .approbation .line .infos .first-line{
 	display: block;
-}
-
-.approbation .line .infos .first-line div{
-	width:300px;
-	display: inline-block;
+	margin-bottom: 8px;
 }
 
 .approbation .line .infos .second-line{
-	width:200px;
 	display: block;
+}
+
+.approbation .line .infos .second-line .youtube_link{
+	color: #eb8686;
 }
 
 .approbation .line form{
@@ -635,7 +634,6 @@ p.pagenotfound {
 }
 
 .approbation .line button{
-	background-color: green;
 	width: 100px;
 	height: 35px;
 	cursor: pointer;
