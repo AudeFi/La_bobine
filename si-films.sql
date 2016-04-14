@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost:3306
--- Généré le :  Jeu 14 Avril 2016 à 08:26
+-- Généré le :  Jeu 14 Avril 2016 à 19:40
 -- Version du serveur :  5.5.41-log
 -- Version de PHP :  5.6.13
 
@@ -34,18 +34,19 @@ CREATE TABLE IF NOT EXISTS `musics` (
   `composer` varchar(100) NOT NULL,
   `music_link` varchar(200) NOT NULL,
   `add_by` varchar(200) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=39 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=62 ;
 
 --
 -- Contenu de la table `musics`
 --
 
 INSERT INTO `musics` (`id`, `movie_name`, `movie_id`, `music_title`, `composer`, `music_link`, `add_by`) VALUES
-(33, 'Flashdance', 535, 'Maniac', 'Michael Sembello', '8NjbGr2nk2c', ''),
-(34, 'Star Wars: The Force Awakens', 140607, 'Theme Song', 'John Williams', 'D0ZQPqeJkk', ''),
-(35, 'Avatar', 19995, 'Avatar Theme Song', 'James Horner', 'i1BwcCuEOtM', ''),
-(36, 'Inception', 27205, 'Time', 'Hans Zimmer', 'RxabLA7UQ9k', ''),
-(37, 'The Grand Budapest Hotel', 120467, 'Mr Moustafa', 'Alexandre Desplat', 'voX15vG2gOk', '');
+(33, 'Flashdance', 535, 'Maniac', 'Michael Sembello', '8NjbGr2nk2c', 'super'),
+(34, 'Star Wars: The Force Awakens', 140607, 'Theme Song', 'John Williams', 'D0ZQPqeJkk', 'super'),
+(35, 'Avatar', 19995, 'Avatar Theme Song', 'James Horner', 'i1BwcCuEOtM', 'super'),
+(36, 'Inception', 27205, 'Time', 'Hans Zimmer', 'RxabLA7UQ9k', 'youpi'),
+(37, 'The Grand Budapest Hotel', 120467, 'Mr Moustafa', 'Alexandre Desplat', 'voX15vG2gOk', 'super'),
+(44, 'Harry Potter and the Philosopher''s Stone', 671, 'Hedwig''s Theme', 'John Williams', 'jhTU7_mipB0', 'super');
 
 -- --------------------------------------------------------
 
@@ -90,7 +91,6 @@ INSERT INTO `playlists_has_musics` (`id`, `id_playlists`, `id_musics`) VALUES
 (16, 2, 38),
 (25, 1, 35),
 (26, 1, 36),
-(27, 3, 34),
 (28, 2, 35),
 (29, 2, 36),
 (30, 2, 37),
@@ -107,17 +107,19 @@ CREATE TABLE IF NOT EXISTS `users` (
   `pseudo` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(150) NOT NULL,
-  `status` varchar(50) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+  `status` varchar(50) NOT NULL,
+  `date_inscription` date NOT NULL,
+  `contribution` int(11) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Contenu de la table `users`
 --
 
-INSERT INTO `users` (`id`, `pseudo`, `email`, `password`, `status`) VALUES
-(1, 'super', 'super@super.com', '3b4ebe551d8f2a09aeb005fb3d14066e065134727d1f62112dd316ef60069bcd', 'admin'),
-(3, 'maxaloc', 'maxaloc@gmail.com', '6c876c36c2d6685a727ac67cd555d8ce62b1e22f745f563a966fc85d84e60728', 'user'),
-(4, 'youpi', 'youpi@youpi.com', '639043bba1df959fd595558be5c36c5cf572f3eccfd1f28571276e790b92b0fe', 'user');
+INSERT INTO `users` (`id`, `pseudo`, `email`, `password`, `status`, `date_inscription`, `contribution`) VALUES
+(1, 'super', 'super@super.com', '3b4ebe551d8f2a09aeb005fb3d14066e065134727d1f62112dd316ef60069bcd', 'admin', '2016-04-12', 48),
+(3, 'maxaloc', 'maxaloc@gmail.com', '6c876c36c2d6685a727ac67cd555d8ce62b1e22f745f563a966fc85d84e60728', 'user', '0000-00-00', 0),
+(4, 'youpi', 'youpi@youpi.com', '639043bba1df959fd595558be5c36c5cf572f3eccfd1f28571276e790b92b0fe', 'user', '0000-00-00', 0);
 
 -- --------------------------------------------------------
 
@@ -133,17 +135,19 @@ CREATE TABLE IF NOT EXISTS `validation_musics` (
   `composer` varchar(50) NOT NULL,
   `music_link` varchar(100) NOT NULL,
   `add_by` varchar(200) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=57 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=132 ;
 
 --
 -- Contenu de la table `validation_musics`
 --
 
 INSERT INTO `validation_musics` (`id`, `movie_name`, `movie_id`, `music_title`, `composer`, `music_link`, `add_by`) VALUES
-(32, 'titre movie', 0, 'LOL', 'un composeur', 'un link', ''),
-(33, 'le titre du film', 0, 'LOL', 'composer', 'youtube url', ''),
-(36, '', 155, 'LOl', '', 'LOL', ''),
-(43, '', 0, '', 'lol', '', '');
+(121, 'Avatar', 19995, 'Avatar Theme Song', 'gsdgsdfg', 'gdfbdfg', 'super'),
+(124, 'Harry Potter and the Philosopher''s Stone', 671, 'Hedwig''s Theme Song', 'qsdgqdih', 'sldkjgbsidlgbqs', 'super'),
+(125, 'Harry Potter and the Philosopher''s Stone', 671, 'Hedwig''s Theme Song', 'qsdgqdih', 'sldkjgbsidlgbqs', 'super'),
+(127, 'Harry Potter and the Philosopher''s Stone', 671, 'Hedwig''s Theme Song', 'qsdgqdih', 'sldkjgbsidlgbqs', 'super'),
+(128, 'Harry Potter and the Philosopher''s Stone', 671, 'qsdgljqbsdh', 'qsldjvbslhg', 'lsdbvsgd', 'super'),
+(129, 'Harry Potter and the Philosopher''s Stone', 671, 'qsdgljqbsdh', 'qsldjvbslhg', 'lsdbvsgd', 'super');
 
 --
 -- Index pour les tables exportées
@@ -187,7 +191,7 @@ ALTER TABLE `validation_musics`
 -- AUTO_INCREMENT pour la table `musics`
 --
 ALTER TABLE `musics`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=62;
 --
 -- AUTO_INCREMENT pour la table `playlists`
 --
@@ -202,12 +206,12 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=33;
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT pour la table `validation_musics`
 --
 ALTER TABLE `validation_musics`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=57;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=132;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
