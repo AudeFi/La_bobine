@@ -955,6 +955,8 @@ p.pagenotfound {
     left: 25%;
     margin-top: -51vh;
     position: absolute;
+    width: 52vw;
+    overflow: hidden;
 }
 
 .wave {
