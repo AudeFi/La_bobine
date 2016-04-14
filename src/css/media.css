@@ -78,11 +78,11 @@
 	display: none;
 	}
 	
-	.container-playlist .title-container-playlist{
+	section .container-playlist .title-container-playlist{
 	margin-top: 100px;
 	}
 
-	.playlist-content{
+	section .playlist-content{
 		display: block;
 		text-align: center;
 		width: 200px;
@@ -94,35 +94,39 @@
 	margin-top: 10px;
 	}
 
-	.container-form{
+	section .container-form{
 		margin-top: 50px;
 	}
 
-	.left-form{
+	section .left-form{
 		margin-top: 30px;
 		display: block;
 		width: 50%;
 		text-align: center;
-		margin-left: 25%;
+		margin-left: 30%;
 	}
 
-	.right-form{
+	section .right-form{
 		display: block;
 		width: 50%;
-		text-align: center;
-		margin-left: 35px;	
+		text-align: center;	
 		margin-left: 25%;
+		margin-top: 30px;
 	}
 
-	.container-form{
+	section .container-form{
+		margin-top: 100px;
+	}
+	
+	section .container-add{
 		margin-top: 100px;
 	}
 
-	.connect-you{
+	section .connect-you{
 		position: absolute;
 	}
 	
-	.container-add-music{
+	section .container-add-music{
 	width: 100%;
 	display: block;
 	}
@@ -171,11 +175,11 @@
 
 @media screen and (max-width:325px) {
 
-	.container-form{
+	section .container-form{
 		margin-top: 170px;
 	}
 
-	.container-playlist{
+	section .container-playlist{
 		margin-top: 180px;
 	}
 
