@@ -31,7 +31,6 @@ section {
 .musicplayer{
 	position: fixed;
 	bottom: 0;
-	margin-bottom: 10px;
 	z-index: 1;
 }
 
@@ -64,14 +63,14 @@ section {
 	text-transform: uppercase;
 	margin-left: 10%;
 	margin-top: 12vh;
-	font-size: 3em;
+	font-size: 4em;
 	font-family: "Lato";
 	font-weight: 600;
 	letter-spacing: 8px;
 }
 
 .music_composer{
-	font-size: 1.5em;
+	font-size: 2em;
 	font-family: "Lato";
 	margin-left: 10%;
 	margin-top: 3vh;
@@ -81,7 +80,7 @@ section {
 }
 
 .see_more{
-	width: 180px;
+	width: 220px;
 	height: 35px;
 	margin-left: 10%;
 	margin-top: 5vh;
@@ -93,30 +92,19 @@ section {
 }
 
 .amazon_link{
-	width: 180px;
+	width: 220px;
 	height: 35px;
 	margin-left: 2%;
 	margin-top: 2vh;
 	border : solid 2px white;
 }
 
-.amazon_link_2{
-	width: 180px;
-	height: 35px;
-	margin-top: 10vh;
-	border : solid 2px white;
-}
-
-.amazon_link:hover , .see_more:hover, .amazon_link_2:hover{
+.amazon_link:hover , .see_more:hover{
 	background-color: white;
 	color: #2E2E2E;
 }
 
 .amazon_music{
-	text-decoration: none;
-}
-
-.amazon_movie{
 	text-decoration: none;
 }
 
@@ -133,59 +121,14 @@ section {
 
 .info-film{
 	transform:skew(0deg,20deg);
-	margin-top: 450px;
 }
 
 body.page-home{
 	overflow: hidden;
 }
 
-.movie_title{
-	text-transform: uppercase;
-	width: 500px;
-	margin-top: 12vh;
-	font-size: 2.5em;
-	font-family: "Lato";
-	font-weight: 600;
-	letter-spacing: 8px;
-}
-
-.director{
-	margin-top: 2vh;
-	font-size: 0.8em;
-	font-family: "Lato";
-	letter-spacing: 3px;
-	font-weight: 900;
-}
-
-.actors{
-	margin-top: 1vh;
-	font-size: 0.8em;
-	font-family: "Lato";
-	letter-spacing: 3px;
-	font-weight: 900;
-}
-
-.film-text, .poster{
-	display: inline-block;
-}
-
-.overview, .genre, .release_date{
-	width: 500px;
-	margin-top: 3vh;
-	font-size: 0.8em;
-	font-family: "Lato";
-	letter-spacing: 1px;
-}
-
-.film-text{
-	margin-left: 10%;
-	margin-bottom: 300px;
-}
-
 .poster{
-	width: 45vh;
-	margin-left: 20%;
+	margin-top: 500px;
 }
 
 
@@ -721,11 +664,9 @@ form .error input {
 	background-color: #F97980;
 	letter-spacing: 1.25px;
 	font-weight: bold;
+	background-color: red;
 }
 
-.add-playlists {
-
-}
 
 .admin .flex{
 	display: flex;
@@ -737,7 +678,7 @@ form .error input {
 	vertical-align: top;
 	width: 300px;
 	display: inline-block;
-}
+}	
 
 .admin .scroll{
 	overflow: scroll;
@@ -955,4 +896,11 @@ form input[type="submit"] {
 	height: 30px;
 	background-color: grey;
 	cursor: pointer;
+}
+
+.legal-mention{
+	float: right;
+	margin-top:-20px;
+	margin-right:20px;
+	color: #565656;
 }
