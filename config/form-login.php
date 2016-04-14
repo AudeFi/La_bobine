@@ -41,6 +41,8 @@ $pseudo = '';
 					'pseudo' => $user->pseudo,
 					'status' => $user->status
 				);
+				header('Location: '.URL.'connexion');
+				exit;
 			}
 			else {
 				$errors_connexion['connexion'] = "Login ou mot de passe incorrect";

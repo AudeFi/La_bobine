@@ -236,7 +236,7 @@ section {
 .section-2{
 	position: absolute;
 	margin-left: -2.5%;
-	background-color: blue;
+	background-color: rgb(193, 169, 156);
 	width: 100vw;
 	top: 55vh;
 	transform:skew(0deg,-20deg);
