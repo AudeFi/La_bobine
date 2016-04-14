@@ -8,9 +8,7 @@ $id = $_GET['id'];
 $query = $pdo->query("SELECT * FROM validation_musics WHERE id='".$id."'");
 $ligne = $query->fetchAll();
 
-echo '<pre>';
-print_r($ligne) ;
-echo '</pre>';
+
 
 $movie_name = $ligne[0]->movie_name;
 $movie_id = $ligne[0]->movie_id;
@@ -19,13 +17,11 @@ $composer = $ligne[0]->composer;
 $music_link = $ligne[0]->music_link;
 $pseudo = $ligne[0]->add_by;
 
-/*$query = $pdo->query("SELECT * FROM musics WHERE movie_name='".$movie_name."' AND music_title='".$music_title."'");
-$already_exist = $query->fetchAll();*/
+$query = $pdo->query("SELECT * FROM musics WHERE movie_name='". addslashes ($movie_name)."' AND music_title='". addslashes ($music_title)."'");
+$already_exist = $query->fetch();
 
-/*$already_exist = $query->fetch();*/
 
-/*if(!empty($already_exist)){*/
-/*if(!empty($already_exist)){*/
+if(empty($already_exist)){	
 
 	if(!empty($id)) {
 
@@ -42,6 +38,14 @@ $already_exist = $query->fetchAll();*/
 	$execute = $prepare->execute();
 
 	} 
-/*}*/
-/*header('Location: ' . URL . 'profil');
-exit;*/
+}
+else {
+
+	if(!empty($id)) {
+		$prepare = $pdo->prepare("DELETE FROM validation_musics WHERE id='".$id."'");
+		$execute = $prepare->execute();
+	}
+}
+
+header('Location: ' . URL . 'profil');
+exit;

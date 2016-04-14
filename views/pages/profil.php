@@ -2,7 +2,7 @@
 	
 	require 'config/add-to-playlist.php';
 
-	$query = $pdo->query('SELECT * FROM validation_musics');
+	$query = $pdo->query('SELECT * FROM validation_musics ORDER BY id DESC');
 	$validation_musics = $query->fetchAll(); 
 
 	$query = $pdo->query('SELECT * FROM playlists');
@@ -19,6 +19,21 @@
 
 	$query = $pdo->query('SELECT * FROM playlists_has_musics INNER JOIN playlists ON playlists_has_musics.id_playlists = playlists.id INNER JOIN musics ON playlists_has_musics.id_musics = musics.id WHERE playlists.id = 3');
 	$playlist3 = $query->fetchAll();
+
+	$query = $pdo->query('SELECT date_inscription FROM users WHERE pseudo="'.$_SESSION['user']['pseudo'].'"');
+	$date_inscription = $query->fetch();
+
+	$query = $pdo->query('SELECT * FROM musics WHERE add_by="'.$_SESSION['user']['pseudo'].'"');
+	$ajouts = $query->fetchAll();
+	$nb_ajouts = count($ajouts);
+
+	$query = $pdo->query('SELECT * FROM validation_musics WHERE add_by="'.$_SESSION['user']['pseudo'].'"');
+	$attente = $query->fetchAll();
+	$nb_attente = count($attente);
+
+	$query = $pdo->query('SELECT contribution FROM users WHERE pseudo="'.$_SESSION['user']['pseudo'].'"');
+	$nb_envoye = $query->fetch();
+
 	
 ?>
 
@@ -44,9 +59,10 @@
 
 	<div class="section profil">
 		<h2>Votre profil</h2>
-		<div class="date">Date d'inscription :</div>
-		<div class="envoye">Nombre de musiques envoyées :</div>
-		<div class="accepte">Nombre de musiques acceptées :</div>
+		<div class="date">Date d'inscription : <?= $date_inscription->date_inscription ?></div>
+		<div class="envoye">Nombre de musiques envoyées : <?= $nb_envoye->contribution ?></div>
+		<div class="envoye">Nombre de musiques en attente : <?= $nb_attente ?></div>
+		<div class="accepte">Nombre de musiques acceptées : <?= $nb_ajouts ?></div>
 		<div class="disconnect"><a href="<?= URL ?>disconnect">Déconnexion</a></div>
 	</div>
 	

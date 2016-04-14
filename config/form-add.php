@@ -16,9 +16,15 @@ if(!empty($_POST['add'])){
     $music_link= $match[1];
 	}
 
-	$movie_id       	= strip_tags($_POST['movie_id']);
+	$movie_id       	= strip_tags(trim($_POST['movie_id']));
 	$movie_name       	= strip_tags(trim($_POST['movie_name']));
 	$user				= $_SESSION['user']['pseudo'];
+
+	$query = $pdo->query('SELECT contribution FROM users WHERE pseudo="'.$_SESSION['user']['pseudo'].'"');
+	$contri = $query->fetch();
+	$contri_plus = $contri->contribution + 1;
+	$prepare = $pdo->prepare('UPDATE users SET contribution = "'.$contri_plus.'" WHERE pseudo="'.$_SESSION['user']['pseudo'].'"');
+	$execute = $prepare->execute();
 
 	$prepare = $pdo->prepare('INSERT INTO validation_musics (movie_name,movie_id,music_title,composer,music_link,add_by) VALUES (:movie_name,:movie_id,:music_title,:composer,:music_link,:add_by)');
 	$prepare->bindValue('movie_name',$movie_name);
