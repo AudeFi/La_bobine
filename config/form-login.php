@@ -38,7 +38,7 @@ $pseudo = '';
 			if($user->password == $password_connexion) {
 				$_SESSION['user'] = array(
 					'id' => $user->id,
-					'email' => $user->email,
+					'pseudo' => $user->pseudo,
 					'status' => $user->status
 				);
 			}

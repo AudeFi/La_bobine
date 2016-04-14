@@ -20,7 +20,7 @@
 	if(!empty($_SESSION['user'])): 
 ?>
 	<a href="<?= URL ?>disconnect">Se déconnecter</a>
-	<div>Bonjour <?= $_SESSION['user']['email']; ?></div>
+	<div>Bonjour <?= $_SESSION['user']['pseudo']; ?></div>
 <?php else:?>
 	
 	<form action="#" method="POST" autocomplete="off">

@@ -6,7 +6,7 @@
 	require_once 'database.php';
 
 
-	/*$id_playlist = empty($_GET['id']) ? '' : $_GET['id'];
+	$id_playlist = empty($_GET['id']) ? '' : $_GET['id'];
 
 	if($id_playlist == '1'){
 		$query = $pdo->query('SELECT * FROM playlists_has_musics INNER JOIN playlists ON playlists_has_musics.id_playlists = playlists.id INNER JOIN musics ON playlists_has_musics.id_musics = musics.id WHERE playlists.id = 1');
@@ -23,10 +23,12 @@
 	else {
 		$query = $pdo->query('SELECT * FROM musics');
 		$playlist = $query->fetchAll();
-	}*/
+	}
 
-	$query = $pdo->query('SELECT * FROM musics');
-	$playlist = $query->fetchAll();
+	echo '<pre>';
+	print_r($playlist);
+	echo '</pre>';;
+
 
 	$result = count($playlist);
 	$id = rand(0, $result - 1);

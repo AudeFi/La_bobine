@@ -18,6 +18,7 @@ if(!empty($_POST['add'])){
 
 	$movie_id       	= strip_tags($_POST['movie_id']);
 	$movie_name       	= strip_tags(trim($_POST['movie_name']));
+	$user				= $_SESSION['user']['pseudo'];
 
 	$prepare = $pdo->prepare('INSERT INTO validation_musics (movie_name,movie_id,music_title,composer,music_link) VALUES (:movie_name,:movie_id,:music_title,:composer,:music_link)');
 	$prepare->bindValue('movie_name',$movie_name);
