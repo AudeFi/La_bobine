@@ -39,14 +39,13 @@
 
             if (statement == 0) {
                 $.ajax({
-                    url     : "config/home-player.php",
+                    url     : "config/home-player.php" + location.search,
                     type    : "POST",
                     dataType: 'JSON',
                     data: {ajax:true},
 
                     success : function(data, status, xhr) {
                         player.loadVideoById(data.music.music_link);
-        
                         $('.music_title').text(data.music.music_title);
                         $('.movie_title').text(data.movie.title);
                         $('.release_date').text(data.movie.release_date);
@@ -54,6 +53,8 @@
                         $('.genre').text(data.movie.genre);
                         $('.overview').text(data.movie.overview);
                         $('.director').text(data.credits.crew[0].name);
+                        $('.amazon_music').attr( 'href', 'https://www.amazon.fr/s/ref=nb_sb_noss_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&url=search-alias%3Dpopular&field-keywords=' + data.movie.title + '+Bande+Originale');
+                        $('.amazon_movie').attr( 'href', 'https://www.amazon.fr/s/ref=nb_sb_noss_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&url=search-alias%3Ddvd&field-keywords=' + data.movie.title);
                         $('.actors').text(data.credits.cast[0].name + "  /  " + data.credits.cast[1].name + "  /  " + data.credits.cast[2].name );
                         $('.poster').attr('src', 'http://image.tmdb.org/t/p/w500/' + data.movie.poster_path);
                     }
@@ -65,7 +66,7 @@
         $('.reload').click(function() {
 
             $.ajax({
-                url     : "./config/home-player.php",
+                url     : "./config/home-player.php" + location.search,
                 type    : "POST",
                 dataType: 'JSON',
                 data: {ajax:true},
@@ -80,6 +81,8 @@
                     $('.director').text(data.credits.crew[0].name);
                     $('.actors').text(data.credits.cast[0].name + "  /  " + data.credits.cast[1].name + "  /  " + data.credits.cast[2].name );
                     $('.music_composer').text(data.music.composer);
+                    $('.amazon_music').attr( 'href', 'https://www.amazon.fr/s/ref=nb_sb_noss_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&url=search-alias%3Dpopular&field-keywords=' + data.movie.title + '+Bande+Originale');
+                    $('.amazon_movie').attr( 'href', 'https://www.amazon.fr/s/ref=nb_sb_noss_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&url=search-alias%3Ddvd&field-keywords=' + data.movie.title);
                     $('.overview').text(data.movie.overview);
                     $('.poster').attr('src', 'http://image.tmdb.org/t/p/w500/' + data.movie.poster_path);
                 }

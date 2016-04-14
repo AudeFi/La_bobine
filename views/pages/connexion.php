@@ -1,21 +1,19 @@
+
 <?php
-
 	require 'config/form-login.php';
-
 ?>
 
 
 
 
 <section>
-
 <!-- CONNEXION FORM -->
 <div class="container-form">
-
 	<div class="left-form">
 		<div class="title-connexion">
 			<h3>Connexion</h3>
 		</div>
+
 <?php 
 	if(!empty($_SESSION['user'])): 
 ?>
@@ -29,6 +27,7 @@
 		<a href="<?= URL ?>disconnect">Se déconnecter</a>
 	</div>
 <?php else:?>
+
 	
 	<form action="#" method="POST" autocomplete="off">
 		
@@ -55,14 +54,10 @@
 				</div>
 			<?php endif; ?>
 		</div>
-
 	</form>
 
-<?php endif; ?>
-
-
+		<?php endif; ?>
 	</div>
-
 
 <!-- INSCRIPTION FORM -->
 	<div class="right-form">
@@ -107,7 +102,7 @@
 					</div>
 				<?php endif; ?>
 			</div>
-			
 		</form>
-	</div>	
+	</div>
+</div>		
 </section>
