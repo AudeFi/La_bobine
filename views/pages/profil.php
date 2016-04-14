@@ -1,6 +1,4 @@
 <?php
-
-	error_reporting(E_ALL);
 	
 	require 'config/add-to-playlist.php';
 
@@ -60,7 +58,7 @@
 <!-- DIV PROFIL -->
 
 	<div class="section profil">
-		<h2>Votre profil</h2>
+		<h2>Votre profil - <?= $_SESSION['user']['pseudo'] ?></h2>
 		<div class="date">Date d'inscription : <?= $date_inscription->date_inscription ?></div>
 		<div class="envoye">Nombre de musiques envoyées : <?= $nb_envoye->contribution ?></div>
 		<div class="envoye">Nombre de musiques en attente : <?= $nb_attente ?></div>

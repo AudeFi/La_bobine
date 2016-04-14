@@ -2,20 +2,37 @@ SEMAINE INTENSIVE PHP / API
 H2 T2 - 11/04/16-15/04/16
 
 
-
 #DESCRIPTION
+
+Notre projet devait être élaboré à partir d'une API relatant des données au sein du domaine cinématographique. Nous avons donc pris la décision de se concentrer sur l'utilisation de l'API TMDB associée à l'API Youtube afin de mettre en avant les bandes-sons des films. 
+Ce projet nécessite le soutien de communauté afin d'assurer la longévité, et ce, par leur participation à l'alimentation régulière de bandes-sons cinématographiques.
 
 
 #FEATURES
 
+- Utilisation de l'API Youtube et TMDB
+- Création de compte
+- Gestion de compte
+- Media player
+
 
 #RESSOURCES
 
+- API Youtube
+- API TMDB
+- PHP
+- JS
+- AJAX
 
 #PROBLEMES
 
+- Intégrer l'API Youtube
+- Synchroniser le player avec l'API TMDB
 
-#INSTALATION
+#INSTALLATION
+
+///
 
 
 #AUTHOR
+Max ALLOUCH, Camille ALVAREZ DE JESUS, Théo BACHOLIER, Jules BELAMY, Aude FICHEUX
