@@ -209,6 +209,15 @@ a:hover {
 	display: inline;
 }
 
+.time-info{
+	margin-left: 10%;
+	margin-top: 2vh;
+}
+
+#time, #duration{
+	display: inline;
+}
+
 .amazon_link{
 	width: 180px;
 	height: 35px;

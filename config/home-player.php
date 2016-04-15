@@ -10,10 +10,10 @@
 		$query = $pdo->query('SELECT * FROM playlists_has_musics INNER JOIN playlists ON playlists_has_musics.id_playlists = playlists.id INNER JOIN musics ON playlists_has_musics.id_musics = musics.id WHERE playlists.id = 1');
 		$playlist = $query->fetchAll();
 	}		
-	else if($num_playlist == '2') {
+	else if($num_playlist == '2'){
 		$query = $pdo->query('SELECT * FROM playlists_has_musics INNER JOIN playlists ON playlists_has_musics.id_playlists = playlists.id INNER JOIN musics ON playlists_has_musics.id_musics = musics.id WHERE playlists.id = 2');
 		$playlist = $query->fetchAll();
-	}
+	}	
 	else if($num_playlist == '3') {
 		$query = $pdo->query('SELECT * FROM playlists_has_musics INNER JOIN playlists ON playlists_has_musics.id_playlists = playlists.id INNER JOIN musics ON playlists_has_musics.id_musics = musics.id WHERE playlists.id = 3');
 		$playlist = $query->fetchAll();

@@ -99,11 +99,36 @@ function onPlayerStateChange(event) {
         window.setInterval(function(){
             var duration = player.getDuration();
             var currentTime = player.getCurrentTime();
+            
 
             $(".current_time").css({
                 "width": ( currentTime / duration ) * 100 + "%"
             });
         }, 500);
+
+        window.setInterval(function(){
+            var duration = player.getDuration();
+            var currentTime = player.getCurrentTime();
+
+            music_duration = parseInt( duration, 10);
+            music_time = parseInt( currentTime, 10);
+
+            var minutes = Math.floor((music_time - (0)) / 60)
+            var minutes2 = Math.floor((music_duration - (0)) / 60);
+            var seconds = music_time - (minutes * 60);
+            var seconds2 = music_duration - (minutes2 * 60);
+
+            if (minutes < 10) {minutes = "0"+minutes;}
+            if (seconds < 10) {seconds = "0"+seconds;}
+            if (minutes2 < 10) {minutes2 = "0"+minutes2;}
+            if (seconds2 < 10) {seconds2 = "0"+seconds2;}
+
+            var time    = minutes+' : '+seconds;
+            var time2   = minutes2+' : '+seconds2;
+
+            document.getElementById("time").innerHTML = time;
+            document.getElementById("duration").innerHTML = time2;
+        }, 1000);
     
     done = true;
 
