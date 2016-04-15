@@ -129,6 +129,10 @@ a {
 	cursor: pointer;
 }
 
+a:hover {
+	color: #8f8f8f;
+}
+
 .eq, .reload, .timebar{
 	display: inline-block;
 	margin-right: 30px;
@@ -870,10 +874,26 @@ form .error input {
 }
 
 .legal-mention{
-	float: right;
-	margin-top:-20px;
-	margin-right:20px;
+	position: fixed;
+	bottom: 20px;
+	right: 40px;
 	color: #565656;
+	vertical-align: middle;
+}
+
+.legal-mention a{
+	padding-bottom: 10px;
+}
+
+.legal-mention img{
+	width: 100px;
+	opacity: 0.3;
+	margin-right: 15px;
+	margin-top: 5px;
+}
+
+.page-home .legal-mention{
+	display: none;
 }
 
 /* -------404-------- */
