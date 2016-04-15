@@ -10,8 +10,6 @@ $composer    = '';
 
 if(!empty($_POST['add'])){
 
-	
-
 	if (empty($_POST['music_title'])){
 		$errors['music_title'] = "Veuillez renseigner un nom de musique";
 	}
@@ -28,9 +26,9 @@ if(!empty($_POST['add'])){
 		$errors['music_link'] = "Veuillez renseigner un lien youtube";
 	}
 	else {
-		$music_link = strip_tags(trim($_POST['music_link']));
+		$music_link = strip_tags(trim($_POST['music_link'])); //YOUTUBE ID VIDEO REGEX
 		if (preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $music_link, $match)) {
-	    $music_link= $match[1];
+	    	$music_link= $match[1];
 		}
 	}
 

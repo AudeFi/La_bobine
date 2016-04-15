@@ -1,3 +1,5 @@
+// ------------------- AJAX FOR SEARCH SYSTEM
+
 var $container          = $( 'form.search' ),
     $input_movie_title  = $container.find( 'input#movie_title' ),
     $input_movie_name = $container.find( 'input#movie_name' ),
@@ -21,17 +23,14 @@ $input_movie_title.keyup(function() {
             for( var i = 0; i < data.length; i++ )
             {
                 var _data = data[i],
-                    $a    = $( '<a>' );
+                $a    = $( '<a>' );
                 $a.addClass('list');
-
                 $a.data( 'id', _data.id );
                 $a.attr( 'href', '#' );
                 $a.text( _data.title );
+                $a.on( 'click', function(){
 
-                $a.on( 'click', function()
-                {
                     var $a = $(this);
-
                     $input_movie_id.val( $a.data( 'id' ) );
                     $input_movie_name.val( $a.text() );
 
@@ -40,10 +39,6 @@ $input_movie_title.keyup(function() {
 
                 $results.append( $a );
             }
-        
         },
-        error: function (jqXHR, status, errorThrown) {
-            console.log ('error');
-        }
     });
 });

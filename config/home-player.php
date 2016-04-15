@@ -5,6 +5,7 @@
 
 	$num_playlist = empty($_GET['id']) ? '' : $_GET['id'];
 
+	// PLAYLISTS
 
 	if($num_playlist == '1'){
 		$query = $pdo->query('SELECT * FROM playlists_has_musics INNER JOIN playlists ON playlists_has_musics.id_playlists = playlists.id INNER JOIN musics ON playlists_has_musics.id_musics = musics.id WHERE playlists.id = 1');
@@ -29,6 +30,7 @@
 	$music = $playlist[$id_music];
 	
 
+// API MOVIE ID FOR SEARCH MOVIE AND HAVE INFORMATIONS 
 	if(!empty($music->movie_id))
 	{
 		$ch = curl_init();

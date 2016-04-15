@@ -2,8 +2,8 @@
 
 $name = '';
 
-if(!empty($_POST['name']))
-{
+if(!empty($_POST['name'])){
+	
 	$name = strip_tags(trim($_POST['name']));
 	$name=urlencode($name);
 
